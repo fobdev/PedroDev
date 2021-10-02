@@ -26,14 +26,15 @@ export const mainContainer: SxProps<Theme> = {
     ".contact-box": {
         ".email": {
             borderColor: main_color,
-            width: "15em",
+            width: "30vh",
             gridArea: "em",
         },
         ".subject": {
-            width: "20em",
+            width: "30vh",
             gridArea: "sj",
         },
         ".message": {
+            width: "62vh",
             gridArea: "ms",
         },
         ".title": {
@@ -49,7 +50,7 @@ export const mainContainer: SxProps<Theme> = {
         backgroundColor: "white",
         display: "grid",
         justifyContent: "center",
-        gridGap: "1em",
+        gridGap: "2vh",
         gridTemplateAreas: `"tt tt tt"
                             "em sj sj"
                             "ms ms ms"
