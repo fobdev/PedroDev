@@ -35,6 +35,7 @@ export default function Hero() {
                     },
 
                     ".hello-text": {
+                        position: "sticky",
                         fontWeight: "bold",
                     },
 
@@ -105,12 +106,12 @@ export default function Hero() {
                                 I'm <span className={`${colorChange}`}>Pedro.</span>
                             </Typography>
                             <Typography className="description" variant="body1">
-                                I'm a MERN Stack developer
+                                I'm a Full-Stack Developer,
                                 <br />
                                 working with <span>Node.JS and Typescript.</span>
                             </Typography>
                             <Typography variant="body1" className="subtitle">
-                                I also work with Postgres, Heroku and GCP.
+                                I also work with Firebase, Heroku and GCP clouds.
                             </Typography>
                         </Box>
                     </Fade>

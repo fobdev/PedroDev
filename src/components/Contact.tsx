@@ -115,8 +115,8 @@ export default function Contact() {
                 <TextField
                     className="email"
                     onChange={handleChange("email")}
-                    defaultValue={form.email}
                     inputRef={emailRef}
+                    defaultValue={form.email}
                     type="email"
                     id="email"
                     variant="outlined"
