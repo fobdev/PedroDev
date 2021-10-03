@@ -1,5 +1,4 @@
 import { SxProps, Theme } from "@mui/system";
-const main_color = "#49a6e9";
 
 export const mainAboutContainer: SxProps<Theme> = {
     height: "100vh",
