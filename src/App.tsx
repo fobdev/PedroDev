@@ -2,10 +2,10 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Head from "./components/Head";
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import About from "./components/About";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDy5OwVes7kWSPyYB0_9l100Rr0rmAkf2s",
     authDomain: "pedrodev-f4d57.firebaseapp.com",
@@ -25,7 +25,7 @@ function App() {
         <div>
             <Head />
             <Hero />
-            <About />
+            {/* <About /> */}
             <Contact />
         </div>
     );
