@@ -33,6 +33,20 @@ export const useStyles = makeStyles({
             transform: "translatey(0px)",
         },
     },
+    "@keyframes float-alt": {
+        "0%": {
+            boxShadow: "0 5px 15px 0px rgba(0,0,0,0.2)",
+            transform: "translatey(0px)",
+        },
+        "50%": {
+            boxShadow: "0 10px 15px 0px rgba(0,0,0,0.2)",
+            transform: "translatey(-10px)",
+        },
+        "100%": {
+            boxShadow: "0 5px 15px 0px rgba(0,0,0,0.2)",
+            transform: "translatey(0px)",
+        },
+    },
     colorChange: {
         animationName: "$colorChange",
         animationDuration: "5s",
@@ -42,6 +56,12 @@ export const useStyles = makeStyles({
     },
     float: {
         animationName: "$float",
+        animationDuration: "8s",
+        animationIterationCount: "infinite",
+        animationTimingFunction: "ease-in-out",
+    },
+    float_alt: {
+        animationName: "$float-alt",
         animationDuration: "8s",
         animationIterationCount: "infinite",
         animationTimingFunction: "ease-in-out",
