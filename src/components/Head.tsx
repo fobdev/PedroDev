@@ -16,14 +16,12 @@ import {
 
 /** MUI Icons Imports */
 import TranslateIcon from "@mui/icons-material/Translate";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import logo from "../images/logo.svg";
 import us_png from "../images/us.svg";
 import br_png from "../images/br.svg";
-import discord_svg from "../images/discord.svg";
 
 /** React */
 import { mainHeadBox } from "./styles/Head";
@@ -212,13 +210,6 @@ export default function Head() {
                                 </Popper>
                             </li>
                             <li>
-                                <a href="https://twitter.com/bfobenga">
-                                    <IconButton>
-                                        <TwitterIcon />
-                                    </IconButton>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="https://www.linkedin.com/in/pedro-henrique-dev1997/">
                                     <IconButton>
                                         <LinkedInIcon />
@@ -229,17 +220,6 @@ export default function Head() {
                                 <a href="https://github.com/fobdev">
                                     <IconButton>
                                         <GitHubIcon />
-                                    </IconButton>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://discordapp.com/users/244270921286811648">
-                                    <IconButton>
-                                        <img
-                                            className="discord-button"
-                                            src={discord_svg}
-                                            alt="Discord"
-                                        />
                                     </IconButton>
                                 </a>
                             </li>
