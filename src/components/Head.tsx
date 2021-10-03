@@ -175,7 +175,15 @@ export default function Head() {
                             >
                                 <li>
                                     <Slide in={true} timeout={{ enter: 500 }}>
-                                        <Button variant="text" disableRipple>
+                                        <Button 
+                                        onClick={() => {
+                                            window.scrollTo({
+                                                top: 0,
+                                                left: 0,
+                                                behavior: "smooth",
+                                            })
+                                        }}
+                                        variant="text" disableRipple>
                                             About Me
                                         </Button>
                                     </Slide>
