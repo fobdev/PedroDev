@@ -13,7 +13,7 @@ import {
 import LoadingButton from "@mui/lab/LoadingButton";
 import emailJS from "emailjs-com";
 import { Box } from "@mui/system";
-import { mainContainer } from "./styles/Contact";
+import { mainContactContainer } from "./styles/Contact";
 import React, { useState, useRef } from "react";
 
 const emailRegex =
@@ -100,7 +100,7 @@ export default function Contact() {
     };
 
     return (
-        <Container sx={mainContainer}>
+        <Container sx={mainContactContainer}>
             <Box className="dev-box" alignSelf="center">
                 <Typography variant="h3">{"¯\\_(ツ)_/¯"}</Typography>
                 <Typography variant="h5" marginTop="1em">
