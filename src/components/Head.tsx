@@ -1,3 +1,4 @@
+/** MUI Components Imports */
 import {
     Button,
     Container,
@@ -12,7 +13,8 @@ import {
     Box,
     Slide,
 } from "@mui/material";
-import { mainHeadBox } from "./styles/Head";
+
+/** MUI Icons Imports */
 import TranslateIcon from "@mui/icons-material/Translate";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
@@ -22,7 +24,11 @@ import logo from "../images/logo.svg";
 import us_png from "../images/us.svg";
 import br_png from "../images/br.svg";
 import discord_svg from "../images/discord.svg";
+
+/** React */
+import { mainHeadBox } from "./styles/Head";
 import { useRef, useState, useEffect } from "react";
+
 export default function Head() {
     const [open, setOpen] = useState(false);
     const [animate, setAnimate] = useState(false);
