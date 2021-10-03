@@ -2,7 +2,6 @@ import { SxProps, Theme } from "@mui/system";
 const main_color = "#49a6e9";
 
 export const mainContactContainer: SxProps<Theme> = {
-    backgroundColor: "white",
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
