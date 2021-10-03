@@ -23,7 +23,6 @@ export const mainHeroContainer: SxProps<Theme> = {
     },
 
     ".hello-text": {
-        position: "sticky",
         fontWeight: "bold",
     },
 
