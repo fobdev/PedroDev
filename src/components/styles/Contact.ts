@@ -26,15 +26,12 @@ export const mainContainer: SxProps<Theme> = {
     ".contact-box": {
         ".email": {
             borderColor: main_color,
-            width: "30vh",
             gridArea: "em",
         },
         ".subject": {
-            width: "30vh",
             gridArea: "sj",
         },
         ".message": {
-            width: "62vh",
             gridArea: "ms",
         },
         ".title": {
