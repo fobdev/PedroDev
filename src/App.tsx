@@ -1,9 +1,7 @@
 import "./App.css";
 import Hero from "./components/Hero";
-// import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Head from "./components/Head";
-// import About from "./components/About";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
