@@ -20,8 +20,9 @@ const heroku_colors = {
 };
 
 export const mainAboutContainer: SxProps<Theme> = {
-    backgroundColor: "#fff",
-    padding: "4em 0 4em 0",
+    backgroundColor: "#eee",
+    height: "100vh",
+    padding: "2em 1em 2em 1em",
 
     ".title": {
         paddingBottom: "1em",
@@ -51,13 +52,15 @@ export const mainAboutContainer: SxProps<Theme> = {
                 columnGap: "2em",
 
                 ".title-fe, .title-be": {
+                    fontSize: "3em",
+                    alignSelf: "center",
                     fontWeight: "200",
                     color: "black",
                 },
             },
 
             ".code-icon, .settings-icon": {
-                fontSize: "5em",
+                fontSize: "3rem",
                 backgroundColor: "white",
                 borderRadius: "5em",
                 boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .2)",
@@ -66,9 +69,25 @@ export const mainAboutContainer: SxProps<Theme> = {
 
         ".middle-floating-boxes": {
             userSelect: "none",
+            borderRadius: "1em",
             display: "flex",
+            rowGap: "2em",
+            padding: "2em",
             flexDirection: "column",
-            rowGap: "4em",
+            ".middle-paper": {
+                display: "flex",
+                justifyContent: "center",
+                columnGap: "1em",
+                ".icon": {
+                    fontSize: "2em",
+                    alignSelf: "center",
+                },
+                ".clouds-title": {
+                    padding: ".5em 0 .5em 0",
+                    fontWeight: "200",
+                    fontSize: "2em",
+                },
+            },
             ".gcp-paper, .firebase-paper, .heroku-paper": {
                 a: {
                     textDecoration: "none",
@@ -76,6 +95,7 @@ export const mainAboutContainer: SxProps<Theme> = {
                     borderRadius: "5em",
                 },
                 ".MuiPaper-root": {
+                    padding: "1.5em",
                     display: "flex",
                     justifyContent: "center",
                 },
@@ -89,7 +109,7 @@ export const mainAboutContainer: SxProps<Theme> = {
                     borderRadius: "5em",
                 },
                 ".wrapper:active": {
-                    transition: ".03s",
+                    transition: ".06s",
                     boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
                 },
             },
@@ -104,22 +124,6 @@ export const mainAboutContainer: SxProps<Theme> = {
 
             ".heroku-paper > .MuiPaper-root": {
                 background: `linear-gradient(30deg, ${heroku_colors.indigo} 10px, ${heroku_colors.indigo} 30px, ${heroku_colors.lavender} 30px, ${heroku_colors.lavender} 50px, ${heroku_colors.violet} 50px, ${heroku_colors.violet} 70px, #fff 70px);`,
-            },
-
-            ".middle-paper": {
-                display: "flex",
-                justifyContent: "center",
-                padding: "1.5em",
-                columnGap: "1em",
-                ".icon": {
-                    fontSize: "2em",
-                    alignSelf: "center",
-                },
-                ".clouds-title": {
-                    padding: ".5em 0 .5em 0",
-                    fontWeight: "200",
-                    fontSize: "2em",
-                },
             },
         },
     },
