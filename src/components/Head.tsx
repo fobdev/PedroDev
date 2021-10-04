@@ -22,6 +22,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import logo from "../images/logo.svg";
 import us_png from "../images/us.svg";
 import br_png from "../images/br.svg";
+import { Link } from "react-router-dom";
 
 /** React */
 import { mainHeadBox } from "./styles/Head";
@@ -89,31 +90,38 @@ export default function Head() {
                         <li>
                             <Slide in={true} timeout={{ enter: 500 }}>
                                 <Button
+                                    variant="text"
+                                    disableRipple
                                     onClick={() => {
-                                        window.scrollTo({
-                                            top: 0,
+                                        window.scrollBy({
+                                            top: -999,
                                             left: 0,
                                             behavior: "smooth",
                                         });
                                     }}
-                                    variant="text"
-                                    disableRipple
                                 >
-                                    About Me
-                                </Button>
-                            </Slide>
-                        </li>
-                        <li>
-                            <Slide in={true} timeout={{ enter: 1000 }}>
-                                <Button variant="text" disableRipple>
-                                    Skills
+                                    <Link className="router-home" to="/">
+                                        Home
+                                    </Link>
                                 </Button>
                             </Slide>
                         </li>
                         <li>
                             <Slide in={true} timeout={{ enter: 1500 }}>
-                                <Button variant="text" disableRipple>
-                                    Projects
+                                <Button
+                                    variant="text"
+                                    disableRipple
+                                    onClick={() => {
+                                        window.scrollBy({
+                                            top: -999,
+                                            left: 0,
+                                            behavior: "smooth",
+                                        });
+                                    }}
+                                >
+                                    <Link className="router-projects" to="/projects">
+                                        Projects
+                                    </Link>
                                 </Button>
                             </Slide>
                         </li>
