@@ -4,8 +4,10 @@ import Contact from "./components/Contact";
 import Head from "./components/Head";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import BackToTop from "./components/BackToTop";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import About from "./components/About";
-import Aboutee from "./components/About2";
+import { Typography } from "@mui/material";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDy5OwVes7kWSPyYB0_9l100Rr0rmAkf2s",
@@ -23,12 +25,25 @@ function App() {
     const app = initializeApp(firebaseConfig);
     getAnalytics(app);
     return (
-        <div>
+        <Router>
             <Head />
-            <Hero />
-            <Aboutee />
-            <Contact />
-        </div>
+            <Switch>
+                <Route exact path="/">
+                    <Hero />
+                    <Contact />
+                </Route>
+                <Route exact path="/projects">
+                    <About />
+                    <Contact />
+                </Route>
+                <Route path="*">
+                    <Typography variant="h3" fontWeight="200" textAlign="left" margin="1em">
+                        404 - Nothing to see here...
+                    </Typography>
+                </Route>
+            </Switch>
+            <BackToTop />
+        </Router>
     );
 }
 
