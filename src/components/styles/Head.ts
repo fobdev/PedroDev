@@ -73,6 +73,15 @@ export const mainHeadBox: SxProps<Theme> = {
                 Button: {
                     padding: 0,
                 },
+
+                ".router-projects, .router-home": {
+                    textDecoration: "none",
+                    color: "black",
+
+                    "&:hover": {
+                        color: main_color,
+                    },
+                },
             },
 
             ".links-box": {
