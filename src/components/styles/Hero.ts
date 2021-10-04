@@ -49,6 +49,11 @@ export const mainHeroContainer: SxProps<Theme> = {
             borderRadius: "5em",
             backgroundColor: "white",
             color: main_color,
+
+            ".router-projects": {
+                textDecoration: "none",
+                color: main_color,
+            },
         },
     },
     ".box-image": {

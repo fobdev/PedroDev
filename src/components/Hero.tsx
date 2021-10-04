@@ -6,6 +6,7 @@ import "./utils/animations.ts";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import ComputerRoundedIcon from "@mui/icons-material/ComputerRounded";
 import { mainHeroContainer } from "./styles/Hero";
+import { Link } from "react-router-dom";
 export default function Hero() {
     const { colorChange, float } = useStyles();
     const [animate, setAnimate] = useState(false);
@@ -58,7 +59,9 @@ export default function Hero() {
                                 size="large"
                                 onClick={() => (!animate ? setAnimate(true) : setAnimate(false))}
                             >
-                                My Work
+                                <Link className="router-projects" to="/projects">
+                                    My Work
+                                </Link>
                             </Button>
                         </Box>
                     </Fade>
