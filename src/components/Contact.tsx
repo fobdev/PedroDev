@@ -102,13 +102,25 @@ export default function Contact() {
     return (
         <Container sx={mainContactContainer}>
             <Box className="dev-box" alignSelf="center">
-                <Typography variant="h3">{"¯\\_(ツ)_/¯"}</Typography>
+                <Typography
+                    variant="h3"
+                    sx={{
+                        userSelect: "none",
+                        "span:after": {
+                            content: '"(づ ◕‿◕ )づ"',
+                        },
+
+                        "span:hover:after": {
+                            content: '"ლ(◕‿◕ ლ)"',
+                        },
+                    }}
+                >
+                    <span />
+                </Typography>
                 <Typography variant="h5" marginTop="1em">
-                    Sorry, nothing to see here... yet!
+                    Mail me something
                 </Typography>
-                <Typography variant="subtitle2">
-                    ...but the e-mail form on the right is working fine, feel free to use it!
-                </Typography>
+                <Typography variant="subtitle2">I will respond you as soon as possible.</Typography>
             </Box>
             <Box className="contact-box">
                 <Typography className="title">Contact Me</Typography>
