@@ -210,14 +210,22 @@ export default function Head() {
                                 </Popper>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/pedro-henrique-dev1997/">
+                                <a
+                                    href="https://www.linkedin.com/in/pedro-henrique-dev1997/"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
                                     <IconButton>
                                         <LinkedInIcon />
                                     </IconButton>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/fobdev">
+                                <a
+                                    href="https://github.com/fobdev"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
                                     <IconButton>
                                         <GitHubIcon />
                                     </IconButton>
