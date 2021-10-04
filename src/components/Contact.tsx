@@ -2,19 +2,20 @@ import {
     Button,
     Container,
     Dialog,
+    Paper,
     TextField,
     Typography,
     DialogTitle,
     DialogContent,
     DialogContentText,
     DialogActions,
-    TextFieldProps,
 } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import emailJS from "emailjs-com";
 import { Box } from "@mui/system";
 import { mainContactContainer } from "./styles/Contact";
 import React, { useState, useRef } from "react";
+import { StandardTextFieldProps } from "@mui/material/TextField";
 
 const emailRegex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -34,9 +35,9 @@ export default function Contact() {
     };
 
     const [form, setForm] = useState<userInfo>(emailObject);
-    const emailRef = useRef<TextFieldProps>();
-    const messageRef = useRef<TextFieldProps>();
-    const subjectRef = useRef<TextFieldProps>();
+    const emailRef = useRef<StandardTextFieldProps>();
+    const messageRef = useRef<StandardTextFieldProps>();
+    const subjectRef = useRef<StandardTextFieldProps>();
 
     const [popup, setPopup] = useState(false);
     const [popup_error, setPopup_error] = useState(false);
@@ -122,7 +123,7 @@ export default function Contact() {
                 </Typography>
                 <Typography variant="subtitle2">I will respond you as soon as possible.</Typography>
             </Box>
-            <Box className="contact-box">
+            <Paper className="contact-box" elevation={4}>
                 <Typography className="title">Contact Me</Typography>
                 <TextField
                     className="email"
@@ -222,7 +223,7 @@ export default function Contact() {
                         </Button>
                     </DialogActions>
                 </Dialog>
-            </Box>
+            </Paper>
         </Container>
     );
 }

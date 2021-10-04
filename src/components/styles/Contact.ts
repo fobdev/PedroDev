@@ -23,6 +23,7 @@ export const mainContactContainer: SxProps<Theme> = {
     },
 
     ".contact-box": {
+        padding: "2em 3em 2em 3em",
         ".email": {
             borderColor: main_color,
             gridArea: "em",
