@@ -5,6 +5,7 @@ import Head from "./components/Head";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import About from "./components/About";
+import Aboutee from "./components/About2";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDy5OwVes7kWSPyYB0_9l100Rr0rmAkf2s",
@@ -25,7 +26,7 @@ function App() {
         <div>
             <Head />
             <Hero />
-            {/* <About /> */}
+            <Aboutee />
             <Contact />
         </div>
     );
