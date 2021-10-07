@@ -15,7 +15,6 @@ import ReactSVG from "../images/React.svg";
 import FlutterSVG from "../images/Flutter.svg";
 import DartSVG from "../images/Dart.svg";
 import Cpp from "../images/C++.svg";
-import Python from "../images/Python.svg";
 import PostgreSQL from "../images/Postgres.svg";
 import MongoDB from "../images/MongoDB.svg";
 import MySQL from "../images/MySQL.svg";
