@@ -1,30 +1,40 @@
 import { SxProps, Theme } from "@mui/system";
 
-const google_colors = {
-    blue: "#4285F4",
-    red: "#DB4437",
-    yellow: "#F4B400",
-    green: "#0F9D58",
+const colorPatterns = {
+    google_colors: {
+        blue: "#4285F4",
+        red: "#DB4437",
+        yellow: "#F4B400",
+        green: "#0F9D58",
+    },
+    firebase_colors: {
+        yellow: "#FFCA28",
+        ember: "#FFA000",
+        orange: "#F57C00",
+    },
+    heroku_colors: {
+        indigo: "#211746",
+        violet: "#430098",
+        lavender: "#7673C0",
+    },
 };
 
-const firebase_colors = {
-    yellow: "#FFCA28",
-    ember: "#FFA000",
-    orange: "#F57C00",
-};
-
-const heroku_colors = {
-    indigo: "#211746",
-    violet: "#430098",
-    lavender: "#7673C0",
+export const references = {
+    google: `linear-gradient(30deg,${colorPatterns.google_colors.green} 20px, ${colorPatterns.google_colors.blue} 20px, ${colorPatterns.google_colors.blue} 40px, ${colorPatterns.google_colors.red} 40px, ${colorPatterns.google_colors.red} 60px, ${colorPatterns.google_colors.yellow} 60px, ${colorPatterns.google_colors.yellow} 80px, #fff 80px);`,
+    firebase: `linear-gradient(30deg, ${colorPatterns.firebase_colors.orange} 10px, ${colorPatterns.firebase_colors.orange} 30px, ${colorPatterns.firebase_colors.ember} 30px, ${colorPatterns.firebase_colors.ember} 50px, ${colorPatterns.firebase_colors.yellow} 50px, ${colorPatterns.firebase_colors.yellow} 70px, #fff 70px);`,
+    heroku: `linear-gradient(30deg, ${colorPatterns.heroku_colors.indigo} 10px, ${colorPatterns.heroku_colors.indigo} 30px, ${colorPatterns.heroku_colors.lavender} 30px, ${colorPatterns.heroku_colors.lavender} 50px, ${colorPatterns.heroku_colors.violet} 50px, ${colorPatterns.heroku_colors.violet} 70px, #fff 70px);`,
 };
 
 export const mainAboutContainer: SxProps<Theme> = {
     backgroundColor: "#eee",
+    display: "flex",
+    justifyContent: "center",
+    alignContent: "center",
     height: "100vh",
     padding: "2em 1em 2em 1em",
 
-    ".title": {
+    ".papers-title": {
+        backgroundColor: "red",
         paddingBottom: "1em",
         fontWeight: "200",
         textAlign: "center",
@@ -32,98 +42,83 @@ export const mainAboutContainer: SxProps<Theme> = {
 
     ".papers": {
         display: "flex",
-        alignItems: "flex-start",
-        alignContent: "flex-start",
-        columnGap: "6em",
+        alignContent: "center",
+        columnGap: "10vw",
         justifyContent: "center",
 
-        ".left-paper, .right-paper": {
+        ".left-side": {
             display: "flex",
+            alignSelf: "center",
+            marginBottom: "20vh",
             flexDirection: "column",
-            alignItems: "center",
-            backgroundColor: "white",
-            columnGap: "1em",
+            rowGap: "2em",
+            width: "30vw",
 
-            ".left-box, .right-box": {
+            ".tech-box": {
                 display: "flex",
                 flexWrap: "wrap",
-                padding: "1em 2em 1em 2em",
+                alignItems: "center",
                 justifyContent: "center",
-                columnGap: "2em",
-
-                ".title-fe, .title-be": {
-                    fontSize: "3em",
-                    alignSelf: "center",
-                    fontWeight: "200",
-                    color: "black",
-                },
+                gap: "1em",
+                padding: 0,
+                marginTop: "2em",
             },
 
-            ".code-icon, .settings-icon": {
-                fontSize: "3rem",
+            ".fe-paper, .be-paper": {
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
                 backgroundColor: "white",
-                borderRadius: "5em",
-                boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .2)",
+                columnGap: "1em",
+
+                ".fe-box, .be-box": {
+                    display: "flex",
+                    flexWrap: "wrap",
+                    padding: "1em 2em 1em 2em",
+                    justifyContent: "center",
+                    columnGap: "2em",
+
+                    ".fe-title, .be-title": {
+                        fontSize: "3em",
+                        alignSelf: "center",
+                        fontWeight: "200",
+                        color: "black",
+                    },
+
+                    ".code-icon, .settings-icon": {
+                        fontSize: "3rem",
+                        backgroundColor: "white",
+                        borderRadius: "5em",
+                        boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .2)",
+                    },
+                },
             },
         },
 
-        ".middle-floating-boxes": {
-            userSelect: "none",
-            borderRadius: "1em",
-            display: "flex",
-            rowGap: "2em",
-            padding: "2em",
-            flexDirection: "column",
-            ".middle-paper": {
+        ".right-side": {
+            alignSelf: "center",
+            marginBottom: "20vh",
+            ".cloud-boxes": {
+                userSelect: "none",
+                borderRadius: "1em",
                 display: "flex",
-                justifyContent: "center",
-                columnGap: "1em",
-                ".icon": {
-                    fontSize: "2em",
-                    alignSelf: "center",
-                },
-                ".clouds-title": {
-                    padding: ".5em 0 .5em 0",
-                    fontWeight: "200",
-                    fontSize: "2em",
-                },
-            },
-            ".gcp-paper, .firebase-paper, .heroku-paper": {
-                a: {
-                    textDecoration: "none",
-                    color: "black",
-                    borderRadius: "5em",
-                },
-                ".MuiPaper-root": {
-                    padding: "1.5em",
+                rowGap: "2em",
+                padding: "2em",
+                flexDirection: "column",
+                ".middle-paper": {
                     display: "flex",
                     justifyContent: "center",
+                    columnGap: "1em",
+                    ".icon": {
+                        fontSize: "2em",
+                        alignSelf: "center",
+                    },
+                    ".clouds-title": {
+                        padding: ".5em 0 .5em 0",
+                        fontWeight: "200",
+                        fontSize: "2em",
+                    },
                 },
-                ".wrapper": {
-                    cursor: "pointer",
-                    display: "flex",
-                    columnGap: ".5em",
-                    padding: "0 3em 0 3em",
-                    boxShadow: "5px 5px 5px 1px rgba(0, 0, 0, .4)",
-                    backgroundColor: "white",
-                    borderRadius: "5em",
-                },
-                ".wrapper:active": {
-                    transition: ".06s",
-                    boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
-                },
-            },
-
-            ".gcp-paper > .MuiPaper-root": {
-                background: `linear-gradient(30deg,${google_colors.green} 20px, ${google_colors.blue} 20px, ${google_colors.blue} 40px, ${google_colors.red} 40px, ${google_colors.red} 60px, ${google_colors.yellow} 60px, ${google_colors.yellow} 80px, #fff 80px);`,
-            },
-
-            ".firebase-paper > .MuiPaper-root": {
-                background: `linear-gradient(30deg, ${firebase_colors.orange} 10px, ${firebase_colors.orange} 30px, ${firebase_colors.ember} 30px, ${firebase_colors.ember} 50px, ${firebase_colors.yellow} 50px, ${firebase_colors.yellow} 70px, #fff 70px);`,
-            },
-
-            ".heroku-paper > .MuiPaper-root": {
-                background: `linear-gradient(30deg, ${heroku_colors.indigo} 10px, ${heroku_colors.indigo} 30px, ${heroku_colors.lavender} 30px, ${heroku_colors.lavender} 50px, ${heroku_colors.violet} 50px, ${heroku_colors.violet} 70px, #fff 70px);`,
             },
         },
     },
