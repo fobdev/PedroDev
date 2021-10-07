@@ -33,10 +33,10 @@ function App() {
                     <Contact />
                 </Route>
                 <Route exact path="/projects">
-                    <Typography variant="h3" fontWeight="200" textAlign="center" margin="1em">
+                    {/* <Typography variant="h3" fontWeight="200" textAlign="center" margin="1em">
                         This page still under development, come back later!
-                    </Typography>
-                    {/* <About /> */}
+                    </Typography> */}
+                    <About />
                     <Contact />
                 </Route>
                 <Route path="*">
