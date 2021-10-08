@@ -30,7 +30,6 @@ export const mainAboutContainer: SxProps<Theme> = {
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
-    height: "100vh",
     padding: "2em 1em 2em 1em",
 
     ".papers-title": {
@@ -43,42 +42,56 @@ export const mainAboutContainer: SxProps<Theme> = {
     ".papers": {
         display: "flex",
         alignContent: "center",
-        columnGap: "10vw",
         justifyContent: "center",
 
-        ".left-side": {
+        ".main-box": {
             display: "flex",
-            alignSelf: "center",
-            marginBottom: "20vh",
             flexDirection: "column",
             rowGap: "2em",
-            width: "30vw",
 
-            ".tech-box": {
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "1em",
-                padding: 0,
-                marginTop: "2em",
-            },
-
-            ".fe-paper, .be-paper": {
-                display: "flex",
-                flexDirection: "column",
+            ".main-title-paper": {
                 alignItems: "center",
                 backgroundColor: "white",
                 columnGap: "1em",
-
-                ".fe-box, .be-box": {
+                ".display-box": {
                     display: "flex",
-                    flexWrap: "wrap",
-                    padding: "1em 2em 1em 2em",
+                    alignItems: "center",
                     justifyContent: "center",
                     columnGap: "2em",
+                    padding: 0,
 
-                    ".fe-title, .be-title": {
+                    button: {
+                        border: 0,
+                        background: "none",
+                        borderRadius: "1em",
+                        fontSize: "1em",
+                    },
+                    ".techselector-paper": {
+                        transition: ".33s",
+                        display: "flex",
+                        borderRadius: "1em",
+                        padding: ".5em 1em .5em 1em",
+                        columnGap: "1em",
+                        cursor: "pointer",
+                        userSelect: "none",
+                        "&:hover": {
+                            transition: ".10s",
+                            backgroundColor: "#eef",
+                        },
+                        "&:active": {
+                            transition: ".06s",
+                            boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+                        },
+                    },
+                },
+                ".main-title-box": {
+                    display: "flex",
+                    flexDirection: "column",
+                    transition: "all 0.3s",
+                    padding: "1em 4em 1em 4em",
+                    justifyContent: "left",
+                    columnGap: "2em",
+                    ".main-title": {
                         fontSize: "3em",
                         alignSelf: "center",
                         fontWeight: "200",
@@ -86,39 +99,20 @@ export const mainAboutContainer: SxProps<Theme> = {
                     },
 
                     ".code-icon, .settings-icon": {
-                        fontSize: "3rem",
+                        fontSize: "3em",
                         backgroundColor: "white",
                         borderRadius: "5em",
-                        boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .2)",
                     },
                 },
             },
-        },
 
-        ".right-side": {
-            alignSelf: "center",
-            marginBottom: "20vh",
-            ".cloud-boxes": {
-                userSelect: "none",
-                borderRadius: "1em",
+            ".frontend-techbox, .backend-techbox": {
                 display: "flex",
-                rowGap: "2em",
-                padding: "2em",
-                flexDirection: "column",
-                ".middle-paper": {
-                    display: "flex",
-                    justifyContent: "center",
-                    columnGap: "1em",
-                    ".icon": {
-                        fontSize: "2em",
-                        alignSelf: "center",
-                    },
-                    ".clouds-title": {
-                        padding: ".5em 0 .5em 0",
-                        fontWeight: "200",
-                        fontSize: "2em",
-                    },
-                },
+                alignItems: "center",
+                justifyContent: "center",
+                columnGap: "2em",
+                padding: 0,
+                marginTop: "2em",
             },
         },
     },
