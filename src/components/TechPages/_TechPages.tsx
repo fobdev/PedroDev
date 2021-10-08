@@ -1,0 +1,11 @@
+export { default as CPage } from "./CPage";
+export { default as DISCORDPage } from "./DISCORDPage";
+export { default as JSPage } from "./JSPage";
+export { default as MUIPage } from "./MUIPage";
+export { default as MYSQLPage } from "./MYSQLPage";
+export { default as NODEJSPage } from "./NODEJSPage";
+export { default as POSTGRESPage } from "./POSTGRESPage";
+export { default as REACTPage } from "./REACTPage";
+export { default as SASSPage } from "./SASSPage";
+export { default as TSPage } from "./TSPage";
+export { default as YOUTUBEPage } from "./YOUTUBEPage";
