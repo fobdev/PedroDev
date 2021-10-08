@@ -22,6 +22,7 @@ export const mainBigButtonContainer = (colorPattern: string) => {
                 borderRadius: "5em",
             },
             ".wrapper": {
+                transition: ".5s",
                 cursor: "pointer",
                 display: "flex",
                 columnGap: "1em",
@@ -33,6 +34,10 @@ export const mainBigButtonContainer = (colorPattern: string) => {
             ".wrapper:active": {
                 transition: ".06s",
                 boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+            },
+            ".wrapper:hover": {
+                transition: ".5s",
+                background: "#eff",
             },
         },
     };
