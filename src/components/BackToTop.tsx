@@ -3,7 +3,6 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { IconButton, Slide } from "@mui/material";
 
 export default function BackToTop() {
-    const main_color = "#49a6e9";
     const [scrolled, setScrolled] = useState(false);
     window.onscroll = function () {
         if (document.documentElement.scrollTop > 20) {
