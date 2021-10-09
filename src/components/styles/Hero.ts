@@ -2,88 +2,91 @@ import { SxProps, Theme } from "@mui/system";
 const main_color = "#49a6e9";
 
 export const mainHeroContainer: SxProps<Theme> = {
+    backgroundColor: "#eee",
     display: "flex",
-    height: "100vh",
-    justifyContent: "space-between",
-    paddingBottom: "10vh",
-    alignItems: "center",
-
-    "@media only screen and (max-height: 580px)": {
-        ".hello-text": {
-            fontSize: "2em",
-        },
-        ".the-big-name": {
-            fontSize: "3em",
-        },
-    },
-    ".the-big-name, .description, .subtitle, .hello-text": {
-        fontFamily: "Roboto",
-        fontWeight: "200",
-        textAlign: "left",
-    },
-
-    ".hello-text": {
-        fontWeight: "bold",
-    },
-
-    ".description": {
-        fontSize: "2em",
-
-        span: {
-            textShadow: "0px 0px 2px #000",
-        },
-    },
-
-    ".subtitle": {
-        fontSize: "1.2em",
-    },
-
-    ".buttons-box": {
+    justifyContent: "space-around",
+    alignContent: "center",
+    padding: "2em",
+    height: "80vh",
+    ".left-side": {
         display: "flex",
-        marginTop: "3em",
-        justifyContent: "left",
-        columnGap: "5em",
-
-        ".work-button, .contact-button": {
-            padding: "1em 4em",
-            borderRadius: "5em",
-            backgroundColor: "white",
-            color: main_color,
-
-            ".router-projects": {
-                textDecoration: "none",
-                color: main_color,
-            },
-        },
-    },
-    ".box-image": {
-        img: {
-            width: "500px",
-            borderRadius: "5em",
-        },
-    },
-    "@media only screen and (max-width: 780px)": {
-        height: "100vh",
-
-        ".box-image": {
-            display: "none",
-        },
-
-        ".hello-text, .the-big-name, .description, .subtitle": {
-            textAlign: "center",
-        },
-
-        ".buttons-box": {
+        flexDirection: "column",
+        justifyContent: "center",
+        alignContent: "center",
+        maxWidth: "100%",
+        ".text": {
             display: "flex",
             flexDirection: "column",
-            rowGap: "1em",
-            marginTop: "3em",
-            alignItems: "center",
-
-            ".work-button, .contact-button": {
-                width: "15rem",
-                borderRadius: "5em",
+            ".hello": {
+                fontSize: "clamp(2em, 5vw, 2.5em)",
+                fontWeight: "500",
             },
+            ".pedro": {
+                fontSize: "clamp(5em, 10vw, 6em)",
+                fontWeight: "200",
+            },
+            ".description": {
+                fontSize: "clamp(1em, 5vw ,2em)",
+                fontWeight: "200",
+                span: {
+                    textShadow: "rgb(0 0 0) 0px 0px 2px",
+                },
+            },
+            ".subtitle": {
+                fontSize: "clamp(1em, 3vw, 1.3em)",
+                fontWeight: "200",
+            },
+        },
+        ".buttons": {
+            display: "inherit",
+            columnGap: "4em",
+            marginTop: "1.5em",
+            ".btn-contact, .btn-work": {
+                borderRadius: "5em",
+                background: "white",
+                color: main_color,
+                fontSize: "1em",
+                padding: "1em 4em 1em 4em",
+                ".router-projects": {
+                    textDecoration: "none",
+                    color: main_color,
+                },
+            },
+        },
+    },
+
+    ".right-side": {
+        display: "flex",
+        img: {
+            width: "30em",
+            borderRadius: "5em",
+            alignSelf: "center",
+        },
+    },
+
+    "@media (max-width: 720px)": {
+        ".left-side": {
+            textAlign: "center",
+            ".text": {
+                ".pedro": {
+                    lineHeight: "0.9em",
+                },
+            },
+            ".buttons": {
+                flexDirection: "column",
+                rowGap: "1em",
+                width: "60%",
+                alignSelf: "center",
+            },
+        },
+        ".right-side": {
+            display: "none",
+        },
+    },
+
+    "@media (max-width: 1000px)": {
+        ".right-side": {
+            display: "none",
         },
     },
 };
