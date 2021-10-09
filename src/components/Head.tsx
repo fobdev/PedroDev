@@ -1,17 +1,15 @@
 /** MUI Components Imports */
 import {
-    Button,
     Container,
     IconButton,
     Typography,
-    ClickAwayListener,
-    MenuItem,
-    MenuList,
-    Paper,
     Grow,
-    Popper,
     Box,
+    List,
     Slide,
+    ListItemButton,
+    ListItemIcon,
+    Button,
 } from "@mui/material";
 
 /** MUI Icons Imports */
@@ -19,78 +17,47 @@ import TranslateIcon from "@mui/icons-material/Translate";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import logo from "../images/logo.svg";
-import us_png from "../images/us.svg";
-import br_png from "../images/br.svg";
 import { Link } from "react-router-dom";
 
-/** React */
+/** Styling */
 import { mainHeadBox } from "./styles/Head";
-import { useRef, useState, useEffect } from "react";
 
 export default function Head() {
-    const [open, setOpen] = useState(false);
-    const [animate, setAnimate] = useState(false);
-    const anchorRef = useRef<HTMLButtonElement>(null);
-
-    const handleToggle = () => {
-        setOpen((prevOpen) => !prevOpen);
-    };
-
-    const handleErrorPopup = (event: Event | React.SyntheticEvent) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target as HTMLElement)) {
-            return;
-        }
-
-        setOpen(false);
-
-        return !animate ? setAnimate(true) : setAnimate(false);
-    };
-
-    function handleListKeyDown(event: React.KeyboardEvent) {
-        if (event.key === "Tab") {
-            event.preventDefault();
-            setOpen(false);
-        } else if (event.key === "Escape") {
-            setOpen(false);
-        }
-    }
-
-    const prevOpen = useRef(open);
-    useEffect(() => {
-        if (prevOpen.current === true && open === false) {
-            anchorRef.current!.focus();
-        }
-
-        prevOpen.current = open;
-    }, [open]);
-
     return (
         <Box position="sticky" top="0" width="100%" zIndex="999" sx={mainHeadBox}>
-            <Container className="mainContainer" maxWidth={false} disableGutters>
+            <Container className="main-container" maxWidth={false}>
                 <Box className="title-box">
-                    <div>
-                        <a href="/">
-                            <Grow in={true} timeout={{ enter: 1000 }}>
-                                <img src={logo} alt="Website Logo" />
-                            </Grow>
-                            <Grow in={true} timeout={{ enter: 1000 }}>
-                                <Typography className="title">
-                                    Pedro<span>Dev</span>
-                                </Typography>
-                            </Grow>
-                        </a>
-                    </div>
+                    <Link
+                        className="title-link"
+                        to="/"
+                        onClick={() => {
+                            window.scrollBy({
+                                top: -999,
+                                left: 0,
+                                behavior: "smooth",
+                            });
+                        }}
+                    >
+                        <Grow in={true} timeout={{ enter: 1000 }}>
+                            <img src={logo} alt="Website Logo" />
+                        </Grow>
+                        <Grow in={true} timeout={{ enter: 1000 }}>
+                            <Typography className="title">
+                                Pedro<span>Dev</span>
+                            </Typography>
+                        </Grow>
+                    </Link>
                 </Box>
                 <Box className="right-box">
                     <IconButton className="menu">
                         <MenuRoundedIcon />
                     </IconButton>
-                    <Box className="info-box" component="ul">
-                        <li>
-                            <Slide in={true} timeout={{ enter: 500 }}>
-                                <Button
-                                    variant="text"
+                    <List className="info-box">
+                        <Slide in={true} timeout={{ enter: 500 }}>
+                            <Link className="router-home" to="/">
+                                <ListItemButton
                                     disableRipple
                                     onClick={() => {
                                         window.scrollBy({
@@ -100,16 +67,13 @@ export default function Head() {
                                         });
                                     }}
                                 >
-                                    <Link className="router-home" to="/">
-                                        Home
-                                    </Link>
-                                </Button>
-                            </Slide>
-                        </li>
-                        <li>
-                            <Slide in={true} timeout={{ enter: 1500 }}>
-                                <Button
-                                    variant="text"
+                                    Home
+                                </ListItemButton>
+                            </Link>
+                        </Slide>
+                        <Slide in={true} timeout={{ enter: 1500 }}>
+                            <Link className="router-projects" to="/projects">
+                                <ListItemButton
                                     disableRipple
                                     onClick={() => {
                                         window.scrollBy({
@@ -119,15 +83,14 @@ export default function Head() {
                                         });
                                     }}
                                 >
-                                    <Link className="router-projects" to="/projects">
-                                        Projects
-                                    </Link>
-                                </Button>
-                            </Slide>
-                        </li>
-                        <li>
-                            <Slide in={true} timeout={{ enter: 2000 }}>
-                                <Button
+                                    Projects
+                                </ListItemButton>
+                            </Link>
+                        </Slide>
+                        <Slide in={true} timeout={{ enter: 2000 }}>
+                            <Box className="router-contact">
+                                <ListItemButton
+                                    disableRipple
                                     onClick={() =>
                                         window.scrollTo({
                                             top: 999,
@@ -135,111 +98,48 @@ export default function Head() {
                                             behavior: "smooth",
                                         })
                                     }
-                                    variant="text"
-                                    disableRipple
                                 >
                                     Contact
-                                </Button>
-                            </Slide>
-                        </li>
-                    </Box>
+                                </ListItemButton>
+                            </Box>
+                        </Slide>
+                    </List>
                     <Grow in={true} timeout={{ enter: 1000 }}>
-                        <Box className="links-box" component="ul">
-                            <li>
-                                <IconButton
-                                    className="translate-button"
-                                    ref={anchorRef}
-                                    id="composition-button"
-                                    onClick={handleToggle}
+                        <List className="links-box">
+                            <ListItemIcon>
+                                <a
+                                    href="https://wa.me/+5599982207527"
+                                    rel="noreferrer"
+                                    target="_blank"
                                 >
-                                    <TranslateIcon />
-                                </IconButton>
-                                <Popper
-                                    open={open}
-                                    anchorEl={anchorRef.current}
-                                    role={undefined}
-                                    placement="bottom-start"
-                                    transition
-                                    disablePortal
-                                >
-                                    {({ TransitionProps, placement }) => (
-                                        <Grow
-                                            {...TransitionProps}
-                                            style={{
-                                                transformOrigin:
-                                                    placement === "bottom-start"
-                                                        ? "left top"
-                                                        : "left bottom",
-                                            }}
-                                        >
-                                            <Paper>
-                                                <ClickAwayListener onClickAway={handleErrorPopup}>
-                                                    <MenuList
-                                                        autoFocusItem={open}
-                                                        id="composition-menu"
-                                                        aria-labelledby="composition-button"
-                                                        onKeyDown={handleListKeyDown}
-                                                    >
-                                                        <MenuItem
-                                                            onClick={handleErrorPopup}
-                                                            sx={{ width: "150px" }}
-                                                        >
-                                                            <img
-                                                                src={br_png}
-                                                                alt="Brazil"
-                                                                style={{
-                                                                    marginRight: ".5em",
-                                                                    width: "20%",
-                                                                    position: "relative",
-                                                                }}
-                                                            />
-                                                            Português
-                                                        </MenuItem>
-                                                        <MenuItem
-                                                            onClick={handleErrorPopup}
-                                                            sx={{ width: "150px" }}
-                                                        >
-                                                            <img
-                                                                src={us_png}
-                                                                alt="United States"
-                                                                style={{
-                                                                    marginRight: ".5em",
-                                                                    width: "20%",
-                                                                    position: "relative",
-                                                                }}
-                                                            />
-                                                            English
-                                                        </MenuItem>
-                                                    </MenuList>
-                                                </ClickAwayListener>
-                                            </Paper>
-                                        </Grow>
-                                    )}
-                                </Popper>
-                            </li>
-                            <li>
+                                    <IconButton className="whatsapp-button">
+                                        <WhatsAppIcon />
+                                    </IconButton>
+                                </a>
+                            </ListItemIcon>
+                            <ListItemIcon>
                                 <a
                                     href="https://www.linkedin.com/in/pedro-henrique-dev1997/"
                                     rel="noreferrer"
                                     target="_blank"
                                 >
-                                    <IconButton>
+                                    <IconButton className="linkedin-button">
                                         <LinkedInIcon />
                                     </IconButton>
                                 </a>
-                            </li>
-                            <li>
+                            </ListItemIcon>
+                            <ListItemIcon>
                                 <a
                                     href="https://github.com/fobdev"
                                     rel="noreferrer"
                                     target="_blank"
                                 >
-                                    <IconButton>
+                                    <IconButton className="github-button">
                                         <GitHubIcon />
                                     </IconButton>
                                 </a>
-                            </li>
-                        </Box>
+                            </ListItemIcon>
+                        </List>
                     </Grow>
                 </Box>
             </Container>

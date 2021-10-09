@@ -5,21 +5,13 @@ export const mainHeadBox: SxProps<Theme> = {
     backgroundColor: "rgba(255,255,255,0.70)",
     backdropFilter: "blur(20px)",
 
-    ".MuiButton-root": {
-        borderRadius: 0,
-        color: "black",
-        "&:hover": {
-            color: main_color,
-        },
-    },
-
-    ".mainContainer": {
+    ".main-container": {
         display: "flex",
         justifyContent: "space-between",
-
+        alignItems: "center",
         ".title-box": {
-            padding: "1em",
-            a: {
+            margin: "1em",
+            ".title-link": {
                 display: "flex",
                 textDecoration: "none",
             },
@@ -28,83 +20,53 @@ export const mainHeadBox: SxProps<Theme> = {
             },
 
             ".title": {
-                marginLeft: "0.2em",
                 fontFamily: "Roboto",
                 userSelect: "none",
                 color: "black",
                 fontSize: "1.5em",
-            },
 
-            div: {
-                display: "flex",
-                width: "10%",
-            },
-
-            span: {
-                color: main_color,
+                span: {
+                    color: main_color,
+                },
             },
         },
 
         ".right-box": {
-            display: "flex",
-            ".menu": {
+            ".info-box, .links-box": {
                 display: "none",
-                marginRight: "1em",
+            },
+
+            ".menu": {
+                display: "flex",
                 color: main_color,
             },
+        },
 
-            "@media only screen and (max-width: 780px)": {
+        "@media only screen and (min-width: 720px)": {
+            ".right-box": {
+                display: "flex",
                 ".menu": {
-                    display: "inherit",
-                },
-                ".info-box, .links-box": {
                     display: "none",
                 },
-            },
+                ".info-box, .links-box": {
+                    display: "flex",
+                    alignContent: "center",
+                    ".router-home, .router-projects, .router-contact": {
+                        textDecoration: "none",
+                        color: "black",
 
-            ".info-box": {
-                padding: 0,
-                display: "inherit",
-                justifyContent: "right",
-                columnGap: "1em",
-                listStyle: "none",
-                alignItems: "center",
-                margin: 0,
-                Button: {
-                    padding: 0,
-                },
-
-                ".router-projects, .router-home": {
-                    textDecoration: "none",
-                    color: "black",
-
-                    "&:hover": {
-                        color: main_color,
+                        "&:hover": {
+                            color: main_color,
+                        },
                     },
                 },
-            },
 
-            ".links-box": {
-                padding: "0 1em 0 2em",
-                margin: 0,
-                display: "flex",
-                listStyle: "none",
-                li: {
-                    alignSelf: "center",
+                ".info-box": {
+                    marginRight: "2em",
                 },
 
-                ".translate-button": {
+                ".whatsapp-button, .linkedin-button, .github-button": {
                     color: main_color,
-                    marginRight: "1em",
-                },
-
-                ".MuiIconButton-root": {
-                    color: main_color,
-                    textDecoration: "none",
-                },
-                ".discord-button": {
-                    width: "24px",
-                    height: "24px",
                 },
             },
         },
