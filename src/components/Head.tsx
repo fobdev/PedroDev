@@ -9,11 +9,9 @@ import {
     Slide,
     ListItemButton,
     ListItemIcon,
-    Button,
 } from "@mui/material";
 
 /** MUI Icons Imports */
-import TranslateIcon from "@mui/icons-material/Translate";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";

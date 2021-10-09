@@ -1,4 +1,4 @@
-import { Fade, Typography, Container, Button, Box } from "@mui/material";
+import { Fade, Typography, Button, Box } from "@mui/material";
 import { useState } from "react";
 import { useStyles } from "./utils/animations";
 import img1 from "../images/hero1.gif";
