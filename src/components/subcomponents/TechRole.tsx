@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material";
+import { Paper, Typography, ButtonBase } from "@mui/material";
 import { mainTechRolesContainer } from "./styles/TechRoles";
 
 interface Props {
@@ -11,10 +11,10 @@ interface Props {
 export const TechRole: React.FC<Props> = ({ image, title, onClick, selected }) => {
     return (
         <Paper elevation={5} sx={mainTechRolesContainer(selected)}>
-            <button onClick={onClick}>
+            <ButtonBase disableRipple onClick={onClick}>
                 <img className="image" src={image} alt="Javascript" />
                 <Typography className="title">{title}</Typography>
-            </button>
+            </ButtonBase>
         </Paper>
     );
 };
