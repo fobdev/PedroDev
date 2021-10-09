@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import { Paper, Typography, Slide, Grow } from "@mui/material";
+import { Paper, Typography, Grow } from "@mui/material";
 import { mainTSPContainer } from "./styles/Project";
 
 interface Props {
