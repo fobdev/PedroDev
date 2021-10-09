@@ -5,7 +5,7 @@ export const mainContactContainer: SxProps<Theme> = {
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
-    height: "100vh",
+    height: "80vh",
     columnGap: "10em",
 
     ".dev-box": {
@@ -57,6 +57,13 @@ export const mainContactContainer: SxProps<Theme> = {
                 fontSize: "2.5em",
                 fontWeight: "200",
             },
+        },
+        "@media only screen and (max-width: 500px)": {
+            gridTemplateAreas: `"tt tt tt "
+                                "em em em"
+                                "sj sj sj"
+                                "ms ms ms"
+                                ". . bs"`,
         },
     },
 };
