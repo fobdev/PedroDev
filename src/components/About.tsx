@@ -157,26 +157,26 @@ export default function About() {
                                         <TechRole
                                             image={JavascriptSVG}
                                             title="JavaScript"
-                                            onClick={() => handlePaperState("javascript")}
+                                            // onClick={() => handlePaperState("javascript")}
                                             selected={paperState.javascript}
                                         />
                                         <TechRole
                                             image={ReactSVG}
                                             title="React"
                                             selected={paperState.react}
-                                            onClick={() => handlePaperState("react")}
+                                            // onClick={() => handlePaperState("react")}
                                         />
                                         <TechRole
                                             image={MUISVG}
                                             title="MUI"
                                             selected={paperState.mui}
-                                            onClick={() => handlePaperState("mui")}
+                                            // onClick={() => handlePaperState("mui")}
                                         />
                                         <TechRole
                                             image={SassSVG}
                                             title="SASS"
                                             selected={paperState.sass}
-                                            onClick={() => handlePaperState("sass")}
+                                            // onClick={() => handlePaperState("sass")}
                                         />
                                     </Box>
                                 </Slide>
@@ -193,37 +193,37 @@ export default function About() {
                                             image={PostgreSQLSVG}
                                             title="Postgres"
                                             selected={paperState.postgres}
-                                            onClick={() => handlePaperState("postgres")}
+                                            // onClick={() => handlePaperState("postgres")}
                                         />
                                         <TechRole
                                             image={CppSVG}
                                             title="C/C++"
                                             selected={paperState.cpp}
-                                            onClick={() => handlePaperState("cpp")}
+                                            // onClick={() => handlePaperState("cpp")}
                                         />
                                         <TechRole
                                             image={MySQLSVG}
                                             title="MySQL"
                                             selected={paperState.mysql}
-                                            onClick={() => handlePaperState("mysql")}
+                                            // onClick={() => handlePaperState("mysql")}
                                         />
                                         <TechRole
                                             image={NodeJSSVG}
                                             title="Node.JS"
                                             selected={paperState.nodejs}
-                                            onClick={() => handlePaperState("nodejs")}
+                                            // onClick={() => handlePaperState("nodejs")}
                                         />
                                         <TechRole
                                             image={DiscordSVG}
                                             title="Discord.JS"
                                             selected={paperState.discord}
-                                            onClick={() => handlePaperState("discord")}
+                                            // onClick={() => handlePaperState("discord")}
                                         />
                                         <TechRole
                                             image={YouTubeSVG}
                                             title="YouTube API"
                                             selected={paperState.youtube}
-                                            onClick={() => handlePaperState("youtube")}
+                                            // onClick={() => handlePaperState("youtube")}
                                         />
                                     </Box>
                                 </Slide>
