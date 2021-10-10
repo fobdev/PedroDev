@@ -44,7 +44,8 @@ export const mainHeadBox: SxProps<Theme> = {
 
         "@media only screen and (min-width: 720px)": {
             ".right-box": {
-                display: "flex",
+                display: "inline-flex",
+                columnGap: "2em",
                 ".menu": {
                     display: "none",
                 },
@@ -59,10 +60,6 @@ export const mainHeadBox: SxProps<Theme> = {
                             color: main_color,
                         },
                     },
-                },
-
-                ".info-box": {
-                    marginRight: "2em",
                 },
 
                 ".whatsapp-button, .linkedin-button, .github-button": {

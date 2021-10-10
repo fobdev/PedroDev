@@ -3,6 +3,7 @@ const main_color = "#49a6e9";
 
 export const mainContactContainer: SxProps<Theme> = {
     alignItems: "center",
+    margin: "2em auto",
     display: "flex",
     justifyContent: "center",
     height: "80vh",

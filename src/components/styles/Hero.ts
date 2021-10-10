@@ -4,9 +4,9 @@ const main_color = "#49a6e9";
 export const mainHeroContainer: SxProps<Theme> = {
     backgroundColor: "#eee",
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
+    columnGap: "5em",
     alignContent: "center",
-    padding: "2em",
     height: "80vh",
     ".left-side": {
         display: "flex",

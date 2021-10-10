@@ -107,7 +107,7 @@ export default function Contact() {
     };
 
     return (
-        <Container sx={mainContactContainer}>
+        <Container sx={mainContactContainer} disableGutters>
             <Box className="dev-box" alignSelf="center">
                 <Typography
                     variant="h3"
