@@ -35,9 +35,9 @@ export default function Contact() {
     };
 
     const [form, setForm] = useState<userInfo>(emailObject);
-    const emailRef = useRef<StandardTextFieldProps>();
-    const messageRef = useRef<StandardTextFieldProps>();
-    const subjectRef = useRef<StandardTextFieldProps>();
+    const emailRef = useRef<StandardTextFieldProps>(null);
+    const messageRef = useRef<StandardTextFieldProps>(null);
+    const subjectRef = useRef<StandardTextFieldProps>(null);
 
     const [popup, setPopup] = useState(false);
     const [popup_error, setPopup_error] = useState(false);
@@ -88,6 +88,12 @@ export default function Contact() {
                 function (response) {
                     console.log(response);
                     handlePopup("send_success");
+
+                    // @ts-ignore
+                    messageRef.current.value = "";
+                    // @ts-ignore
+                    subjectRef.current.value = "";
+
                     setLoading(false);
                 },
                 function (error) {
@@ -166,11 +172,7 @@ export default function Contact() {
                 >
                     Send
                 </LoadingButton>
-                <Dialog
-                    open={popup}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
+                <Dialog open={popup}>
                     <DialogTitle id="alert-dialog-title">{"Thank you!"}</DialogTitle>
                     <DialogContent>
                         <DialogContentText id="alert-dialog-description">
@@ -183,11 +185,7 @@ export default function Contact() {
                         </Button>
                     </DialogActions>
                 </Dialog>
-                <Dialog
-                    open={popup_emptyFields}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
+                <Dialog open={popup_emptyFields}>
                     <DialogTitle id="alert-dialog-title">
                         {"Please fill all the fields."}
                     </DialogTitle>
@@ -202,11 +200,7 @@ export default function Contact() {
                         </Button>
                     </DialogActions>
                 </Dialog>
-                <Dialog
-                    open={popup_error}
-                    aria-labelledby="alert-dialog-title"
-                    aria-describedby="alert-dialog-description"
-                >
+                <Dialog open={popup_error}>
                     <DialogTitle id="alert-dialog-title">
                         {"Oops... Something went wrong."}
                     </DialogTitle>
