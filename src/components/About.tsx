@@ -84,6 +84,7 @@ export default function About() {
                             <Box className="main-title-box" ref={insideContainer} overflow="hidden">
                                 <Box className="display-box">
                                     <ButtonBase
+                                        disableRipple
                                         onClick={() => {
                                             if (!frontEnd) {
                                                 handlePaperState("typescript");
