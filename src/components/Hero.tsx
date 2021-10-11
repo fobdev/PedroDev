@@ -1,5 +1,4 @@
 import { Fade, Typography, Button, Box } from "@mui/material";
-import { useState } from "react";
 import { useStyles } from "./utils/animations";
 import img1 from "../images/hero1.gif";
 import "./utils/animations.ts";
@@ -9,7 +8,6 @@ import { mainHeroContainer } from "./styles/Hero";
 import { Link } from "react-router-dom";
 export default function Hero() {
     const { colorChange, float } = useStyles();
-    const [animate, setAnimate] = useState(false);
 
     return (
         <Box sx={mainHeroContainer}>
@@ -56,7 +54,13 @@ export default function Hero() {
                             disableRipple
                             size="large"
                             startIcon={<ComputerRoundedIcon />}
-                            onClick={() => (!animate ? setAnimate(true) : setAnimate(false))}
+                            onClick={() => {
+                                window.scrollBy({
+                                    top: -999,
+                                    left: 0,
+                                    behavior: "smooth",
+                                });
+                            }}
                         >
                             <Link className="router-projects" to="/projects">
                                 Projects
