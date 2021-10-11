@@ -1,5 +1,6 @@
 import { Slide, Grow, Paper, Typography, ButtonBase } from "@mui/material";
 import { update, mapValues } from "lodash";
+import { mainTechRolesContainer } from "./subcomponents/styles/TechRoles";
 import { Box } from "@mui/system";
 import { mainAboutContainer } from "./styles/About";
 import CodeIcon from "@mui/icons-material/Code";
@@ -151,33 +152,32 @@ export default function About() {
                                         <TechRole
                                             image={TypescriptSVG}
                                             title="Typescript"
-                                            onClick={() => handlePaperState("typescript")}
                                             selected={paperState.typescript}
+                                            onClick={() => handlePaperState("typescript")}
                                         />
                                         <TechRole
                                             image={JavascriptSVG}
                                             title="JavaScript"
-                                            // onClick={() => handlePaperState("javascript")}
                                             selected={paperState.javascript}
+                                            onClick={() => handlePaperState("javascript")}
                                         />
-                                        <TechRole
-                                            image={ReactSVG}
-                                            title="React"
-                                            selected={paperState.react}
-                                            // onClick={() => handlePaperState("react")}
-                                        />
-                                        <TechRole
-                                            image={MUISVG}
-                                            title="MUI"
-                                            selected={paperState.mui}
-                                            // onClick={() => handlePaperState("mui")}
-                                        />
-                                        <TechRole
-                                            image={SassSVG}
-                                            title="SASS"
-                                            selected={paperState.sass}
-                                            // onClick={() => handlePaperState("sass")}
-                                        />
+
+                                        <Paper
+                                            elevation={5}
+                                            sx={mainTechRolesContainer(paperState.react)}
+                                        >
+                                            <ButtonBase
+                                                disableRipple
+                                                onClick={() => handlePaperState("react")}
+                                            >
+                                                <img className="image" src={ReactSVG} alt="React" />
+                                                <img className="image" src={MUISVG} alt="MUI" />
+                                                <img className="image" src={SassSVG} alt="SASS" />
+                                                <Typography className="title">
+                                                    React / MUI / Sass
+                                                </Typography>
+                                            </ButtonBase>
+                                        </Paper>
                                     </Box>
                                 </Slide>
                                 <Slide
@@ -193,37 +193,37 @@ export default function About() {
                                             image={NodeJSSVG}
                                             title="Node.JS"
                                             selected={paperState.nodejs}
-                                            // onClick={() => handlePaperState("nodejs")}
+                                            onClick={() => handlePaperState("nodejs")}
                                         />
                                         <TechRole
                                             image={PostgreSQLSVG}
                                             title="Postgres"
                                             selected={paperState.postgres}
-                                            // onClick={() => handlePaperState("postgres")}
+                                            onClick={() => handlePaperState("postgres")}
                                         />
                                         <TechRole
                                             image={CppSVG}
                                             title="C/C++"
                                             selected={paperState.cpp}
-                                            // onClick={() => handlePaperState("cpp")}
+                                            onClick={() => handlePaperState("cpp")}
                                         />
                                         <TechRole
                                             image={MySQLSVG}
                                             title="MySQL"
                                             selected={paperState.mysql}
-                                            // onClick={() => handlePaperState("mysql")}
+                                            onClick={() => handlePaperState("mysql")}
                                         />
                                         <TechRole
                                             image={DiscordSVG}
                                             title="Discord.JS"
                                             selected={paperState.discord}
-                                            // onClick={() => handlePaperState("discord")}
+                                            onClick={() => handlePaperState("discord")}
                                         />
                                         <TechRole
                                             image={YouTubeSVG}
                                             title="YouTube API"
                                             selected={paperState.youtube}
-                                            // onClick={() => handlePaperState("youtube")}
+                                            onClick={() => handlePaperState("youtube")}
                                         />
                                     </Box>
                                 </Slide>

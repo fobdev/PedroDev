@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Project from "../subcomponents/Project";
 
 interface Props {
@@ -9,18 +9,23 @@ interface Props {
 export const JSPage: React.FC<Props> = ({ growIn, image }) => {
     return (
         <Project title="Javascript Projects" image={image} growIn={growIn}>
-            <Typography>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio harum doloremque
-                mollitia eius accusantium perspiciatis omnis saepe dicta itaque, velit dolorem
-                accusamus, excepturi ratione facere pariatur laudantium molestias aspernatur veniam!
-                Aspernatur sequi delectus itaque nesciunt quam debitis sint ullam explicabo, tenetur
-                nemo ipsum eos molestiae consectetur perferendis, veritatis veniam ducimus, dolorum
-                fugiat rerum sunt. Possimus corrupti deserunt cum, nam eveniet modi laboriosam
-                temporibus eos assumenda quas reprehenderit molestiae pariatur, nesciunt vitae id
-                obcaecati dolorem libero impedit aut. Nulla delectus iste praesentium error saepe
-                recusandae beatae, ab distinctio sit provident molestias ea obcaecati quidem
-                doloribus rem amet nobis impedit aliquid enim.
-            </Typography>
+            <Box>
+                <Typography variant="h2" fontWeight="200">
+                    Javascript + Discord.JS
+                </Typography>
+                <Typography variant="subtitle1">
+                    I have a Discord bot entirely made with Javascript, with a music module that
+                    makes usage of the YouTube API, more info in it's GitHub repository.
+                </Typography>
+                <Typography variant="h2" fontWeight="200" sx={{ paddingTop: "1em" }}>
+                    Javascript + Express.JS and Bootstrap
+                </Typography>
+                <Typography variant="subtitle1">
+                    I made a simple website with Javascript and Express.js for the backend and
+                    Bootstrap for the frontend, for a college project. It's a chat with text
+                    channels that can host several users simultaneously.
+                </Typography>
+            </Box>
         </Project>
     );
 };
