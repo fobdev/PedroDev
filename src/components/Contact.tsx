@@ -67,6 +67,7 @@ export default function Contact() {
     };
 
     const handleChange = (prop: keyof userInfo) => (e: React.ChangeEvent<HTMLInputElement>) => {
+        setButtonEnabled(true);
         setForm({ ...form, [prop]: e.target.value });
         if (prop === "email") {
             if (emailRegex.test(e.target.value)) setButtonEnabled(true);
@@ -93,11 +94,12 @@ export default function Contact() {
                     messageRef.current.value = "";
                     // @ts-ignore
                     subjectRef.current.value = "";
-
+                    setButtonEnabled(false);
                     setLoading(false);
                 },
                 function (error) {
                     console.log(error);
+                    setButtonEnabled(false);
                     setLoading(false);
                     handlePopup("error");
                     console.log(error);
