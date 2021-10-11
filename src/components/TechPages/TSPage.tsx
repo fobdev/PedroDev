@@ -81,6 +81,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                         </Repo>
                     </Box>
                     <LargeImageHover
+                        side="right"
                         image={DiscordTSIMG}
                         link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts"
                     />
