@@ -20,8 +20,6 @@ const firebaseConfig = {
     measurementId: "G-3GYZLMB0BQ",
 };
 
-// Import the functions you need from the SDKs you need
-
 function App() {
     const app = initializeApp(firebaseConfig);
     getAnalytics(app);
@@ -34,9 +32,6 @@ function App() {
                     <Contact />
                 </Route>
                 <Route exact path="/projects">
-                    {/* <Typography variant="h3" fontWeight="200" textAlign="center" margin="1em">
-                        This page still under development, come back later!
-                    </Typography> */}
                     <About />
                     <Contact />
                 </Route>
