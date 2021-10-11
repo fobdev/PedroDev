@@ -17,10 +17,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import logo from "../images/logo.svg";
-import { Link } from "react-router-dom";
 
 /** Styling */
 import { mainHeadBox } from "./styles/Head";
+
+/** React */
+import { Link } from "react-router-dom";
 
 export default function Head() {
     return (
