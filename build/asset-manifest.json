@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4f19616d.chunk.css",
-    "main.js": "/static/js/main.8acc292a.chunk.js",
-    "main.js.map": "/static/js/main.8acc292a.chunk.js.map",
+    "main.js": "/static/js/main.edc4c90f.chunk.js",
+    "main.js.map": "/static/js/main.edc4c90f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0670bf4.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0670bf4.js.map",
     "static/js/2.1b9b5676.chunk.js": "/static/js/2.1b9b5676.chunk.js",
@@ -21,6 +21,7 @@
     "static/media/React.116e502c.svg": "/static/media/React.116e502c.svg",
     "static/media/Sass.d0d03348.svg": "/static/media/Sass.d0d03348.svg",
     "static/media/YouTube.350d8f8f.svg": "/static/media/YouTube.350d8f8f.svg",
+    "static/media/discord-typescript.0a9b96d8.png": "/static/media/discord-typescript.0a9b96d8.png",
     "static/media/hero1.567e4b5d.gif": "/static/media/hero1.567e4b5d.gif",
     "static/media/javascript.acc4642f.svg": "/static/media/javascript.acc4642f.svg",
     "static/media/logo.7d46b8e7.svg": "/static/media/logo.7d46b8e7.svg",
@@ -31,6 +32,6 @@
     "static/js/runtime-main.d0670bf4.js",
     "static/js/2.1b9b5676.chunk.js",
     "static/css/main.4f19616d.chunk.css",
-    "static/js/main.8acc292a.chunk.js"
+    "static/js/main.edc4c90f.chunk.js"
   ]
 }
