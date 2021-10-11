@@ -1,5 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import Project from "../subcomponents/Project";
+import ReactIMG from "../../images/reactcode.png";
+import Repo from "./model/Repo";
+import LargeImageHover from "./model/LargeImageHover";
 
 interface Props {
     growIn: boolean;
@@ -10,14 +13,58 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
     return (
         <Project title="React Projects" image={image} growIn={growIn}>
             <Box>
-                <Typography variant="h2" fontWeight="200">
-                    React + Typescript, Material UI + JSS (Sass / PostCSS)
+                <Typography className="page-maintitle" variant="h2" fontWeight="200" padding=".3em">
+                    React & Typescript / Mui + Sass
                 </Typography>
-                <Typography variant="subtitle1">
-                    This entire website was made inside of the React Typescript package, where SASS
-                    is built-in with PostCSS and used in JSS, the entire source code can be found in
-                    my GitHub repository.
-                </Typography>
+                <Box
+                    className="page-mainbox"
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                >
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            rowGap: "2em",
+                            width: "80%",
+                        }}
+                    >
+                        <Repo repo="https://github.com/fobdev/PedroDev" title="PedroDev">
+                            My personal portfolio, made completely in React in junction with
+                            Typescript. This project is still under development and I push commits
+                            to it it daily .
+                            <br />
+                            If you want to help me develop my website, feel free to send requests to
+                            this repository.
+                            <ul>
+                                React Typescript modules used:
+                                <li>
+                                    <code style={{ background: "#eef" }}>@types/react</code>
+                                </li>
+                                <li>
+                                    <code style={{ background: "#eef" }}>@types/react-dom</code>
+                                </li>
+                                <li>
+                                    <code style={{ background: "#eef" }}>
+                                        @types/react-router-dom
+                                    </code>
+                                </li>
+                            </ul>
+                            <ul>
+                                Other Typescript modules:
+                                <li>
+                                    <code style={{ background: "#eef" }}>@types/lodash</code>
+                                </li>
+                                <li>
+                                    <code style={{ background: "#eef" }}>@types/node</code>
+                                </li>
+                            </ul>
+                        </Repo>
+                    </Box>
+                    <LargeImageHover
+                        image={ReactIMG}
+                        link="https://github.com/fobdev/PedroDev/blob/main/src/App.tsx"
+                    />
+                </Box>
             </Box>
         </Project>
     );
