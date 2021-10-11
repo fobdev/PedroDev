@@ -12,7 +12,7 @@ interface Props {
 
 export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
     return (
-        <Project title="React Projects" image={image} growIn={growIn}>
+        <Project title="React / Material UI / Sass Projects" image={image} growIn={growIn}>
             <Box sx={globalPageStyle}>
                 <Typography className="page-maintitle" variant="h2">
                     React & Typescript / Mui + Sass
@@ -145,6 +145,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                         </Repo>
                     </Box>
                     <LargeImageHover
+                        side="right"
                         image={ReactIMG}
                         link="https://github.com/fobdev/PedroDev/blob/main/src/App.tsx"
                     />
