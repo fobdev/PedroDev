@@ -1,5 +1,4 @@
 import { SxProps, Theme } from "@mui/system";
-import { page_padding } from "./_globals";
 
 const colorPatterns = {
     google_colors: {
@@ -31,7 +30,7 @@ export const mainAboutContainer: SxProps<Theme> = {
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
-    padding: page_padding,
+    padding: "3em 0 5em 0",
 
     ".papers-title": {
         backgroundColor: "red",
