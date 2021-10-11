@@ -8,11 +8,11 @@ export const globalPageStyle: SxProps<Theme> = {
     ".page-mainbox": {
         display: "flex",
         justifyContent: "space-between",
+        columnGap: "1em",
 
         ".page-repobox": {
             display: "flex",
             flexDirection: "column",
-            rowGap: "2em",
             width: "80%",
             a: {
                 textDecoration: "none",
