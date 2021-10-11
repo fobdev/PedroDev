@@ -2,11 +2,12 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Head from "./components/Head";
+import About from "./components/About";
+import Footer from "./components/Footer";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import BackToTop from "./components/BackToTop";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import About from "./components/About";
 import { Typography } from "@mui/material";
 
 const firebaseConfig = {
@@ -45,6 +46,7 @@ function App() {
                     </Typography>
                 </Route>
             </Switch>
+            <Footer />
             <BackToTop />
         </Router>
     );
