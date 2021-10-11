@@ -11,17 +11,20 @@ import SettingsIcon from "@mui/icons-material/Settings";
 // import FilterDramaIcon from "@mui/icons-material/FilterDrama";
 // import BigButton from "./subcomponents/BigButton";
 import TechRole from "./subcomponents/TechRole";
-import TypescriptSVG from "../images/typescript.svg";
-import JavascriptSVG from "../images/javascript.svg";
-import ReactSVG from "../images/React.svg";
-import MUISVG from "../images/MUI.svg";
-import SassSVG from "../images/Sass.svg";
-import CppSVG from "../images/C++.svg";
-import PostgreSQLSVG from "../images/Postgres.svg";
-import MySQLSVG from "../images/MySQL.svg";
-import NodeJSSVG from "../images/NodeJS.svg";
-import DiscordSVG from "../images/Discord.svg";
-import YouTubeSVG from "../images/YouTube.svg";
+
+import {
+    TypescriptSVG,
+    JavascriptSVG,
+    ReactSVG,
+    MUISVG,
+    SassSVG,
+    CppSVG,
+    PostgreSQLSVG,
+    MySQLSVG,
+    NodeJSSVG,
+    DiscordSVG,
+    YouTubeSVG,
+} from "../images/_importHandler";
 
 import {
     POSTGRESPage,
@@ -45,9 +48,9 @@ export default function About() {
 
     // paper switch
     const [paperState, setPaperState] = useState({
-        typescript: true,
+        typescript: false,
         javascript: false,
-        react: false,
+        react: true,
         mui: false,
         sass: false,
         cpp: false,
@@ -88,7 +91,7 @@ export default function About() {
                                         disableRipple
                                         onClick={() => {
                                             if (!frontEnd) {
-                                                handlePaperState("typescript");
+                                                handlePaperState("react");
                                                 setFrontEnd(true);
                                                 setBackEnd(false);
                                             }
@@ -149,19 +152,6 @@ export default function About() {
                                     unmountOnExit
                                 >
                                     <Box className="frontend-techbox">
-                                        <TechRole
-                                            image={TypescriptSVG}
-                                            title="Typescript"
-                                            selected={paperState.typescript}
-                                            onClick={() => handlePaperState("typescript")}
-                                        />
-                                        <TechRole
-                                            image={JavascriptSVG}
-                                            title="JavaScript"
-                                            selected={paperState.javascript}
-                                            onClick={() => handlePaperState("javascript")}
-                                        />
-
                                         <Paper
                                             elevation={5}
                                             sx={mainTechRolesContainer(paperState.react)}
@@ -178,6 +168,18 @@ export default function About() {
                                                 </Typography>
                                             </ButtonBase>
                                         </Paper>
+                                        <TechRole
+                                            image={TypescriptSVG}
+                                            title="Typescript"
+                                            selected={paperState.typescript}
+                                            onClick={() => handlePaperState("typescript")}
+                                        />
+                                        <TechRole
+                                            image={JavascriptSVG}
+                                            title="JavaScript"
+                                            selected={paperState.javascript}
+                                            onClick={() => handlePaperState("javascript")}
+                                        />
                                     </Box>
                                 </Slide>
                                 <Slide
