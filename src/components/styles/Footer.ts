@@ -1,11 +1,9 @@
 import { SxProps, Theme } from "@mui/system";
 
 export const mainFooterBox: SxProps<Theme> = {
-    background: "#ddd",
     display: "flex",
     flexDirection: "column",
     width: "100%",
-
     ".MuiLink-root": {
         margin: 0,
         padding: 0,
