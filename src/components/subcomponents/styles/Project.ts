@@ -1,27 +1,24 @@
 import { SxProps, Theme } from "@mui/system";
 
 export const mainTSPContainer: SxProps<Theme> = {
-    display: "flex",
-    flexDirection: "column",
-    paddingBottom: "1em",
-
+    maxWidth: "65em",
     ".outside-paper": {
-        position: "relative",
-    },
-    ".outside-title": {
         display: "flex",
-        columnGap: "1em",
-        margin: "1em 0 1em 3em",
-        maxWidth: "70vw",
-        img: {
-            width: "5em",
+        flexDirection: "column",
+        justifyContent: "center",
+        ".outside-title": {
+            display: "flex",
+            justifyContent: "left",
+            padding: "2em 0 0 4em",
+            columnGap: "1em",
+
+            img: {
+                width: "4em",
+            },
         },
     },
-
     ".inside-paper": {
-        padding: "1em",
-        alignSelf: "center",
-        margin: "0 1em 0 1em",
-        maxWidth: "50vw",
+        margin: "2em",
+        padding: "1.2em",
     },
 };
