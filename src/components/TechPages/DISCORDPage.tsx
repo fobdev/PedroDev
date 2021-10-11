@@ -9,7 +9,7 @@ interface Props {
 export const DISCORDPage: React.FC<Props> = ({ growIn, image }) => {
     return (
         <Project title="Discord.JS Projects" image={image} growIn={growIn}>
-            <Typography>
+            <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>
         </Project>

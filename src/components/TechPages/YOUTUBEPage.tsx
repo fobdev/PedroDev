@@ -9,7 +9,7 @@ interface Props {
 export const YOUTUBEPage: React.FC<Props> = ({ growIn, image }) => {
     return (
         <Project title="Youtube API Projects" image={image} growIn={growIn}>
-            <Typography>
+            <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>
         </Project>
