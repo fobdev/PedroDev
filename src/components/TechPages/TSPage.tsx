@@ -31,22 +31,38 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                             <ul>
                                 Administrative commands:
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/ban.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/ban.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>ban</code>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>clear</code>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/kick.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/kick.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>kick</code>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/renameserver.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/renameserver.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>renameserver</code>
                                     </a>
                                 </li>
@@ -54,12 +70,20 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                             <ul>
                                 Client commands:
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/help.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/help.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>help</code>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/ping.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/ping.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>ping</code>
                                     </a>
                                 </li>
@@ -67,7 +91,11 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                             <ul>
                                 Miscellaneous:
                                 <li>
-                                    <a href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/music/music.ts">
+                                    <a
+                                        href="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/music/music.ts"
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
                                         <code>music</code>
                                     </a>
                                 </li>
