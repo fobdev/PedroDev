@@ -15,7 +15,7 @@ export const largeImageHoverMainBox: SxProps<Theme> = {
         borderBottomLeftRadius: "2em",
         "&:hover": {
             transition: "0.3s",
-            boxShadow: "-5px -5px 10px #999",
+            boxShadow: "-2px -2px 10px #aaa",
             transform: "translate(5px, 5px)",
         },
     },
