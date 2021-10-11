@@ -77,7 +77,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                             and a complete music engine, check my JavaScript tab for more
                             information about it.
                             <br />
-                            You can also go to its repository and fork it:
+                            You can also go to this repository and fork it:
                         </Repo>
                     </Box>
                     <LargeImageHover
