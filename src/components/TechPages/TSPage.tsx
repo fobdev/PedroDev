@@ -20,12 +20,12 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                 <Box className="page-mainbox">
                     <Box className="page-repobox">
                         <Repo
-                            title="Discord Bot model in Typescript"
+                            title="Discord Bot Model in Typescript"
                             repo="https://github.com/fobdev/discordbot-typescript"
                         >
-                            This is a simple Discord.JS bot model made in typescript, that can
-                            execute several basic actions, and can be used as a starting point model
-                            to a personalized client, with custom commands and more.
+                            This is a simple Discord.JS bot model made in Typescript that can
+                            execute basic actions and can be used as a starting point model to a
+                            personalized client, with custom commands and more.
                             <br />
                             The client commands are listed above:
                             <ul>
