@@ -19,6 +19,5 @@ export const mainTSPContainer: SxProps<Theme> = {
     },
     ".inside-paper": {
         margin: "2em",
-        padding: "1.2em",
     },
 };
