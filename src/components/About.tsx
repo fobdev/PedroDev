@@ -114,7 +114,7 @@ export default function About() {
                                         disableRipple
                                         onClick={() => {
                                             if (!backEnd) {
-                                                handlePaperState("postgres");
+                                                handlePaperState("nodejs");
                                                 setBackEnd(true);
                                                 setFrontEnd(false);
                                             }
@@ -190,6 +190,12 @@ export default function About() {
                                 >
                                     <Box className="backend-techbox">
                                         <TechRole
+                                            image={NodeJSSVG}
+                                            title="Node.JS"
+                                            selected={paperState.nodejs}
+                                            // onClick={() => handlePaperState("nodejs")}
+                                        />
+                                        <TechRole
                                             image={PostgreSQLSVG}
                                             title="Postgres"
                                             selected={paperState.postgres}
@@ -206,12 +212,6 @@ export default function About() {
                                             title="MySQL"
                                             selected={paperState.mysql}
                                             // onClick={() => handlePaperState("mysql")}
-                                        />
-                                        <TechRole
-                                            image={NodeJSSVG}
-                                            title="Node.JS"
-                                            selected={paperState.nodejs}
-                                            // onClick={() => handlePaperState("nodejs")}
                                         />
                                         <TechRole
                                             image={DiscordSVG}
@@ -231,17 +231,20 @@ export default function About() {
                         </Paper>
                     </Grow>
                     <Box className="description-box">
+                        {/* Frontend */}
                         <TSPage image={TypescriptSVG} growIn={paperState.typescript} />
                         <JSPage image={JavascriptSVG} growIn={paperState.javascript} />
                         <REACTPage image={ReactSVG} growIn={paperState.react} />
                         <MUIPage image={MUISVG} growIn={paperState.mui} />
                         <SASSPage image={SassSVG} growIn={paperState.sass} />
-                        <POSTGRESPage image={PostgreSQLSVG} growIn={paperState.postgres} />
-                        <CPage image={CppSVG} growIn={paperState.cpp} />
-                        <MYSQLPage image={MySQLSVG} growIn={paperState.mysql} />
+
+                        {/* Backend */}
                         <NODEJSPage image={NodeJSSVG} growIn={paperState.nodejs} />
                         <DISCORDPage image={DiscordSVG} growIn={paperState.discord} />
+                        <POSTGRESPage image={PostgreSQLSVG} growIn={paperState.postgres} />
                         <YOUTUBEPage image={YouTubeSVG} growIn={paperState.youtube} />
+                        <CPage image={CppSVG} growIn={paperState.cpp} />
+                        <MYSQLPage image={MySQLSVG} growIn={paperState.mysql} />
                     </Box>
                 </Box>
             </Box>
