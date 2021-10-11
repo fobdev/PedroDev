@@ -109,19 +109,7 @@ export default function Contact() {
     return (
         <Container sx={mainContactContainer} disableGutters>
             <Box className="dev-box" alignSelf="center">
-                <Typography
-                    variant="h3"
-                    sx={{
-                        userSelect: "none",
-                        "span:after": {
-                            content: '"(づ ◕‿◕ )づ"',
-                        },
-
-                        "span:hover:after": {
-                            content: '"ლ(◕‿◕ ლ)"',
-                        },
-                    }}
-                >
+                <Typography variant="h3" className="cuteface">
                     <span />
                 </Typography>
                 <Typography variant="h5" marginTop="1em">

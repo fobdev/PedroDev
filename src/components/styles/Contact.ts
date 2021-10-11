@@ -10,6 +10,16 @@ export const mainContactContainer: SxProps<Theme> = {
     columnGap: "10em",
 
     ".dev-box": {
+        ".cuteface": {
+            userSelect: "none",
+            "span:after": {
+                content: '"(づ ◕‿◕ )づ"',
+            },
+
+            "span:hover:after": {
+                content: '"ლ(◕‿◕ ლ)"',
+            },
+        },
         ".MuiTypography-root": {
             fontFamily: "Roboto",
             fontWeight: "200",
