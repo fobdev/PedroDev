@@ -1,13 +1,12 @@
 import { SxProps, Theme } from "@mui/system";
-const main_color = "#49a6e9";
+import { main_color, page_padding } from "./_globals";
 
 export const mainHeroContainer: SxProps<Theme> = {
     backgroundColor: "#eee",
     display: "flex",
     justifyContent: "center",
     columnGap: "5em",
-    alignContent: "center",
-    height: "80vh",
+    padding: page_padding,
     ".left-side": {
         display: "flex",
         flexDirection: "column",

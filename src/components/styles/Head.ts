@@ -1,5 +1,5 @@
 import { SxProps, Theme } from "@mui/system";
-const main_color = "#49a6e9";
+import { main_color } from "./_globals";
 
 export const mainHeadBox: SxProps<Theme> = {
     backgroundColor: "rgba(255,255,255,0.70)",

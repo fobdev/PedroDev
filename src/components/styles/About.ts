@@ -1,4 +1,5 @@
 import { SxProps, Theme } from "@mui/system";
+import { page_padding } from "./_globals";
 
 const colorPatterns = {
     google_colors: {
@@ -30,7 +31,7 @@ export const mainAboutContainer: SxProps<Theme> = {
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
-    padding: "2em 1em 2em 1em",
+    padding: page_padding,
 
     ".papers-title": {
         backgroundColor: "red",
@@ -48,11 +49,8 @@ export const mainAboutContainer: SxProps<Theme> = {
             display: "flex",
             flexDirection: "column",
             rowGap: "2em",
-
+            alignItems: "center",
             ".main-title-paper": {
-                alignItems: "center",
-                backgroundColor: "white",
-                columnGap: "1em",
                 ".display-box": {
                     display: "flex",
                     alignItems: "center",
@@ -85,12 +83,7 @@ export const mainAboutContainer: SxProps<Theme> = {
                     },
                 },
                 ".main-title-box": {
-                    display: "flex",
-                    flexDirection: "column",
-                    transition: "all 0.3s",
                     padding: "1em 4em 1em 4em",
-                    justifyContent: "left",
-                    columnGap: "2em",
                     ".main-title": {
                         fontSize: "3em",
                         alignSelf: "center",

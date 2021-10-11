@@ -1,14 +1,13 @@
 import { SxProps, Theme } from "@mui/system";
-const main_color = "#49a6e9";
+import { main_color } from "./_globals";
 
 export const mainContactContainer: SxProps<Theme> = {
     alignItems: "center",
     margin: "2em auto",
     display: "flex",
     justifyContent: "center",
-    height: "80vh",
     columnGap: "10em",
-
+    padding: "5em 0 3em 0",
     ".dev-box": {
         ".cuteface": {
             userSelect: "none",
