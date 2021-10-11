@@ -28,9 +28,7 @@ import {
 
 import {
     POSTGRESPage,
-    SASSPage,
     REACTPage,
-    MUIPage,
     JSPage,
     TSPage,
     YOUTUBEPage,
@@ -237,8 +235,6 @@ export default function About() {
                         <TSPage image={TypescriptSVG} growIn={paperState.typescript} />
                         <JSPage image={JavascriptSVG} growIn={paperState.javascript} />
                         <REACTPage image={ReactSVG} growIn={paperState.react} />
-                        <MUIPage image={MUISVG} growIn={paperState.mui} />
-                        <SASSPage image={SassSVG} growIn={paperState.sass} />
 
                         {/* Backend */}
                         <NODEJSPage image={NodeJSSVG} growIn={paperState.nodejs} />
