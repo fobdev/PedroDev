@@ -31,7 +31,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                         <Repo repo="https://github.com/fobdev/PedroDev" title="PedroDev">
                             My personal portfolio, made completely in React in junction with
                             Typescript. This project is still under development and I push commits
-                            to it it daily .
+                            to it daily.
                             <br />
                             If you want to help me develop my website, feel free to send requests to
                             this repository.
