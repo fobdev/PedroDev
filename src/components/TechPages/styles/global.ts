@@ -6,18 +6,10 @@ export const globalPageStyle: SxProps<Theme> = {
         padding: ".3em",
     },
     ".page-mainbox": {
-        display: "flex",
-        justifyContent: "space-between",
-        columnGap: "1em",
-
         ".page-repobox": {
-            display: "flex",
-            flexDirection: "column",
-            width: "80%",
             a: {
                 textDecoration: "none",
                 color: "black",
-
                 code: {
                     background: "#eef",
                 },
