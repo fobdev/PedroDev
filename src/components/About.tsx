@@ -64,7 +64,11 @@ export default function About() {
         let newState = paperState;
         newState = mapValues(newState, () => false); // reset the obj
         update(newState, tech, (value) => (value = true)); // turns only the selected key
-        setPaperState(newState); // return into the hook
+        return setPaperState(newState); // return into the hook
+    };
+
+    const summonPage = (value: boolean, element: JSX.Element) => {
+        return value ? element : null;
     };
 
     const insideContainer = useRef(null);
@@ -232,17 +236,44 @@ export default function About() {
                     </Grow>
                     <Box className="description-box">
                         {/* Frontend */}
-                        <TSPage image={TypescriptSVG} growIn={paperState.typescript} />
-                        <JSPage image={JavascriptSVG} growIn={paperState.javascript} />
-                        <REACTPage image={ReactSVG} growIn={paperState.react} />
+                        {summonPage(
+                            paperState.react,
+                            <REACTPage image={ReactSVG} growIn={paperState.react} />
+                        )}
+                        {summonPage(
+                            paperState.javascript,
+                            <JSPage image={JavascriptSVG} growIn={paperState.javascript} />
+                        )}
+                        {summonPage(
+                            paperState.typescript,
+                            <TSPage image={TypescriptSVG} growIn={paperState.typescript} />
+                        )}
 
                         {/* Backend */}
-                        <NODEJSPage image={NodeJSSVG} growIn={paperState.nodejs} />
-                        <DISCORDPage image={DiscordSVG} growIn={paperState.discord} />
-                        <POSTGRESPage image={PostgreSQLSVG} growIn={paperState.postgres} />
-                        <YOUTUBEPage image={YouTubeSVG} growIn={paperState.youtube} />
-                        <CPage image={CppSVG} growIn={paperState.cpp} />
-                        <MYSQLPage image={MySQLSVG} growIn={paperState.mysql} />
+                        {summonPage(
+                            paperState.mysql,
+                            <MYSQLPage image={MySQLSVG} growIn={paperState.mysql} />
+                        )}
+                        {summonPage(
+                            paperState.youtube,
+                            <YOUTUBEPage image={YouTubeSVG} growIn={paperState.youtube} />
+                        )}
+                        {summonPage(
+                            paperState.postgres,
+                            <POSTGRESPage image={PostgreSQLSVG} growIn={paperState.postgres} />
+                        )}
+                        {summonPage(
+                            paperState.discord,
+                            <DISCORDPage image={DiscordSVG} growIn={paperState.discord} />
+                        )}
+                        {summonPage(
+                            paperState.nodejs,
+                            <NODEJSPage image={NodeJSSVG} growIn={paperState.nodejs} />
+                        )}
+                        {summonPage(
+                            paperState.cpp,
+                            <CPage image={CppSVG} growIn={paperState.cpp} />
+                        )}
                     </Box>
                 </Box>
             </Box>
