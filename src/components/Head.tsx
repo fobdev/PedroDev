@@ -26,7 +26,7 @@ import { Link } from "react-router-dom";
 
 export default function Head() {
     return (
-        <Box position="sticky" top="0" width="100%" zIndex="999" sx={mainHeadBox}>
+        <Box sx={mainHeadBox}>
             <Container className="main-container" maxWidth={false}>
                 <Box className="title-box">
                     <Link

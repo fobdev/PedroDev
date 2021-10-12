@@ -4,13 +4,15 @@ import { main_color } from "./_globals";
 export const mainHeadBox: SxProps<Theme> = {
     backgroundColor: "rgba(255,255,255,0.70)",
     backdropFilter: "blur(20px)",
-
+    zIndex: "1300",
+    width: "100%",
+    top: 0,
+    position: "sticky",
     ".main-container": {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         ".title-box": {
-            margin: "1em",
             ".title-link": {
                 display: "flex",
                 textDecoration: "none",
