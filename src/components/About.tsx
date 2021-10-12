@@ -71,6 +71,14 @@ export default function About() {
         return value ? element : null;
     };
 
+    const handleClick = (value: string) => {
+        window.scrollTo({
+            top: 230,
+            behavior: "smooth",
+        });
+        handlePaperState(value);
+    };
+
     const insideContainer = useRef(null);
     const feSelection = frontEnd ? "#eef" : "#fff";
     const beSelection = backEnd ? "#eef" : "#fff";
@@ -160,7 +168,7 @@ export default function About() {
                                         >
                                             <ButtonBase
                                                 disableRipple
-                                                onClick={() => handlePaperState("react")}
+                                                onClick={() => handleClick("react")}
                                             >
                                                 <img className="image" src={ReactSVG} alt="React" />
                                                 <img className="image" src={MUISVG} alt="MUI" />
@@ -174,13 +182,13 @@ export default function About() {
                                             image={TypescriptSVG}
                                             title="Typescript"
                                             selected={paperState.typescript}
-                                            onClick={() => handlePaperState("typescript")}
+                                            onClick={() => handleClick("typescript")}
                                         />
                                         <TechRole
                                             image={JavascriptSVG}
                                             title="JavaScript"
                                             selected={paperState.javascript}
-                                            onClick={() => handlePaperState("javascript")}
+                                            onClick={() => handleClick("javascript")}
                                         />
                                     </Box>
                                 </Slide>
@@ -197,37 +205,37 @@ export default function About() {
                                             image={NodeJSSVG}
                                             title="Node.JS"
                                             selected={paperState.nodejs}
-                                            onClick={() => handlePaperState("nodejs")}
+                                            onClick={() => handleClick("nodejs")}
                                         />
                                         <TechRole
                                             image={PostgreSQLSVG}
                                             title="Postgres"
                                             selected={paperState.postgres}
-                                            onClick={() => handlePaperState("postgres")}
+                                            onClick={() => handleClick("postgres")}
                                         />
                                         <TechRole
                                             image={CppSVG}
                                             title="C/C++"
                                             selected={paperState.cpp}
-                                            onClick={() => handlePaperState("cpp")}
+                                            onClick={() => handleClick("cpp")}
                                         />
                                         <TechRole
                                             image={MySQLSVG}
                                             title="MySQL"
                                             selected={paperState.mysql}
-                                            onClick={() => handlePaperState("mysql")}
+                                            onClick={() => handleClick("mysql")}
                                         />
                                         <TechRole
                                             image={DiscordSVG}
                                             title="Discord.JS"
                                             selected={paperState.discord}
-                                            onClick={() => handlePaperState("discord")}
+                                            onClick={() => handleClick("discord")}
                                         />
                                         <TechRole
                                             image={YouTubeSVG}
                                             title="YouTube API"
                                             selected={paperState.youtube}
-                                            onClick={() => handlePaperState("youtube")}
+                                            onClick={() => handleClick("youtube")}
                                         />
                                     </Box>
                                 </Slide>
