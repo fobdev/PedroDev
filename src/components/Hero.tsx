@@ -39,9 +39,8 @@ export default function Hero() {
                             size="large"
                             startIcon={<EmailRoundedIcon />}
                             onClick={() => {
-                                window.scrollBy({
-                                    top: 9999,
-                                    left: 0,
+                                window.scrollTo({
+                                    top: document.body.scrollHeight,
                                     behavior: "smooth",
                                 });
                             }}
@@ -55,9 +54,8 @@ export default function Hero() {
                             size="large"
                             startIcon={<ComputerRoundedIcon />}
                             onClick={() => {
-                                window.scrollBy({
-                                    top: -999,
-                                    left: 0,
+                                window.scrollTo({
+                                    top: 0,
                                     behavior: "smooth",
                                 });
                             }}
