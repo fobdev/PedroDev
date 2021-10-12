@@ -32,8 +32,9 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 <CodeLink link="https://www.heroku.com/">Heroku</CodeLink>, done by me with a local
                 helper debugging tool made by{" "}
                 <CodeLink link="https://github.com/FranciscoRamon">FranciscoRamon</CodeLink>. <br />
-                On the right is the complete main source engine of the music system, with the entire
-                back-end based on{" "}
+                On the left is a chunk of the main JavaScript file of the client, clicking on it
+                will take you to the file inside the repository. The entirety of the back-end was
+                made with{" "}
                 <CodeLink link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">
                     JavaScript Maps
                 </CodeLink>{" "}
