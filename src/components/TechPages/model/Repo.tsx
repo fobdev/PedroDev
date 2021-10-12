@@ -1,7 +1,6 @@
-import { Paper, Box, Typography, Grow, Fade, Slide, easing } from "@mui/material";
+import { Paper, Box, Typography, Slide } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { repoMainBox } from "./styles/Repo";
-import { useRef } from "react";
 
 interface Props {
     title: string;
@@ -11,7 +10,7 @@ interface Props {
 
 export const Repo: React.FC<Props> = ({ title, children, repo }) => {
     return (
-        <Slide direction="up" in={true} timeout={{ enter: 500 }}>
+        <Slide direction="up" in={true} timeout={{ enter: 1000, exit: 0 }}>
             <Box sx={repoMainBox}>
                 <Typography className="repo-title" variant="h4">
                     {title}
