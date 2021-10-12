@@ -42,7 +42,7 @@ export let largeImageHoverMainBox = (side: string) => {
         },
     };
 
-    return side === "left" ? left : right;
+    return side === "right" ? left : right;
 };
 
 export default largeImageHoverMainBox;

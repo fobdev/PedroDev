@@ -1,15 +1,15 @@
 import { SxProps, Theme } from "@mui/system";
 
-export const repoMainBoxStyling = (side: string) => {
-    let dir: any = side === "left" ? "rtl" : "ltr";
+export const repoMainBoxStyling = (side: any) => {
+    let dir: any = side === "right" ? "rtl" : "ltr";
 
     const dirChange: SxProps<Theme> = {
         direction: dir,
+        textAlign: side,
     };
 
     const mainStyle: SxProps<Theme> = {
         display: "flex",
-        textAlign: "left",
 
         ".repobox-rightside": {
             width: "100%",

@@ -19,7 +19,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
             <Repo
                 title="Discord Bot Model in Typescript"
                 repoLink="https://github.com/fobdev/discordbot-typescript"
-                side="right"
+                side="left"
                 largeImage={DiscordTSIMG}
                 largeImageLink="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts"
             >

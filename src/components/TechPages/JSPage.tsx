@@ -19,7 +19,7 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
             <Repo
                 title="BogueBot"
                 repoLink="https://github.com/fobdev/BogueBot"
-                side="left"
+                side="right"
                 largeImage={bbmusic}
                 largeImageLink="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js"
             >

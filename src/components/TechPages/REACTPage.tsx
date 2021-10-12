@@ -19,7 +19,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
             <Repo
                 repoLink="https://github.com/fobdev/PedroDev"
                 title="PedroDev"
-                side="right"
+                side="left"
                 largeImageLink="https://github.com/fobdev/PedroDev/blob/main/src/App.tsx"
                 largeImage={ReactIMG}
             >
