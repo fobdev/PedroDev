@@ -14,7 +14,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
     return (
         <Project title="Typescript Projects" image={image} growIn={growIn}>
             <Box sx={globalPageStyle}>
-                <Typography className="page-maintitle" variant="h2">
+                <Typography className="page-maintitle" variant="h2" textAlign="right">
                     Typescript & Discord.JS
                 </Typography>
                 <Box className="page-mainbox">
