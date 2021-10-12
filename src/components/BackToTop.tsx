@@ -23,9 +23,8 @@ export default function BackToTop() {
     };
 
     const handleClick = () => {
-        return window.scrollBy({
-            top: -999,
-            left: 0,
+        return window.scrollTo({
+            top: 0,
             behavior: "smooth",
         });
     };

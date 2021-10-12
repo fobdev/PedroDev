@@ -33,9 +33,8 @@ export default function Head() {
                         className="title-link"
                         to="/"
                         onClick={() => {
-                            window.scrollBy({
-                                top: -999,
-                                left: 0,
+                            window.scrollTo({
+                                top: 0,
                                 behavior: "smooth",
                             });
                         }}
@@ -60,9 +59,8 @@ export default function Head() {
                                 <ListItemButton
                                     disableRipple
                                     onClick={() => {
-                                        window.scrollBy({
-                                            top: -999,
-                                            left: 0,
+                                        window.scrollTo({
+                                            top: 0,
                                             behavior: "smooth",
                                         });
                                     }}
@@ -76,9 +74,8 @@ export default function Head() {
                                 <ListItemButton
                                     disableRipple
                                     onClick={() => {
-                                        window.scrollBy({
-                                            top: -999,
-                                            left: 0,
+                                        window.scrollTo({
+                                            top: 0,
                                             behavior: "smooth",
                                         });
                                     }}
