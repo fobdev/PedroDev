@@ -1,14 +1,17 @@
 import { SxProps, Theme } from "@mui/system";
 
 export let largeImageHoverMainBox = (side: string) => {
-    const RightStyle: SxProps<Theme> = {
+    const mainStyle: SxProps<Theme> = {
         display: "flex",
         flexDirection: "column",
         rowGap: "2em",
         alignContent: "space-around",
         marginBottom: "2em",
-        marginTop: "3em",
+        marginTop: "5em",
+    };
 
+    const right: SxProps<Theme> = {
+        ...mainStyle,
         ".bigImage": {
             maxWidth: "100%",
             objectFit: "contain",
@@ -23,14 +26,8 @@ export let largeImageHoverMainBox = (side: string) => {
         },
     };
 
-    const LeftStyle: SxProps<Theme> = {
-        display: "flex",
-        flexDirection: "column",
-        rowGap: "2em",
-        alignContent: "space-around",
-        marginBottom: "2em",
-        marginTop: "3em",
-
+    const left: SxProps<Theme> = {
+        ...mainStyle,
         ".bigImage": {
             maxWidth: "100%",
             objectFit: "contain",
@@ -45,8 +42,7 @@ export let largeImageHoverMainBox = (side: string) => {
         },
     };
 
-    if (side === "right") return RightStyle;
-    if (side === "left") return LeftStyle;
+    return side === "left" ? left : right;
 };
 
 export default largeImageHoverMainBox;
