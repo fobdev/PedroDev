@@ -42,14 +42,31 @@ export const mainHeroContainer: SxProps<Theme> = {
             marginTop: "1.5em",
             ".btn-contact, .btn-work": {
                 borderRadius: "5em",
+                border: "2px solid white",
                 background: "white",
                 color: main_color,
                 fontSize: "1em",
                 padding: "1em 4em 1em 4em",
+
                 ".router-projects": {
                     textDecoration: "none",
                     color: main_color,
                 },
+            },
+
+            ".btn-work": {
+                "@keyframes gradient": {
+                    "0%": { backgroundPosition: "0% 50%" },
+                    "50%": { backgroundPosition: "100% 50%" },
+                    "100%": { backgroundPosition: "0% 50%" },
+                },
+
+                background: "linear-gradient(90deg, #fff, #dff)",
+                backgroundSize: "400% 400%",
+                animationName: "gradient",
+                animationDuration: "10s",
+                animationTimingFunction: "linear",
+                animationIterationCount: "infinite",
             },
         },
     },
