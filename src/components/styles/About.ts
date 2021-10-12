@@ -30,7 +30,7 @@ export const mainAboutContainer: SxProps<Theme> = {
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
-    padding: "3em 0 5em 0",
+    padding: "2em 0 5em 0",
 
     ".papers-title": {
         backgroundColor: "red",
@@ -50,6 +50,9 @@ export const mainAboutContainer: SxProps<Theme> = {
             rowGap: "2em",
             alignItems: "center",
             ".main-title-paper": {
+                background: "linear-gradient(#eee, #fff)",
+                borderRadius: "2em",
+                border: "2px solid #fff",
                 ".display-box": {
                     display: "flex",
                     alignItems: "center",
