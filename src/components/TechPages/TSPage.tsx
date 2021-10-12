@@ -25,11 +25,11 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
             >
                 This is a simple Discord.JS bot model made in Typescript that can execute basic
                 actions and can be used as a starting point model to a personalized client, with
-                custom commands and more.
+                custom commands and more
                 <br />
-                The client commands are listed above:
+                The client commands are listed below
                 <ul>
-                    Administrative commands:
+                    Administrative commands
                     <li>
                         <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/ban.ts">
                             ban
@@ -52,7 +52,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                     </li>
                 </ul>
                 <ul>
-                    Client commands:
+                    Client commands
                     <li>
                         <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/help.ts">
                             help
@@ -65,18 +65,18 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                     </li>
                 </ul>
                 <ul>
-                    Miscellaneous:
+                    Miscellaneous
                     <li>
                         <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/music/music.ts">
                             music
                         </CodeLink>
                     </li>
                 </ul>
-                This is not supposed to be a finished client, its just the barebones. <br /> I
-                already made a finished client in JavaScript with 30+ commands and a complete music
-                engine, check my JavaScript tab for more information about it.
+                This is not supposed to be a finished client, its just the barebones
+                <br /> I already made a finished client in JavaScript with 30+ commands and a
+                complete music engine, check my JavaScript tab for more information about it.
                 <br />
-                You can also go to this repository and fork it:
+                You can also go to this repository and fork it
             </Repo>
         </PageModel>
     );
