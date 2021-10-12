@@ -4,20 +4,42 @@ export const mainTSPContainer: SxProps<Theme> = {
     maxWidth: "65em",
     ".outside-paper": {
         display: "flex",
+        position: "relative",
+        background: "linear-gradient(360deg, #eee, #fff)",
+        borderRadius: "2em",
+        border: "3px solid #fff",
         flexDirection: "column",
         justifyContent: "center",
+        overflow: "hidden",
+        objectFit: "cover",
         ".outside-title": {
             display: "flex",
-            justifyContent: "left",
-            padding: "2em 0 0 4em",
+            justifyContent: "right",
+            padding: "2em 2em 0 0",
             columnGap: "1em",
-
             img: {
-                width: "4em",
+                position: "absolute",
+                width: "20em",
+                borderRadius: "3em",
+                left: "-50px",
+                top: "-50px",
+                "@keyframes rotate": {
+                    from: {
+                        transform: "rotate(0deg)",
+                    },
+                    to: {
+                        transform: "rotate(360deg)",
+                    },
+                },
+                animationName: "rotate",
+                animationDuration: "60s",
+                animationIterationCount: "infinite",
+                animationTimingFunction: "linear",
             },
         },
     },
     ".inside-paper": {
+        zIndex: "1200",
         margin: "2em",
     },
 };
