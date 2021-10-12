@@ -5,11 +5,14 @@ export const repoMainBoxStyling = (side: any) => {
 
     const dirChange: SxProps<Theme> = {
         direction: dir,
-        textAlign: side,
+        ul: {
+            textAlign: side,
+        },
     };
 
     const mainStyle: SxProps<Theme> = {
         display: "flex",
+        textAlign: "left",
 
         ".repobox-rightside": {
             width: "100%",
