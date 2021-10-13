@@ -1,7 +1,8 @@
 import PageModel from "./model/PageModel";
 import Repo from "./model/Repo";
-import bbmusic from "../../images/bbmusic.png";
 import { CodeLink } from "./model/CodeLink";
+import BBMusic from "../../images/bbmusic.png";
+import BBMusicMin from "../../images/bbmusic-min.png";
 
 interface Props {
     growIn: boolean;
@@ -20,7 +21,8 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 title="BogueBot"
                 repoLink="https://github.com/fobdev/BogueBot"
                 side="right"
-                largeImage={bbmusic}
+                largeImage={BBMusic}
+                largeImagePlaceholder={BBMusicMin}
                 largeImageLink="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js"
             >
                 This is a large scale Discord.JS bot project named{" "}

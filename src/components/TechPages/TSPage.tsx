@@ -1,4 +1,5 @@
-import DiscordTSIMG from "../../images/discord-typescript.png";
+import TSimg from "../../images/discord-typescript.png";
+import TSimgMin from "../../images/discord-typescript-min.png";
 import CodeLink from "./model/CodeLink";
 import { PageModel } from "./model/PageModel";
 import Repo from "./model/Repo";
@@ -20,7 +21,8 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                 title="Discord Bot Model in Typescript"
                 repoLink="https://github.com/fobdev/discordbot-typescript"
                 side="right"
-                largeImage={DiscordTSIMG}
+                largeImage={TSimg}
+                largeImagePlaceholder={TSimgMin}
                 largeImageLink="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts"
             >
                 This is a simple Discord.JS bot model made in Typescript that can execute basic

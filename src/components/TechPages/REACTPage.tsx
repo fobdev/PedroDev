@@ -1,4 +1,5 @@
 import ReactIMG from "../../images/reactcode.png";
+import ReactIMGMin from "../../images/reactcode-min.png";
 import Repo from "./model/Repo";
 import PageModel from "./model/PageModel";
 import { CodeLink } from "./model/CodeLink";
@@ -23,6 +24,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                 side="left"
                 largeImageLink="https://github.com/fobdev/PedroDev/blob/main/src/App.tsx"
                 largeImage={ReactIMG}
+                largeImagePlaceholder={ReactIMGMin}
             >
                 My personal portfolio, made completely in React in junction with Typescript. This
                 project is still under development and I push commits to it daily.
