@@ -40,7 +40,10 @@ export const Repo: React.FC<Props> = ({
                 <Box className="repobox-rightside">
                     <Box sx={largeImageHoverMainBox(side)}>
                         <a href={largeImageLink} rel="noreferrer" target="_blank">
-                            <img src={largeImage} alt="" className="bigImage" />
+                            <img src={largeImage} alt="Content" className="bigImage" />
+                            {/* <video autoPlay muted loop className="bigImage">
+                                <source src={largeImage} />
+                            </video> */}
                         </a>
                     </Box>
                 </Box>
