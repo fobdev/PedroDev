@@ -1,5 +1,4 @@
 import { Paper, Typography, ButtonBase } from "@mui/material";
-import { useEffect } from "react";
 import { mainTechRolesContainer } from "./styles/TechRoles";
 
 interface Props {
