@@ -2,6 +2,7 @@ import ReactIMG from "../../images/reactcode.png";
 import Repo from "./model/Repo";
 import PageModel from "./model/PageModel";
 import { CodeLink } from "./model/CodeLink";
+import videotest from "../../images/video.webm";
 
 interface Props {
     growIn: boolean;
