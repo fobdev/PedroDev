@@ -90,7 +90,7 @@ export default function Head() {
                                     disableRipple
                                     onClick={() =>
                                         window.scrollTo({
-                                            top: 999,
+                                            top: document.body.scrollHeight,
                                             left: 0,
                                             behavior: "smooth",
                                         })
