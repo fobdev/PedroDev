@@ -26,7 +26,7 @@ export const mainContactContainer: SxProps<Theme> = {
         },
     },
 
-    "@media only screen and (max-width: 780px)": {
+    "@media only screen and (max-width: 960px)": {
         ".dev-box": {
             display: "none",
         },
