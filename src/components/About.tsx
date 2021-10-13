@@ -72,10 +72,6 @@ export default function About() {
     };
 
     const handleClick = (value: string) => {
-        window.scrollTo({
-            top: 230,
-            behavior: "smooth",
-        });
         handlePaperState(value);
     };
 
