@@ -2,6 +2,7 @@ import { Paper, Box, Typography, Slide } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { repoMainBoxStyling } from "./styles/Repo";
 import { largeImageHoverMainBox } from "./styles/LargeImageHover";
+import ImageLoader from "../../utils/ImageLoader";
 
 interface Props {
     title: string;
@@ -10,6 +11,7 @@ interface Props {
     side: string;
     largeImageLink: string;
     largeImage: any;
+    largeImagePlaceholder: any;
 }
 
 export const Repo: React.FC<Props> = ({
@@ -19,6 +21,7 @@ export const Repo: React.FC<Props> = ({
     side,
     largeImageLink,
     largeImage,
+    largeImagePlaceholder,
 }) => {
     return (
         <Slide direction="up" in={true} timeout={{ enter: 1000, exit: 0 }}>
@@ -40,7 +43,12 @@ export const Repo: React.FC<Props> = ({
                 <Box className="repobox-rightside">
                     <Box sx={largeImageHoverMainBox(side)}>
                         <a href={largeImageLink} rel="noreferrer" target="_blank">
-                            <img src={largeImage} alt="Content" className="bigImage" />
+                            <ImageLoader
+                                src={largeImage}
+                                placeholder={largeImagePlaceholder}
+                                className="bigImage"
+                            />
+                            {/* <img src={largeImage} alt="Content" className="bigImage" /> */}
                             {/* <video autoPlay muted loop className="bigImage">
                                 <source src={largeImage} />
                             </video> */}
