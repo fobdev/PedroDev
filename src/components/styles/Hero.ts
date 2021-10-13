@@ -56,17 +56,20 @@ export const mainHeroContainer: SxProps<Theme> = {
 
             ".btn-work": {
                 "@keyframes gradient": {
-                    "0%": { backgroundPosition: "0% 50%" },
-                    "50%": { backgroundPosition: "100% 50%" },
-                    "100%": { backgroundPosition: "0% 50%" },
+                    "0%": { backgroundPosition: "left" },
+                    //"50%": { backgroundPosition: "right" },
+                    "100%": { backgroundPosition: "right" },
                 },
 
-                background: "linear-gradient(90deg, #fff, #dff)",
-                backgroundSize: "400% 400%",
+                background:
+                    "linear-gradient(270deg, #fff, #fff, #defffe, #c9fffe, #f8e0ff, #f6d9ff, #d1feff, #fff, #fff)",
+                backgroundSize: "1200%",
                 animationName: "gradient",
-                animationDuration: "10s",
-                animationTimingFunction: "linear",
+                animationDuration: "5s",
+                animationTimingFunction: "ease",
                 animationIterationCount: "infinite",
+
+                "&:hover": {},
             },
         },
     },
