@@ -164,8 +164,15 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                     </ul>
                 </Box>
                 <h2 style={{ lineHeight: "0.2em", marginTop: "1.2em" }}>npm modules</h2>
-                This is a list of all the packages used in the core backend of the client, the music
-                command also have it's own packages, that can be listed just below this section.
+                This is a list of all the packages used in the core backend of the client, with
+                packages like <CodeLink link="https://www.npmjs.com/package/i18n">
+                    i18n
+                </CodeLink>{" "}
+                and <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink> not being used
+                anymore, but still listed in it's{" "}
+                <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/package.json">
+                    package.json
+                </CodeLink>
                 <Box
                     sx={{
                         display: "grid",
@@ -238,9 +245,9 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
                     simple-youtube-api
                 </CodeLink>{" "}
-                module, that is a simplified/cutted-out version of the{" "}
+                package, that is a simplified/cutted-out version of the{" "}
                 <CodeLink link="https://www.npmjs.com/package/googleapis">googleapis</CodeLink>{" "}
-                module, only used for getting video information, while the audio streaming is dealt
+                package, only used for getting video information, while the audio streaming is dealt
                 by the <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
                 package. This is all the packages that the BogueBot Music System uses
                 <ul>
@@ -272,12 +279,15 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 </ul>
                 The music system contains a mapset of asynchronous Discord.JS listeners that receive
                 all the requests from users in a single server while maintaining multi-server
-                syncronization and personalization via PostgreSQL, with a attempt to save resources
-                from Heroku Dynos, without the usage of database architectures like{" "}
+                syncronization and personalization via PostgreSQL. <br />
+                As an attempt to save resources from{" "}
+                <CodeLink link="https://www.heroku.com/dynos">Heroku Dynos</CodeLink>, without the
+                usage of database architectures like{" "}
                 <CodeLink link="https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6">
                     sharding
                 </CodeLink>
-                , the client, in it's lifespan was only able to hold 100 servers at once.
+                , the client in it's lifespan was only able to hold 100 servers at once before
+                shutdown in December of 2020, and after that, no longer being maintained by myself.
                 <br />
                 This is the list of all the available music commands
                 <Box
