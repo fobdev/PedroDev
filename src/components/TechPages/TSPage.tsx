@@ -3,6 +3,7 @@ import TSimgMin from "../../images/discord-typescript-min.png";
 import CodeLink from "./model/CodeLink";
 import { PageModel } from "./model/PageModel";
 import Repo from "./model/Repo";
+import { Box } from "@mui/system";
 
 interface Props {
     growIn: boolean;
@@ -20,7 +21,7 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
             <Repo
                 title="Discord Bot Model in Typescript"
                 repoLink="https://github.com/fobdev/discordbot-typescript"
-                side="right"
+                side="left"
                 largeImage={TSimg}
                 largeImagePlaceholder={TSimgMin}
                 largeImageLink="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts"
@@ -29,51 +30,53 @@ export const TSPage: React.FC<Props> = ({ growIn, image }) => {
                 actions and can be used as a starting point model to a personalized client, with
                 custom commands and more
                 <br />
-                The client commands are listed below
-                <ul>
-                    Administrative commands
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/ban.ts">
-                            ban
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts">
-                            clear
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/kick.ts">
-                            kick
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/renameserver.ts">
-                            renameserver
-                        </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Client commands
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/help.ts">
-                            help
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/ping.ts">
-                            ping
-                        </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Miscellaneous
-                    <li>
-                        <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/music/music.ts">
-                            music
-                        </CodeLink>
-                    </li>
-                </ul>
+                The <span>client commands</span> are listed below
+                <Box sx={{ span: { fontWeight: "bold" } }}>
+                    <ul>
+                        <span>Administrative commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/ban.ts">
+                                ban
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/clear.ts">
+                                clear
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/kick.ts">
+                                kick
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/admin/renameserver.ts">
+                                renameserver
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>Client commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/help.ts">
+                                help
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/bot/ping.ts">
+                                ping
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>Miscellaneous</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/discordbot-typescript/blob/master/src/commands/music/music.ts">
+                                music
+                            </CodeLink>
+                        </li>
+                    </ul>
+                </Box>
                 This is not supposed to be a finished client, its just the barebones
                 <br /> I already made a finished client in JavaScript with 30+ commands and a
                 complete music engine, check my JavaScript tab for more information about it.
