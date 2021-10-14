@@ -7,6 +7,9 @@ export const globalPageStyle: SxProps<Theme> = {
     },
     ".page-mainbox": {
         ".page-repobox": {
+            display: "flex",
+            flexDirection: "column",
+            rowGap: "2em",
             a: {
                 textDecoration: "none",
                 color: "black",
