@@ -1,8 +1,11 @@
 import PageModel from "./model/PageModel";
 import Repo from "./model/Repo";
 import { CodeLink } from "./model/CodeLink";
-import BBMusic from "../../images/bbmusic.png";
-import BBMusicMin from "../../images/bbmusic-min.png";
+import BBMain from "../../images/bbmain.png";
+import YTmain from "../../images/ytmain.png";
+import YTmainMin from "../../images/bbmain.png";
+import BBMainMin from "../../images/bbmain-min.png";
+import Box from "@mui/material/Box";
 
 interface Props {
     growIn: boolean;
@@ -21,9 +24,9 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 title="BogueBot"
                 repoLink="https://github.com/fobdev/BogueBot"
                 side="right"
-                largeImage={BBMusic}
-                largeImagePlaceholder={BBMusicMin}
-                largeImageLink="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js"
+                largeImage={BBMain}
+                largeImagePlaceholder={BBMainMin}
+                largeImageLink="https://github.com/fobdev/BogueBot/blob/master/BogueBot.js"
             >
                 This is a large scale Discord.JS bot project named{" "}
                 <CodeLink link="https://github.com/fobdev/BogueBot/">BogueBot</CodeLink>, a general
@@ -44,6 +47,304 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 <CodeLink link="https://discordjs.guide/creating-your-bot/event-handling.html#individual-event-files">
                     Discord.JS Listeners
                 </CodeLink>
+                <br /> Some of the client commands are listed below
+                <Box
+                    sx={{
+                        display: "grid",
+                        boxSizing: "border-box",
+                        gridTemplateColumns: "auto auto",
+                        gridRow: "auto auto",
+                        span: {
+                            fontWeight: "bold",
+                        },
+                    }}
+                >
+                    <ul>
+                        <span>Administrative Commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/ban.js">
+                                ban
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/clear.js">
+                                clear
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/report.js">
+                                report
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/renameserver.js">
+                                kick
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/">
+                                more commands (7+)
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>Client Commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/feedback.js">
+                                feedback
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/help.js">
+                                help
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/invite.js">
+                                invite
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/ping.js">
+                                prefix
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/">
+                                more commands (+3)
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>User Based Commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/user/avatar.js">
+                                avatar
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/user/couple.js">
+                                couple
+                            </CodeLink>
+                        </li>
+                        <span>Game Commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/games/guess.js">
+                                guess
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <span>Fun Commands</span>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/imagesearch.js">
+                                imagesearch
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/bigtext.js">
+                                bigtext
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/dice.js">
+                                dice
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/roll.js">
+                                roll
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/">
+                                more commands (+6)
+                            </CodeLink>
+                        </li>
+                    </ul>
+                </Box>
+                <h2 style={{ lineHeight: "0.2em", marginTop: "1.2em" }}>npm modules</h2>
+                This is a list of all the packages used in the core backend of the client, the music
+                command also have it's own packages, that can be listed just below this section.
+                <Box
+                    sx={{
+                        display: "grid",
+                        boxSizing: "border-box",
+                        gridTemplateColumns: "auto auto",
+                        gridRow: "auto auto",
+                        span: {
+                            fontWeight: "bold",
+                        },
+                    }}
+                >
+                    <ul>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/discord.js">
+                                discord.js
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/g-i-s">g-i-s</CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/i18n">i18n</CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/lunicode">
+                                lunicode
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/merge-img">
+                                merge-img
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/ms">ms</CodeLink>
+                        </li>
+
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/number-to-words">
+                                number-to-words
+                            </CodeLink>
+                        </li>
+
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/numeral">
+                                numeral
+                            </CodeLink>
+                        </li>
+
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://www.npmjs.com/package/pg">pg</CodeLink>
+                        </li>
+                    </ul>
+                </Box>
+            </Repo>
+            <Repo
+                title="@boguebot/music"
+                side="left"
+                repoLink="https://github.com/fobdev/BogueBot/tree/master/commands/music"
+                largeImage={YTmain}
+                largeImagePlaceholder={YTmainMin}
+                largeImageLink="https://google.com/"
+            >
+                This is the music module of the BogueBot, a complete player made possible with the{" "}
+                <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
+                    simple-youtube-api
+                </CodeLink>{" "}
+                module, that is a simplified/cutted-out version of the{" "}
+                <CodeLink link="https://www.npmjs.com/package/googleapis">googleapis</CodeLink>{" "}
+                module, only used for getting video information, while the audio streaming is dealt
+                by the <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
+                package. This is all the packages that the BogueBot Music System uses
+                <ul>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
+                            simple-youtube-api
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/ytdl-core">
+                            ytdl-core
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/m3u8stream">
+                            m3u8stream
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/node-fetch">
+                            node-fetch
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@discordjs/opus">
+                            node-opus (@discordjs/opus)
+                        </CodeLink>
+                    </li>
+                </ul>
+                The music system contains a system of asynchronous Discord.JS listeners that receive
+                all the requests from users in a single server while maintaining multi-server
+                syncronization via PostgreSQL, with a attempt to save resources from Heroku Dynos,
+                without the usage of database architectures like{" "}
+                <CodeLink link="https://en.wikipedia.org/wiki/Shard_(database_architecture)">
+                    Sharding
+                </CodeLink>
+                , the client, in it's lifespan was only able to hold 100 servers at once.
+                <br />
+                This is the list of all the available music commands
+                <Box
+                    sx={{
+                        display: "grid",
+                        boxSizing: "border-box",
+                        gridTemplateColumns: "auto auto",
+                        gridRow: "auto auto",
+                        span: {
+                            fontWeight: "bold",
+                        },
+                    }}
+                >
+                    <ul>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js">
+                                music
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/queue.js">
+                                queue
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/nowplaying.js">
+                                nowplaying
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/pause.js">
+                                pause
+                            </CodeLink>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/repeat.js">
+                                repeat
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/skip.js">
+                                skip
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/earrape.js">
+                                earrape
+                            </CodeLink>
+                        </li>
+                        <li>
+                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/leave.js">
+                                leave
+                            </CodeLink>
+                        </li>
+                    </ul>
+                </Box>
+                You can check the repository on GitHub, but with a warning:{" "}
+                <span style={{ backgroundColor: "#fed" }}>
+                    {" "}
+                    The Discord.JS version of the client is old, and a lot of changes to the main
+                    code must be done before it can run in the current Discord.JS API Version, while
+                    it's not maintained anymore, a lot of the logic related to the commands are
+                    still valid and completely usable whitin a new Bot Client.
+                </span>{" "}
+                Check my Typescript Bot Model for more information.
             </Repo>
         </PageModel>
     );
