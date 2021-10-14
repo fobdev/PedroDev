@@ -112,7 +112,7 @@ export default function Contact() {
         <Container sx={mainContactContainer} disableGutters>
             <Box className="dev-box" alignSelf="center">
                 <Typography variant="h3" className="cuteface">
-                    <span />
+                    (づ ◕‿◕ )づ
                 </Typography>
                 <Typography variant="h5" marginTop="1em">
                     Mail me something
