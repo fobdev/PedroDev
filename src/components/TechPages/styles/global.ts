@@ -14,6 +14,10 @@ export const globalPageStyle: SxProps<Theme> = {
                 textDecoration: "none",
                 color: "black",
                 code: {
+                    transition: "all .2s",
+                    "&:hover": {
+                        boxShadow: "4px 4px 4px #aaa",
+                    },
                     background: "#eef",
                 },
             },
