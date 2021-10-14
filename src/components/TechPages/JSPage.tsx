@@ -274,8 +274,8 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 all the requests from users in a single server while maintaining multi-server
                 syncronization via PostgreSQL, with a attempt to save resources from Heroku Dynos,
                 without the usage of database architectures like{" "}
-                <CodeLink link="https://en.wikipedia.org/wiki/Shard_(database_architecture)">
-                    Sharding
+                <CodeLink link="https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6">
+                    sharding
                 </CodeLink>
                 , the client, in it's lifespan was only able to hold 100 servers at once.
                 <br />
