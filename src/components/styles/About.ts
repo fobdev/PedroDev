@@ -103,8 +103,10 @@ export const mainAboutContainer: SxProps<Theme> = {
 
             ".frontend-techbox, .backend-techbox": {
                 display: "flex",
+                flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "center",
+                rowGap: "1em",
                 columnGap: "2em",
                 padding: 0,
                 marginTop: "2em",
