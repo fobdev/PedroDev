@@ -232,7 +232,7 @@ export const JSPage: React.FC<Props> = ({ growIn, image }) => {
                 repoLink="https://github.com/fobdev/BogueBot/tree/master/commands/music"
                 largeImage={YTmain}
                 largeImagePlaceholder={YTmainMin}
-                largeImageLink="https://google.com/"
+                largeImageLink="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js"
             >
                 This is the music module of the BogueBot, a complete player made possible with the{" "}
                 <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
