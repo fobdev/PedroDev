@@ -20,8 +20,8 @@ export let largeImageHoverMainBox = (side: string) => {
             borderBottomLeftRadius: "2em",
             "&:hover": {
                 transition: "0.3s",
-                boxShadow: "-2px -2px 10px #aaa",
-                transform: "translate(5px, 5px)",
+                boxShadow: "2px -2px 10px #aaa",
+                transform: "translate(-5px, 5px)",
             },
         },
     };
