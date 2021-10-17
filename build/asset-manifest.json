@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4f19616d.chunk.css",
-    "main.js": "/static/js/main.539f4367.chunk.js",
-    "main.js.map": "/static/js/main.539f4367.chunk.js.map",
+    "main.js": "/static/js/main.9fd05635.chunk.js",
+    "main.js.map": "/static/js/main.9fd05635.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5f174a95.js",
     "runtime-main.js.map": "/static/js/runtime-main.5f174a95.js.map",
     "static/js/2.d440172d.chunk.js": "/static/js/2.d440172d.chunk.js",
@@ -22,6 +22,7 @@
     "static/media/Sass.d0d03348.svg": "/static/media/Sass.d0d03348.svg",
     "static/media/YouTube.350d8f8f.svg": "/static/media/YouTube.350d8f8f.svg",
     "static/media/bbmain.7fb73e7b.png": "/static/media/bbmain.7fb73e7b.png",
+    "static/media/bbstandings.8425b923.png": "/static/media/bbstandings.8425b923.png",
     "static/media/discord-typescript.ba0bc0f6.png": "/static/media/discord-typescript.ba0bc0f6.png",
     "static/media/hero1.567e4b5d.gif": "/static/media/hero1.567e4b5d.gif",
     "static/media/javascript.acc4642f.svg": "/static/media/javascript.acc4642f.svg",
@@ -34,6 +35,6 @@
     "static/js/runtime-main.5f174a95.js",
     "static/js/2.d440172d.chunk.js",
     "static/css/main.4f19616d.chunk.css",
-    "static/js/main.539f4367.chunk.js"
+    "static/js/main.9fd05635.chunk.js"
   ]
 }
