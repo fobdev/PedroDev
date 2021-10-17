@@ -14,20 +14,26 @@ export const repoMainBoxStyling = (side: any) => {
         display: "flex",
         textAlign: "left",
 
-        ".repobox-rightside": {
+        ".repobox-image, .repobox-text": {
             width: "100%",
         },
 
-        ".repobox-leftside": {
+        ".repobox-text": {
             margin: "2em",
-            width: "100%",
         },
+
         ".repo-title": {
             fontWeight: "500",
         },
+
         ".repo-description": {
             fontWeight: "300",
+            ul: {
+                listStyle: "none",
+                padding: 0,
+            },
         },
+
         ".repo-link": {
             marginTop: "1em",
             alignSelf: "center",

@@ -110,7 +110,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                 from several Leagues, and my job was to show the content in a table, for each of the
                 leagues available. I mainly used{" "}
                 <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink> for the fetch
-                requests and made a Typescript fetcher using interfaces to get the JSON objects
+                requests and made a Typescript fetcher using interfaces to get the JSON objects.
                 <ul>
                     React Typescript modules used
                     <li>
@@ -157,7 +157,7 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                     </li>
                 </ul>
                 Feel free to check it, I created a fetch system with axios that is completely
-                modular, and I use it basically all my projects that I need API fetching
+                modular, and I use it basically all my projects that I need API fetching:
             </Repo>
         </PageModel>
     );

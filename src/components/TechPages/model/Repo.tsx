@@ -26,11 +26,13 @@ export const Repo: React.FC<Props> = ({
     return (
         <Slide direction="up" in={true} timeout={{ enter: 1000, exit: 0 }}>
             <Box sx={repoMainBoxStyling(side)}>
-                <Box className="repobox-leftside">
+                <Box className="repobox-text">
                     <Typography className="repo-title" variant="h4">
                         {title}
+                        <Typography className="repo-description" sx={{ direction: "ltr" }}>
+                            {children}
+                        </Typography>
                     </Typography>
-                    <Typography className="repo-description">{children}</Typography>
                     <a className="repo-link" href={repoLink} rel="noreferrer" target="_blank">
                         <Paper className="page-button" elevation={5}>
                             <GitHubIcon className="gh-icon" />
@@ -40,7 +42,7 @@ export const Repo: React.FC<Props> = ({
                         </Paper>
                     </a>
                 </Box>
-                <Box className="repobox-rightside">
+                <Box className="repobox-image">
                     <Box sx={largeImageHoverMainBox(side)}>
                         <a href={largeImageLink} rel="noreferrer" target="_blank">
                             <ImageLoader
