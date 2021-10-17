@@ -3,7 +3,7 @@ import ReactIMGMin from "../../images/reactcode-min.png";
 import Repo from "./model/Repo";
 import PageModel from "./model/PageModel";
 import { CodeLink } from "./model/CodeLink";
-// import videotest from "../../images/video.webm";
+import bbStandings from "../../images/bbstandings.png";
 
 interface Props {
     growIn: boolean;
@@ -93,6 +93,71 @@ export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
                 </ul>
                 If you want to help me develop my website, feel free to send requests to this
                 repository.
+            </Repo>
+            <Repo
+                largeImage={bbStandings}
+                largeImageLink="https://github.com/fobdev/standings/blob/master/src/pages/Home.tsx"
+                largeImagePlaceholder={ReactIMGMin}
+                repoLink="https://github.com/fobdev/standings/"
+                side="right"
+                title="standings-fetch"
+            >
+                This is a project that I made as a test for a company, where they wanted me to fetch
+                the contents of a public API that contains{" "}
+                <CodeLink link="https://github.com/azharimm/football-standings-api">
+                    Football Standings
+                </CodeLink>{" "}
+                from several Leagues, and my job was to show the content in a table, for each of the
+                leagues available. I mainly used{" "}
+                <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink> for the fetch
+                requests and made a Typescript fetcher using interfaces to get the JSON objects
+                <ul>
+                    React Typescript modules used
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@types/react">
+                            @types/react
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@types/react-dom">
+                            @types/react-dom
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@types/react-router-dom">
+                            @types/react-router-dom
+                        </CodeLink>
+                    </li>
+                </ul>
+                <ul>
+                    Other Typescript modules
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@types/node">
+                            @types/node
+                        </CodeLink>
+                    </li>
+                </ul>
+                <ul>
+                    Other modules
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@mui/icons-material">
+                            @mui/icons-material
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@mui/material">
+                            @mui/material
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/@mui/lab">@mui/lab</CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink>
+                    </li>
+                </ul>
+                Feel free to check it, I created a fetch system with axios that is completely
+                modular, and I use it basically all my projects that I need API fetching
             </Repo>
         </PageModel>
     );
