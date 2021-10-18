@@ -13,7 +13,7 @@ import {
 import LoadingButton from "@mui/lab/LoadingButton";
 import emailJS from "emailjs-com";
 import { Box } from "@mui/system";
-import { mainContactContainer } from "./styles/Contact";
+import { mainContactContainer } from "./styles";
 import React, { useState, useRef } from "react";
 import { StandardTextFieldProps } from "@mui/material/TextField";
 

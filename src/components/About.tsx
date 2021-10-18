@@ -1,3 +1,9 @@
+// import CloudQueueIcon from "@mui/icons-material/CloudQueue";
+// import FirebaseIcon from "../images/firebase-icon.svg";
+// import HerokuIcon from "../images/heroku-icon.svg";
+// import FilterDramaIcon from "@mui/icons-material/FilterDrama";
+// import BigButton from "./subcomponents/BigButton";
+
 import { Slide, Grow, Paper, Typography, ButtonBase } from "@mui/material";
 import { update, mapValues } from "lodash";
 import { mainTechRolesContainer } from "./subcomponents/styles/TechRoles";
@@ -5,26 +11,9 @@ import { Box } from "@mui/system";
 import { mainAboutContainer } from "./styles/About";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
-// import CloudQueueIcon from "@mui/icons-material/CloudQueue";
-// import FirebaseIcon from "../images/firebase-icon.svg";
-// import HerokuIcon from "../images/heroku-icon.svg";
-// import FilterDramaIcon from "@mui/icons-material/FilterDrama";
-// import BigButton from "./subcomponents/BigButton";
-import TechRole from "./subcomponents/TechRole";
+import { TechRole } from "./subcomponents";
 
-import {
-    TypescriptSVG,
-    JavascriptSVG,
-    ReactSVG,
-    MUISVG,
-    SassSVG,
-    CppSVG,
-    PostgreSQLSVG,
-    MySQLSVG,
-    NodeJSSVG,
-    DiscordSVG,
-    YouTubeSVG,
-} from "../images/_importHandler";
+import * as svgBank from "../images";
 
 import {
     POSTGRESPage,
@@ -36,7 +25,7 @@ import {
     CPage,
     DISCORDPage,
     MYSQLPage,
-} from "./TechPages/_importHandler";
+} from "./TechPages";
 
 import { useState, useRef } from "react";
 export default function About() {
@@ -166,22 +155,34 @@ export default function About() {
                                                 disableRipple
                                                 onClick={() => handleClick("react")}
                                             >
-                                                <img className="image" src={ReactSVG} alt="React" />
-                                                <img className="image" src={MUISVG} alt="MUI" />
-                                                <img className="image" src={SassSVG} alt="SASS" />
+                                                <img
+                                                    className="image"
+                                                    src={svgBank.ReactSVG}
+                                                    alt="React"
+                                                />
+                                                <img
+                                                    className="image"
+                                                    src={svgBank.MUISVG}
+                                                    alt="MUI"
+                                                />
+                                                <img
+                                                    className="image"
+                                                    src={svgBank.SassSVG}
+                                                    alt="SASS"
+                                                />
                                                 <Typography className="title">
                                                     React / MUI / Sass
                                                 </Typography>
                                             </ButtonBase>
                                         </Paper>
                                         <TechRole
-                                            image={TypescriptSVG}
+                                            image={svgBank.TypescriptSVG}
                                             title="Typescript"
                                             selected={paperState.typescript}
                                             onClick={() => handleClick("typescript")}
                                         />
                                         <TechRole
-                                            image={JavascriptSVG}
+                                            image={svgBank.JavascriptSVG}
                                             title="JavaScript"
                                             selected={paperState.javascript}
                                             onClick={() => handleClick("javascript")}
@@ -198,37 +199,37 @@ export default function About() {
                                 >
                                     <Box className="backend-techbox">
                                         <TechRole
-                                            image={NodeJSSVG}
+                                            image={svgBank.NodeJSSVG}
                                             title="Node.JS"
                                             selected={paperState.nodejs}
                                             onClick={() => handleClick("nodejs")}
                                         />
                                         <TechRole
-                                            image={PostgreSQLSVG}
+                                            image={svgBank.PostgreSQLSVG}
                                             title="Postgres"
                                             selected={paperState.postgres}
                                             onClick={() => handleClick("postgres")}
                                         />
                                         <TechRole
-                                            image={CppSVG}
+                                            image={svgBank.CppSVG}
                                             title="C/C++"
                                             selected={paperState.cpp}
                                             onClick={() => handleClick("cpp")}
                                         />
                                         <TechRole
-                                            image={MySQLSVG}
+                                            image={svgBank.MySQLSVG}
                                             title="MySQL"
                                             selected={paperState.mysql}
                                             onClick={() => handleClick("mysql")}
                                         />
                                         <TechRole
-                                            image={DiscordSVG}
+                                            image={svgBank.DiscordSVG}
                                             title="Discord.JS"
                                             selected={paperState.discord}
                                             onClick={() => handleClick("discord")}
                                         />
                                         <TechRole
-                                            image={YouTubeSVG}
+                                            image={svgBank.YouTubeSVG}
                                             title="YouTube API"
                                             selected={paperState.youtube}
                                             onClick={() => handleClick("youtube")}
@@ -242,41 +243,44 @@ export default function About() {
                         {/* Frontend */}
                         {summonPage(
                             paperState.react,
-                            <REACTPage image={ReactSVG} growIn={paperState.react} />
+                            <REACTPage image={svgBank.ReactSVG} growIn={paperState.react} />
                         )}
                         {summonPage(
                             paperState.javascript,
-                            <JSPage image={JavascriptSVG} growIn={paperState.javascript} />
+                            <JSPage image={svgBank.JavascriptSVG} growIn={paperState.javascript} />
                         )}
                         {summonPage(
                             paperState.typescript,
-                            <TSPage image={TypescriptSVG} growIn={paperState.typescript} />
+                            <TSPage image={svgBank.TypescriptSVG} growIn={paperState.typescript} />
                         )}
 
                         {/* Backend */}
                         {summonPage(
                             paperState.mysql,
-                            <MYSQLPage image={MySQLSVG} growIn={paperState.mysql} />
+                            <MYSQLPage image={svgBank.MySQLSVG} growIn={paperState.mysql} />
                         )}
                         {summonPage(
                             paperState.youtube,
-                            <YOUTUBEPage image={YouTubeSVG} growIn={paperState.youtube} />
+                            <YOUTUBEPage image={svgBank.YouTubeSVG} growIn={paperState.youtube} />
                         )}
                         {summonPage(
                             paperState.postgres,
-                            <POSTGRESPage image={PostgreSQLSVG} growIn={paperState.postgres} />
+                            <POSTGRESPage
+                                image={svgBank.PostgreSQLSVG}
+                                growIn={paperState.postgres}
+                            />
                         )}
                         {summonPage(
                             paperState.discord,
-                            <DISCORDPage image={DiscordSVG} growIn={paperState.discord} />
+                            <DISCORDPage image={svgBank.DiscordSVG} growIn={paperState.discord} />
                         )}
                         {summonPage(
                             paperState.nodejs,
-                            <NODEJSPage image={NodeJSSVG} growIn={paperState.nodejs} />
+                            <NODEJSPage image={svgBank.NodeJSSVG} growIn={paperState.nodejs} />
                         )}
                         {summonPage(
                             paperState.cpp,
-                            <CPage image={CppSVG} growIn={paperState.cpp} />
+                            <CPage image={svgBank.CppSVG} growIn={paperState.cpp} />
                         )}
                     </Box>
                 </Box>
