@@ -8,6 +8,9 @@ import {
     ListItemButton,
     ListItemIcon,
     Stack,
+    SwipeableDrawer,
+    ListItem,
+    ListItemText,
 } from "@mui/material";
 
 /** MUI Icons Imports */
@@ -16,17 +19,27 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import logo from "../images/logo.svg";
+import HomeIcon from "@mui/icons-material/Home";
+import EmailIcon from "@mui/icons-material/Email";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
+
+import { HeadStyle } from "./styles";
 
 /** React */
 import { Link } from "react-router-dom";
-import { main_color } from "./styles/_globals";
-import { SxProps, Theme } from "@mui/system";
+import { useState } from "react";
 
 const githubLink = "https://github.com/fobdev";
 const whatsappLink = "https://wa.me/+5599982207527";
 const linkedinLink = "https://www.linkedin.com/in/pedro-henrique-dev1997/";
 
 export default function Head() {
+    const [openMenu, setOpenMenu] = useState(false);
+
+    const handleMenuOpen = () => {
+        return openMenu ? setOpenMenu(false) : setOpenMenu(true);
+    };
+
     const handleToTopClick = () => {
         return window.scrollTo({
             top: 0,
@@ -42,58 +55,134 @@ export default function Head() {
         });
     };
 
-    const styling: SxProps<Theme> = {
-        backgroundColor: "rgba(255,255,255,0.70)",
-        backdropFilter: "blur(20px)",
-        a: { color: `${main_color}` },
-        ".link": {
-            textDecoration: "none",
-            color: "black",
-            div: { transition: "all .3s", "&:hover": { color: `${main_color}` } },
-        },
-        ".title": {
-            span: { color: `${main_color}` },
-        },
-        ".mobile-menu": {
-            display: "none",
-            color: main_color,
-            margin: 1.1,
-        },
-        "@media (max-width: 560px)": {
-            ul: {
-                display: "none",
-            },
-            ".mobile-menu": {
-                display: "inherit",
-            },
-        },
+    const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+            event &&
+            event.type === "keydown" &&
+            ((event as React.KeyboardEvent).key === "Tab" ||
+                (event as React.KeyboardEvent).key === "Shift")
+        ) {
+            return;
+        }
+
+        setOpenMenu(open);
     };
 
     return (
         <Stack
-            sx={styling}
+            sx={HeadStyle}
             position="sticky"
             zIndex="1300"
             top="0"
             direction="row"
             alignItems="center"
-            justifyContent="space-between"
+            justifyContent="space-around"
         >
             <Link className="link" to="/" onClick={handleToTopClick}>
-                <Stack direction="row" spacing={0.1} margin={1} sx={{ img: { width: "24px" } }}>
-                    <Grow in={true} timeout={{ enter: 1000 }}>
-                        <img src={logo} alt="Website Logo" />
-                    </Grow>
+                <Stack direction="row" spacing={0.1} margin={1}>
                     <Grow in={true} timeout={{ enter: 1000 }}>
                         <Typography className="title">
-                            Pedro<span>Dev</span>
+                            <img src={logo} alt="Website Logo" />
+                            <Typography className="title-name">
+                                Pedro<Typography component="span">Dev</Typography>
+                            </Typography>
                         </Typography>
                     </Grow>
                 </Stack>
             </Link>
-            <IconButton className="mobile-menu">
+            <IconButton className="mobile-menu" onClick={handleMenuOpen}>
                 <MenuRoundedIcon />
             </IconButton>
+            <SwipeableDrawer
+                anchor="right"
+                open={openMenu}
+                onClose={toggleDrawer(false)}
+                onOpen={toggleDrawer(true)}
+                sx={{ zIndex: "1500" }}
+            >
+                <List
+                    sx={{
+                        a: {
+                            display: "flex",
+                            alignItems: "center",
+                            textDecoration: "none",
+                            color: "black",
+                        },
+                    }}
+                >
+                    <Link
+                        to="/"
+                        className="link"
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
+                        <ListItem
+                            button
+                            onClick={() => {
+                                handleToTopClick();
+                                setOpenMenu(false);
+                            }}
+                        >
+                            <ListItemIcon>
+                                <HomeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Home" />
+                        </ListItem>
+                    </Link>
+                    <Link to="/projects" style={{ textDecoration: "none", color: "black" }}>
+                        <ListItem
+                            button
+                            onClick={() => {
+                                setOpenMenu(false);
+                                handleToTopClick();
+                            }}
+                        >
+                            <ListItemIcon>
+                                <AccountTreeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Projects" />
+                        </ListItem>
+                    </Link>
+                    <Link to="#" style={{ textDecoration: "none", color: "black" }}>
+                        <ListItem
+                            divider
+                            button
+                            onClick={() => {
+                                handleToBottomClick();
+                                setOpenMenu(false);
+                            }}
+                        >
+                            <ListItemIcon>
+                                <EmailIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Contact me" />
+                        </ListItem>
+                    </Link>
+                    <ListItemButton>
+                        <a className="" href={whatsappLink} rel="noreferrer" target="_blank">
+                            <ListItemIcon>
+                                <WhatsAppIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Whatsapp" />
+                        </a>
+                    </ListItemButton>
+                    <ListItemButton>
+                        <a href={linkedinLink} rel="noreferrer" target="_blank">
+                            <ListItemIcon>
+                                <LinkedInIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="LinkedIn" />
+                        </a>
+                    </ListItemButton>
+                    <ListItemButton>
+                        <a href={githubLink} rel="noreferrer" target="_blank">
+                            <ListItemIcon>
+                                <GitHubIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="GitHub" />
+                        </a>
+                    </ListItemButton>
+                </List>
+            </SwipeableDrawer>
             <List>
                 <Stack direction="row" spacing={1}>
                     <Slide in={true} timeout={{ enter: 500 }}>
