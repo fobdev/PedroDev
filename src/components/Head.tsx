@@ -91,8 +91,8 @@ export default function Head() {
                     </Grow>
                 </Stack>
             </Link>
-            <IconButton>
-                <MenuRoundedIcon className="mobile-menu" />
+            <IconButton className="mobile-menu">
+                <MenuRoundedIcon />
             </IconButton>
             <List>
                 <Stack direction="row" spacing={1}>
