@@ -45,6 +45,7 @@ export default function Head() {
     const styling: SxProps<Theme> = {
         backgroundColor: "rgba(255,255,255,0.70)",
         backdropFilter: "blur(20px)",
+        a: { color: `${main_color}` },
         ".link": {
             textDecoration: "none",
             color: "black",
@@ -53,7 +54,6 @@ export default function Head() {
         ".title": {
             span: { color: `${main_color}` },
         },
-        button: { color: `${main_color}` },
         ".mobile-menu": {
             display: "none",
             color: main_color,
@@ -123,25 +123,19 @@ export default function Head() {
                 <Grow in={true} timeout={{ enter: 1000 }}>
                     <Stack direction="row">
                         <ListItemIcon>
-                            <a href={whatsappLink} rel="noreferrer" target="_blank">
-                                <IconButton className="icon-button">
-                                    <WhatsAppIcon />
-                                </IconButton>
-                            </a>
+                            <IconButton href={whatsappLink} rel="noreferrer" target="_blank">
+                                <WhatsAppIcon />
+                            </IconButton>
                         </ListItemIcon>
                         <ListItemIcon>
-                            <a href={linkedinLink} rel="noreferrer" target="_blank">
-                                <IconButton className="icon-button">
-                                    <LinkedInIcon />
-                                </IconButton>
-                            </a>
+                            <IconButton href={linkedinLink} rel="noreferrer" target="_blank">
+                                <LinkedInIcon />
+                            </IconButton>
                         </ListItemIcon>
                         <ListItemIcon>
-                            <a href={githubLink} rel="noreferrer" target="_blank">
-                                <IconButton className="icon-button">
-                                    <GitHubIcon />
-                                </IconButton>
-                            </a>
+                            <IconButton href={githubLink} rel="noreferrer" target="_blank">
+                                <GitHubIcon />
+                            </IconButton>
                         </ListItemIcon>
                     </Stack>
                 </Grow>
