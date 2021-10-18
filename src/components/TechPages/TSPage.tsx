@@ -6,15 +6,13 @@ import Repo from "./model/Repo";
 import { Box } from "@mui/system";
 
 interface Props {
-    growIn: boolean;
     image: any;
 }
 
-export const TSPage: React.FC<Props> = ({ growIn, image }) => {
+export const TSPage: React.FC<Props> = ({ image }) => {
     return (
         <PageModel
             image={image}
-            growIn={growIn}
             mainTitle="Typescript Projects"
             largeTitle="Typescript & Discord.JS"
         >

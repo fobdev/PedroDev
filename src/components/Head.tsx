@@ -128,7 +128,10 @@ export default function Head() {
                             <ListItemText primary="Home" />
                         </ListItem>
                     </Link>
-                    <Link to="/projects" style={{ textDecoration: "none", color: "black" }}>
+                    <Link
+                        to="/projects/frontend/react"
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
                         <ListItem
                             button
                             onClick={() => {
@@ -193,7 +196,7 @@ export default function Head() {
                         </Link>
                     </Slide>
                     <Slide in={true} timeout={{ enter: 1000 }}>
-                        <Link className="link" to="/projects">
+                        <Link className="link" to="/projects/frontend/react">
                             <ListItemButton onClick={handleToTopClick} disableRipple>
                                 Projects
                             </ListItemButton>

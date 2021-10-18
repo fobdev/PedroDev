@@ -6,12 +6,11 @@ interface Props {
     children: JSX.Element | JSX.Element[];
     title: string;
     image: string;
-    growIn: boolean;
 }
 
-export const Project: React.FC<Props> = ({ children, title, image, growIn }) => {
+export const Project: React.FC<Props> = ({ children, title, image }) => {
     return (
-        <Grow in={growIn} timeout={{ enter: 500, exit: 0 }} unmountOnExit mountOnEnter>
+        <Grow in={true} timeout={{ enter: 500, exit: 0 }} unmountOnExit mountOnEnter>
             <Box sx={mainTSPContainer}>
                 <Paper className="outside-paper" elevation={2}>
                     <Box className="outside-title">

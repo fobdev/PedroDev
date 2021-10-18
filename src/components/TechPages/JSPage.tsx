@@ -8,15 +8,13 @@ import BBMainMin from "../../images/bbmain-min.png";
 import Box from "@mui/material/Box";
 
 interface Props {
-    growIn: boolean;
     image: any;
 }
 
-export const JSPage: React.FC<Props> = ({ growIn, image }) => {
+export const JSPage: React.FC<Props> = ({ image }) => {
     return (
         <PageModel
             image={image}
-            growIn={growIn}
             mainTitle="Javascript Projects"
             largeTitle="JavaScript & Discord.JS"
         >

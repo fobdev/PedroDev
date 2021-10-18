@@ -5,10 +5,10 @@ interface Props {
     image: any;
     title: string;
     onClick?: any;
-    selected: boolean;
+    selected?: boolean;
 }
 
-export const TechRole: React.FC<Props> = ({ image, title, onClick, selected }) => {
+export const TechRole: React.FC<Props> = ({ image, title, onClick, selected = false }) => {
     return (
         <Paper elevation={5} sx={mainTechRolesContainer(selected)}>
             <ButtonBase disableRipple onClick={onClick}>

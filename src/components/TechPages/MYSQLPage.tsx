@@ -2,13 +2,12 @@ import { Typography } from "@mui/material";
 import Project from "../subcomponents/Project";
 
 interface Props {
-    growIn: boolean;
     image: any;
 }
 
-export const MYSQLPage: React.FC<Props> = ({ growIn, image }) => {
+export const MYSQLPage: React.FC<Props> = ({ image }) => {
     return (
-        <Project title="MySQL Projects" image={image} growIn={growIn}>
+        <Project title="MySQL Projects" image={image}>
             <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>

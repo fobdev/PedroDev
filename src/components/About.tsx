@@ -12,9 +12,8 @@ import { mainAboutContainer } from "./styles/About";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { TechRole } from "./subcomponents";
-
+import { Link, useRouteMatch, Route, useLocation } from "react-router-dom";
 import * as svgBank from "../images";
-
 import {
     POSTGRESPage,
     REACTPage,
@@ -26,45 +25,65 @@ import {
     DISCORDPage,
     MYSQLPage,
 } from "./TechPages";
+import { useState, useRef, useEffect } from "react";
 
-import { useState, useRef } from "react";
 export default function About() {
+    let match = useRouteMatch();
+    // let location = useLocation();
+
+    // const [currentLocation, setCurrentLocation] = useState("");
+
+    // useEffect(() => {
+    //     console.log("key:", location.key);
+    //     console.log("current location: ", location.pathname);
+    //     setCurrentLocation(location.pathname);
+    // }, [location.key, location.pathname]);
+
     // menu transition
-    const [frontEnd, setFrontEnd] = useState(true);
+    const [frontEnd, setFrontEnd] = useState(false);
     const [backEnd, setBackEnd] = useState(false);
 
+    // type Tech = "frontend" | "backend";
+    // const tech = (tech: Tech) => {
+    //     if (tech === "backend") {
+    //         setBackEnd(true);
+    //         setFrontEnd(false);
+    //     }
+    //     if (tech === "frontend") {
+    //         setBackEnd(false);
+    //         setFrontEnd(true);
+    //     }
+    // };
+
     // paper switch
-    const [paperState, setPaperState] = useState({
-        typescript: false,
-        javascript: false,
-        react: true,
-        mui: false,
-        sass: false,
-        cpp: false,
-        mysql: false,
-        postgres: false,
-        nodejs: false,
-        discord: false,
-        youtube: false,
-    });
+    // const [paperState, setPaperState] = useState({
+    //     typescript: false,
+    //     javascript: false,
+    //     react: true,
+    //     mui: false,
+    //     sass: false,
+    //     cpp: false,
+    //     mysql: false,
+    //     postgres: false,
+    //     nodejs: false,
+    //     discord: false,
+    //     youtube: false,
+    // });
 
     // paper switch handler
-    const handlePaperState = (tech: string) => {
-        let newState = paperState;
-        newState = mapValues(newState, () => false); // reset the obj
-        update(newState, tech, (value) => (value = true)); // turns only the selected key
-        return setPaperState(newState); // return into the hook
-    };
+    // const handlePaperState = (tech: string) => {
+    //     let newState = paperState;
+    //     newState = mapValues(newState, () => false); // reset the obj
+    //     update(newState, tech, (value) => (value = true)); // turns only the selected key
+    //     return setPaperState(newState); // return into the hook
+    // };
 
-    const summonPage = (value: boolean, element: JSX.Element) => {
-        return value ? element : null;
-    };
-
-    const handleClick = (value: string) => {
-        handlePaperState(value);
-    };
+    // const handleClick = (value: string) => {
+    //     handlePaperState(value);
+    // };
 
     const insideContainer = useRef(null);
+
     const feSelection = frontEnd ? "#eef" : "#fff";
     const beSelection = backEnd ? "#eef" : "#fff";
     const feSelectionBoxShadow = !frontEnd
@@ -82,15 +101,10 @@ export default function About() {
                         <Paper className="main-title-paper" elevation={3}>
                             <Box className="main-title-box" ref={insideContainer} overflow="hidden">
                                 <Box className="display-box">
-                                    <ButtonBase
-                                        disableRipple
-                                        onClick={() => {
-                                            if (!frontEnd) {
-                                                handlePaperState("react");
-                                                setFrontEnd(true);
-                                                setBackEnd(false);
-                                            }
-                                        }}
+                                    <Link
+                                        to={`${match.path}/frontend/react`}
+                                        style={{ textDecoration: "none", color: "black" }}
+                                        // onClick={() => tech("frontend")}
                                     >
                                         <Paper
                                             elevation={3}
@@ -108,16 +122,11 @@ export default function About() {
                                                 Frontend
                                             </Typography>
                                         </Paper>
-                                    </ButtonBase>
-                                    <ButtonBase
-                                        disableRipple
-                                        onClick={() => {
-                                            if (!backEnd) {
-                                                handlePaperState("nodejs");
-                                                setBackEnd(true);
-                                                setFrontEnd(false);
-                                            }
-                                        }}
+                                    </Link>
+                                    <Link
+                                        to={`${match.path}/backend/nodejs`}
+                                        style={{ textDecoration: "none", color: "black" }}
+                                        // onClick={() => tech("backend")}
                                     >
                                         <Paper
                                             elevation={3}
@@ -136,152 +145,162 @@ export default function About() {
                                                 Backend
                                             </Typography>
                                         </Paper>
-                                    </ButtonBase>
+                                    </Link>
                                 </Box>
-                                <Slide
-                                    in={frontEnd}
-                                    direction="up"
-                                    timeout={{ enter: 500, exit: 0 }}
-                                    container={insideContainer.current}
-                                    mountOnEnter
-                                    unmountOnExit
-                                >
-                                    <Box className="frontend-techbox">
-                                        <Paper
-                                            elevation={5}
-                                            sx={mainTechRolesContainer(paperState.react)}
-                                        >
-                                            <ButtonBase
-                                                disableRipple
-                                                onClick={() => handleClick("react")}
+                                <Route path={`${match.path}/frontend/`}>
+                                    <Slide
+                                        in={true}
+                                        direction="up"
+                                        timeout={{ enter: 500, exit: 0 }}
+                                        container={insideContainer.current}
+                                        mountOnEnter
+                                        unmountOnExit
+                                    >
+                                        <Box className="frontend-techbox">
+                                            <Paper elevation={5} sx={mainTechRolesContainer(false)}>
+                                                <Link
+                                                    to={`${match.url}/frontend/react`}
+                                                    style={{
+                                                        textDecoration: "none",
+                                                        color: "black",
+                                                    }}
+                                                >
+                                                    <ButtonBase disableRipple>
+                                                        <img
+                                                            className="image"
+                                                            src={svgBank.ReactSVG}
+                                                            alt="React"
+                                                        />
+                                                        <img
+                                                            className="image"
+                                                            src={svgBank.MUISVG}
+                                                            alt="MUI"
+                                                        />
+                                                        <img
+                                                            className="image"
+                                                            src={svgBank.SassSVG}
+                                                            alt="SASS"
+                                                        />
+                                                        <Typography className="title">
+                                                            React / MUI / Sass
+                                                        </Typography>
+                                                    </ButtonBase>
+                                                </Link>
+                                            </Paper>
+                                            <Link
+                                                to={`${match.url}/frontend/typescript`}
+                                                style={{ textDecoration: "none", color: "black" }}
                                             >
-                                                <img
-                                                    className="image"
-                                                    src={svgBank.ReactSVG}
-                                                    alt="React"
+                                                <TechRole
+                                                    image={svgBank.TypescriptSVG}
+                                                    title="Typescript"
                                                 />
-                                                <img
-                                                    className="image"
-                                                    src={svgBank.MUISVG}
-                                                    alt="MUI"
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/frontend/javascript`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.JavascriptSVG}
+                                                    title="JavaScript"
                                                 />
-                                                <img
-                                                    className="image"
-                                                    src={svgBank.SassSVG}
-                                                    alt="SASS"
+                                            </Link>
+                                        </Box>
+                                    </Slide>
+                                </Route>
+                                <Route path={`${match.path}/backend/`}>
+                                    <Slide
+                                        in={true}
+                                        direction="up"
+                                        timeout={{ enter: 500, exit: 0 }}
+                                        container={insideContainer.current}
+                                        mountOnEnter
+                                        unmountOnExit
+                                    >
+                                        <Box className="backend-techbox">
+                                            <Link
+                                                to={`${match.url}/backend/nodejs`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.NodeJSSVG}
+                                                    title="Node.JS"
                                                 />
-                                                <Typography className="title">
-                                                    React / MUI / Sass
-                                                </Typography>
-                                            </ButtonBase>
-                                        </Paper>
-                                        <TechRole
-                                            image={svgBank.TypescriptSVG}
-                                            title="Typescript"
-                                            selected={paperState.typescript}
-                                            onClick={() => handleClick("typescript")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.JavascriptSVG}
-                                            title="JavaScript"
-                                            selected={paperState.javascript}
-                                            onClick={() => handleClick("javascript")}
-                                        />
-                                    </Box>
-                                </Slide>
-                                <Slide
-                                    in={backEnd}
-                                    direction="up"
-                                    timeout={{ enter: 500, exit: 0 }}
-                                    container={insideContainer.current}
-                                    mountOnEnter
-                                    unmountOnExit
-                                >
-                                    <Box className="backend-techbox">
-                                        <TechRole
-                                            image={svgBank.NodeJSSVG}
-                                            title="Node.JS"
-                                            selected={paperState.nodejs}
-                                            onClick={() => handleClick("nodejs")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.PostgreSQLSVG}
-                                            title="Postgres"
-                                            selected={paperState.postgres}
-                                            onClick={() => handleClick("postgres")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.CppSVG}
-                                            title="C/C++"
-                                            selected={paperState.cpp}
-                                            onClick={() => handleClick("cpp")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.MySQLSVG}
-                                            title="MySQL"
-                                            selected={paperState.mysql}
-                                            onClick={() => handleClick("mysql")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.DiscordSVG}
-                                            title="Discord.JS"
-                                            selected={paperState.discord}
-                                            onClick={() => handleClick("discord")}
-                                        />
-                                        <TechRole
-                                            image={svgBank.YouTubeSVG}
-                                            title="YouTube API"
-                                            selected={paperState.youtube}
-                                            onClick={() => handleClick("youtube")}
-                                        />
-                                    </Box>
-                                </Slide>
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/postgres`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.PostgreSQLSVG}
+                                                    title="Postgres"
+                                                />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/cpp`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole image={svgBank.CppSVG} title="C/C++" />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/mysql`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole image={svgBank.MySQLSVG} title="MySQL" />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/discordapi`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.DiscordSVG}
+                                                    title="Discord.JS"
+                                                />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/youtubeapi`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.YouTubeSVG}
+                                                    title="YouTube API"
+                                                />
+                                            </Link>
+                                        </Box>
+                                    </Slide>
+                                </Route>
                             </Box>
                         </Paper>
                     </Grow>
                     <Box className="description-box">
                         {/* Frontend */}
-                        {summonPage(
-                            paperState.react,
-                            <REACTPage image={svgBank.ReactSVG} growIn={paperState.react} />
-                        )}
-                        {summonPage(
-                            paperState.javascript,
-                            <JSPage image={svgBank.JavascriptSVG} growIn={paperState.javascript} />
-                        )}
-                        {summonPage(
-                            paperState.typescript,
-                            <TSPage image={svgBank.TypescriptSVG} growIn={paperState.typescript} />
-                        )}
-
-                        {/* Backend */}
-                        {summonPage(
-                            paperState.mysql,
-                            <MYSQLPage image={svgBank.MySQLSVG} growIn={paperState.mysql} />
-                        )}
-                        {summonPage(
-                            paperState.youtube,
-                            <YOUTUBEPage image={svgBank.YouTubeSVG} growIn={paperState.youtube} />
-                        )}
-                        {summonPage(
-                            paperState.postgres,
-                            <POSTGRESPage
-                                image={svgBank.PostgreSQLSVG}
-                                growIn={paperState.postgres}
-                            />
-                        )}
-                        {summonPage(
-                            paperState.discord,
-                            <DISCORDPage image={svgBank.DiscordSVG} growIn={paperState.discord} />
-                        )}
-                        {summonPage(
-                            paperState.nodejs,
-                            <NODEJSPage image={svgBank.NodeJSSVG} growIn={paperState.nodejs} />
-                        )}
-                        {summonPage(
-                            paperState.cpp,
-                            <CPage image={svgBank.CppSVG} growIn={paperState.cpp} />
-                        )}
+                        <Route path={`${match.path}/frontend/react`}>
+                            <REACTPage image={svgBank.ReactSVG} />
+                        </Route>
+                        <Route path={`${match.path}/frontend/typescript`}>
+                            <TSPage image={svgBank.TypescriptSVG} />
+                        </Route>
+                        <Route path={`${match.path}/frontend/javascript`}>
+                            <JSPage image={svgBank.JavascriptSVG} />
+                        </Route>
+                        <Route path={`${match.path}/backend/mysql`}>
+                            <MYSQLPage image={svgBank.MySQLSVG} />
+                        </Route>
+                        <Route path={`${match.path}/backend/youtubeapi`}>
+                            <YOUTUBEPage image={svgBank.YouTubeSVG} />{" "}
+                        </Route>
+                        <Route path={`${match.path}/backend/postgres`}>
+                            <POSTGRESPage image={svgBank.PostgreSQLSVG} />{" "}
+                        </Route>
+                        <Route path={`${match.path}/backend/discordapi`}>
+                            <DISCORDPage image={svgBank.DiscordSVG} />{" "}
+                        </Route>
+                        <Route path={`${match.path}/backend/nodejs`}>
+                            <NODEJSPage image={svgBank.NodeJSSVG} />{" "}
+                        </Route>
+                        <Route path={`${match.path}/backend/cpp`}>
+                            <CPage image={svgBank.CppSVG} />{" "}
+                        </Route>
                     </Box>
                 </Box>
             </Box>

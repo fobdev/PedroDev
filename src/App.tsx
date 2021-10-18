@@ -31,7 +31,7 @@ function App() {
                     <Hero />
                     <Contact />
                 </Route>
-                <Route exact path="/projects">
+                <Route path="/projects">
                     <About />
                     <Contact />
                 </Route>

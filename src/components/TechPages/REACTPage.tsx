@@ -6,15 +6,13 @@ import { CodeLink } from "./model/CodeLink";
 import bbStandings from "../../images/bbstandings.png";
 
 interface Props {
-    growIn: boolean;
     image: any;
 }
 
-export const REACTPage: React.FC<Props> = ({ growIn, image }) => {
+export const REACTPage: React.FC<Props> = ({ image }) => {
     return (
         <PageModel
             image={image}
-            growIn={growIn}
             mainTitle="React / Material UI / Sass Projects"
             largeTitle="React & Typescript / Mui + Sass"
         >
