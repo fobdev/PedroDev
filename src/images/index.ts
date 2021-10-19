@@ -7,5 +7,5 @@ export { default as CppSVG } from "./C++.svg";
 export { default as PostgreSQLSVG } from "./Postgres.svg";
 export { default as MySQLSVG } from "./MySQL.svg";
 export { default as NodeJSSVG } from "./NodeJS.svg";
-export { default as DiscordSVG } from "./Discord.svg";
+export { default as DiscordSVG } from "./discord.svg";
 export { default as YouTubeSVG } from "./YouTube.svg";
