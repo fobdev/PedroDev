@@ -5,15 +5,16 @@
 // import BigButton from "./subcomponents/BigButton";
 
 import { Slide, Grow, Paper, Typography, ButtonBase } from "@mui/material";
-import { update, mapValues } from "lodash";
+// import { update, mapValues } from "lodash";
 import { mainTechRolesContainer } from "./subcomponents/styles/TechRoles";
 import { Box } from "@mui/system";
 import { mainAboutContainer } from "./styles/About";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { TechRole } from "./subcomponents";
-import { Link, useRouteMatch, Route, useLocation } from "react-router-dom";
+import { Link, useRouteMatch, Route } from "react-router-dom";
 import * as svgBank from "../images";
+import { useRef } from "react";
 import {
     POSTGRESPage,
     REACTPage,
@@ -25,7 +26,7 @@ import {
     DISCORDPage,
     MYSQLPage,
 } from "./TechPages";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 export default function About() {
     let match = useRouteMatch();
