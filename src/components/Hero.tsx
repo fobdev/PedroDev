@@ -47,23 +47,23 @@ export default function Hero() {
                         >
                             Contact
                         </Button>
-                        <Button
-                            className="btn-work"
-                            variant="contained"
-                            disableRipple
-                            size="large"
-                            startIcon={<ComputerRoundedIcon />}
-                            onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: "smooth",
-                                });
-                            }}
-                        >
-                            <Link className="router-projects" to="/projects">
+                        <Link className="router-projects" to="/projects/frontend/react">
+                            <Button
+                                className="btn-work"
+                                variant="contained"
+                                disableRipple
+                                size="large"
+                                startIcon={<ComputerRoundedIcon />}
+                                onClick={() => {
+                                    window.scrollTo({
+                                        top: 0,
+                                        behavior: "smooth",
+                                    });
+                                }}
+                            >
                                 Projects
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
                     </Box>
                 </Fade>
             </Box>
