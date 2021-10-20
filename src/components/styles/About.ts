@@ -99,6 +99,16 @@ export const mainAboutContainer: SxProps<Theme> = {
                         borderRadius: "5em",
                     },
                 },
+                "@media (max-width: 780px)": {
+                    borderRadius: "0",
+                    width: "100%",
+
+                    ".display-box": {
+                        ".techselector-paper": {
+                            fontSize: ".6em",
+                        },
+                    },
+                },
             },
 
             ".frontend-techbox, .backend-techbox": {
@@ -110,6 +120,10 @@ export const mainAboutContainer: SxProps<Theme> = {
                 columnGap: "2em",
                 padding: 0,
                 marginTop: "2em",
+
+                "@media (max-width: 780px)": {
+                    fontSize: ".4em",
+                },
             },
         },
     },

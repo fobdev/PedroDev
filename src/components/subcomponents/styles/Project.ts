@@ -38,6 +38,19 @@ export const mainTSPContainer: SxProps<Theme> = {
             },
         },
     },
+
+    "@media (max-width: 780px)": {
+        ".outside-paper": {
+            borderRadius: "0",
+        },
+        ".outside-title": {
+            fontSize: ".5em",
+        },
+        img: {
+            display: "none",
+        },
+    },
+
     ".inside-paper": {
         zIndex: "1200",
         margin: "2em",

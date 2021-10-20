@@ -23,6 +23,13 @@ export const globalPageStyle: SxProps<Theme> = {
             },
         },
     },
+    "@media (max-width: 780px)": {
+        ".page-maintitle": {
+            fontSize: "2em",
+            fontWeight: "200",
+            padding: ".3em",
+        },
+    },
 };
 
 export default globalPageStyle;

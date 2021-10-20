@@ -18,6 +18,12 @@ export const repoMainBoxStyling = (side: any) => {
             width: "100%",
         },
 
+        "@media (max-width: 780px)": {
+            ".repobox-image": {
+                display: "none",
+            },
+        },
+
         ".repobox-text": {
             margin: "2em",
         },
