@@ -1,7 +1,7 @@
 export { default as CPage } from "./CPage";
-export { default as DISCORDPage } from "./DISCORDPage";
+export { default as MongoDBPage } from "./MongoDBPage";
 export { default as JSPage } from "./JSPage";
-export { default as MYSQLPage } from "./MYSQLPage";
+export { default as CSharpPage } from "./CSharpPage";
 export { default as NODEJSPage } from "./NODEJSPage";
 export { default as POSTGRESPage } from "./POSTGRESPage";
 export { default as REACTPage } from "./REACTPage";

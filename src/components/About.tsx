@@ -23,65 +23,17 @@ import {
     YOUTUBEPage,
     NODEJSPage,
     CPage,
-    DISCORDPage,
-    MYSQLPage,
+    MongoDBPage,
+    CSharpPage,
 } from "./TechPages";
 import { useState } from "react";
 
 export default function About() {
     let match = useRouteMatch();
-    // let location = useLocation();
-
-    // const [currentLocation, setCurrentLocation] = useState("");
-
-    // useEffect(() => {
-    //     console.log("key:", location.key);
-    //     console.log("current location: ", location.pathname);
-    //     setCurrentLocation(location.pathname);
-    // }, [location.key, location.pathname]);
 
     // menu transition
     const [frontEnd, setFrontEnd] = useState(false);
     const [backEnd, setBackEnd] = useState(false);
-
-    // type Tech = "frontend" | "backend";
-    // const tech = (tech: Tech) => {
-    //     if (tech === "backend") {
-    //         setBackEnd(true);
-    //         setFrontEnd(false);
-    //     }
-    //     if (tech === "frontend") {
-    //         setBackEnd(false);
-    //         setFrontEnd(true);
-    //     }
-    // };
-
-    // paper switch
-    // const [paperState, setPaperState] = useState({
-    //     typescript: false,
-    //     javascript: false,
-    //     react: true,
-    //     mui: false,
-    //     sass: false,
-    //     cpp: false,
-    //     mysql: false,
-    //     postgres: false,
-    //     nodejs: false,
-    //     discord: false,
-    //     youtube: false,
-    // });
-
-    // paper switch handler
-    // const handlePaperState = (tech: string) => {
-    //     let newState = paperState;
-    //     newState = mapValues(newState, () => false); // reset the obj
-    //     update(newState, tech, (value) => (value = true)); // turns only the selected key
-    //     return setPaperState(newState); // return into the hook
-    // };
-
-    // const handleClick = (value: string) => {
-    //     handlePaperState(value);
-    // };
 
     const insideContainer = useRef(null);
 
@@ -244,18 +196,18 @@ export default function About() {
                                                 <TechRole image={svgBank.CppSVG} title="C/C++" />
                                             </Link>
                                             <Link
-                                                to={`${match.url}/backend/mysql`}
+                                                to={`${match.url}/backend/csharp`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
-                                                <TechRole image={svgBank.MySQLSVG} title="MySQL" />
+                                                <TechRole image={svgBank.CSharpSVG} title="C#" />
                                             </Link>
                                             <Link
-                                                to={`${match.url}/backend/discordapi`}
+                                                to={`${match.url}/backend/mongodb`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
                                                 <TechRole
-                                                    image={svgBank.DiscordSVG}
-                                                    title="Discord.JS"
+                                                    image={svgBank.MongoDBSVG}
+                                                    title="MongoDB"
                                                 />
                                             </Link>
                                             <Link
@@ -284,8 +236,8 @@ export default function About() {
                         <Route path={`${match.path}/frontend/javascript`}>
                             <JSPage image={svgBank.JavascriptSVG} />
                         </Route>
-                        <Route path={`${match.path}/backend/mysql`}>
-                            <MYSQLPage image={svgBank.MySQLSVG} />
+                        <Route path={`${match.path}/backend/csharp`}>
+                            <CSharpPage image={svgBank.CSharpSVG} />
                         </Route>
                         <Route path={`${match.path}/backend/youtubeapi`}>
                             <YOUTUBEPage image={svgBank.YouTubeSVG} />{" "}
@@ -293,8 +245,8 @@ export default function About() {
                         <Route path={`${match.path}/backend/postgres`}>
                             <POSTGRESPage image={svgBank.PostgreSQLSVG} />{" "}
                         </Route>
-                        <Route path={`${match.path}/backend/discordapi`}>
-                            <DISCORDPage image={svgBank.DiscordSVG} />{" "}
+                        <Route path={`${match.path}/backend/mongodb`}>
+                            <MongoDBPage image={svgBank.MongoDBSVG} />{" "}
                         </Route>
                         <Route path={`${match.path}/backend/nodejs`}>
                             <NODEJSPage image={svgBank.NodeJSSVG} />{" "}

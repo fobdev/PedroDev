@@ -5,13 +5,13 @@ interface Props {
     image: any;
 }
 
-export const MYSQLPage: React.FC<Props> = ({ image }) => {
+export const MongoDBPage: React.FC<Props> = ({ image }) => {
     return (
-        <Project title="MySQL Projects" image={image}>
+        <Project title="MongoDB Projects" image={image}>
             <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>
         </Project>
     );
 };
-export default MYSQLPage;
+export default MongoDBPage;

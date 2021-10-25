@@ -5,13 +5,13 @@ interface Props {
     image: any;
 }
 
-export const DISCORDPage: React.FC<Props> = ({ image }) => {
+export const CSharpPage: React.FC<Props> = ({ image }) => {
     return (
-        <Project title="Discord.JS Projects" image={image}>
+        <Project title="C# Projects" image={image}>
             <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>
         </Project>
     );
 };
-export default DISCORDPage;
+export default CSharpPage;
