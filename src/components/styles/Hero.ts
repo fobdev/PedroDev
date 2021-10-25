@@ -47,11 +47,6 @@ export const mainHeroContainer: SxProps<Theme> = {
                 color: main_color,
                 fontSize: "1em",
                 padding: "1em 4em 1em 4em",
-
-                ".router-projects": {
-                    textDecoration: "none",
-                    color: main_color,
-                },
             },
 
             ".btn-work": {

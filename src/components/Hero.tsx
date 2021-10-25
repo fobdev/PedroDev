@@ -47,7 +47,11 @@ export default function Hero() {
                         >
                             Contact
                         </Button>
-                        <Link className="router-projects" to="/projects/frontend/react">
+                        <Link
+                            style={{ textDecoration: "none" }}
+                            className="router-projects"
+                            to="/projects/frontend/react"
+                        >
                             <Button
                                 className="btn-work"
                                 variant="contained"
