@@ -172,6 +172,21 @@ export default function About() {
                                     >
                                         <Box className="backend-techbox">
                                             <Link
+                                                to={`${match.url}/backend/csharp`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole image={svgBank.CSharpSVG} title="C#" />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/backend/mongodb`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.MongoDBSVG}
+                                                    title="MongoDB"
+                                                />
+                                            </Link>
+                                            <Link
                                                 to={`${match.url}/backend/nodejs`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
@@ -194,21 +209,6 @@ export default function About() {
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
                                                 <TechRole image={svgBank.CppSVG} title="C/C++" />
-                                            </Link>
-                                            <Link
-                                                to={`${match.url}/backend/csharp`}
-                                                style={{ textDecoration: "none", color: "black" }}
-                                            >
-                                                <TechRole image={svgBank.CSharpSVG} title="C#" />
-                                            </Link>
-                                            <Link
-                                                to={`${match.url}/backend/mongodb`}
-                                                style={{ textDecoration: "none", color: "black" }}
-                                            >
-                                                <TechRole
-                                                    image={svgBank.MongoDBSVG}
-                                                    title="MongoDB"
-                                                />
                                             </Link>
                                             <Link
                                                 to={`${match.url}/backend/youtubeapi`}
