@@ -11,7 +11,7 @@ import { style } from "./_style";
 import { animations } from "../../utils";
 
 // Images
-import heroImage from "../../images/other/hero1.gif";
+import heroImage from "../../images/gif/hero1.gif";
 
 interface Props {}
 export const Hero: React.FC<Props> = () => {

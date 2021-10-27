@@ -1,8 +1,8 @@
 import { CodeLink, Repo, Page } from "./models";
-import BBMain from "../../images/other/bbmain.png";
-import YTmain from "../../images/other/ytmain.png";
-import YTmainMin from "../../images/other/bbmain.png";
-import BBMainMin from "../../images/other/bbmain-min.png";
+import BBMain from "../../images/png/bbmain.png";
+import YTmain from "../../images/png/ytmain.png";
+import YTmainMin from "../../images/png/bbmain.png";
+import BBMainMin from "../../images/png/bbmain-min.png";
 import Box from "@mui/material/Box";
 
 interface Props {

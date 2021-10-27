@@ -1,5 +1,5 @@
-import TSimg from "../../images/other/discord-typescript.png";
-import TSimgMin from "../../images/other/discord-typescript-min.png";
+import TSimg from "../../images/png/discord-typescript.png";
+import TSimgMin from "../../images/png/discord-typescript-min.png";
 import { Repo, Page, CodeLink } from "./models";
 import { Box } from "@mui/system";
 

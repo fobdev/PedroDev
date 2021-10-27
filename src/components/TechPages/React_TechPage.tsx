@@ -1,6 +1,6 @@
-import ReactIMG from "../../images/other/reactcode.png";
-import ReactIMGMin from "../../images/other/reactcode-min.png";
-import bbStandings from "../../images/other/bbstandings.png";
+import ReactIMG from "../../images/png/reactcode.png";
+import ReactIMGMin from "../../images/png/reactcode-min.png";
+import bbStandings from "../../images/png/bbstandings.png";
 import { Repo, Page, CodeLink } from "./models";
 
 interface Props {
