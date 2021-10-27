@@ -42,12 +42,13 @@ export const style: SxProps<Theme> = {
     "@media (max-width: 780px)": {
         ".outside-paper": {
             borderRadius: "0",
+            width: "100vw",
         },
         ".outside-title": {
             fontSize: ".5em",
-        },
-        img: {
-            display: "none",
+            img: {
+                display: "none",
+            },
         },
     },
 
