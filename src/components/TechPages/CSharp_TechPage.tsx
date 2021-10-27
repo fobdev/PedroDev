@@ -1,6 +1,7 @@
 import { CodeLink, Page, Repo } from "./models";
 import bankapi from "../../images/png/bankapi.png";
 import bankapi_min from "../../images/png/bbmain-min.png";
+import { Paper } from "@mui/material";
 interface Props {
     image: any;
 }
@@ -62,6 +63,39 @@ export const CSharpPage: React.FC<Props> = ({ image }) => {
                         </CodeLink>
                     </li>
                 </ul>
+                This is the architectural model of the ASP.NET MVC WebAPI, with more information in
+                the repository:
+                <br />
+                <Paper
+                    elevation={5}
+                    sx={{
+                        zIndex: "9999",
+                        margin: "1em 0 1em 0",
+                        transition: "all .5s",
+                        img: {
+                            width: "100%",
+                        },
+                        "&:hover": {
+                            transform: "scale(1.5)",
+                            transformOrigin: "bottom right",
+                        },
+                    }}
+                >
+                    <a
+                        href="https://github.com/fobdev/bank-dotnet-webapi"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <img
+                            src="https://raw.githubusercontent.com/fobdev/bank-dotnet-webapi/master/APIModel.png"
+                            alt=""
+                        />
+                    </a>
+                </Paper>
+                The startup contains the dependency injection of the Database to the DTO content,
+                and data serialization of some types that could not be handled out of the box by the
+                MongoDB.Driver <br />
+                Feel free to clone, fork, or make your own project out of this repository!
             </Repo>
         </Page>
     );
