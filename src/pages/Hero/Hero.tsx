@@ -56,7 +56,10 @@ export const Hero: React.FC<Props> = () => {
                             Contact
                         </Button>
                         <Link
-                            style={{ textDecoration: "none" }}
+                            style={{
+                                display: "flex",
+                                textDecoration: "none",
+                            }}
                             className="router-projects"
                             to="/projects/frontend/react"
                         >
