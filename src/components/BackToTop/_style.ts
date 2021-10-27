@@ -2,6 +2,7 @@ import { SxProps, Theme } from "@mui/system";
 
 export const style: SxProps<Theme> = {
     display: "flex",
+    zIndex: "9999",
     position: "fixed",
     bottom: "0",
     left: "0",
