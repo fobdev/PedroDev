@@ -59,7 +59,7 @@ export const CSharpPage: React.FC<Props> = ({ image }) => {
                     </li>
                     <li>
                         <CodeLink link="https://www.nuget.org/packages/AspNetCore.HealthChecks.MongoDb/">
-                            AspNetCore.HealthChecks.MongoDb
+                            HealthChecks.MongoDb
                         </CodeLink>
                     </li>
                 </ul>
