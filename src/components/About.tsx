@@ -26,25 +26,12 @@ import {
     MongoDBPage,
     CSharpPage,
 } from "./TechPages";
-import { useState } from "react";
 
 export default function About() {
     let match = useRouteMatch();
 
     // menu transition
-    const [frontEnd, setFrontEnd] = useState(false);
-    const [backEnd, setBackEnd] = useState(false);
-
     const insideContainer = useRef(null);
-
-    const feSelection = frontEnd ? "#eef" : "#fff";
-    const beSelection = backEnd ? "#eef" : "#fff";
-    const feSelectionBoxShadow = !frontEnd
-        ? "3px 3px 3px 1px rgba(0, 0, 0, .4)"
-        : "1px 1px 1px 1px rgba(0, 0, 0, .4)";
-    const beSelectionBoxShadow = !backEnd
-        ? "3px 3px 3px 1px rgba(0, 0, 0, .4)"
-        : "1px 1px 1px 1px rgba(0, 0, 0, .4)";
 
     return (
         <Box sx={mainAboutContainer}>
@@ -59,17 +46,7 @@ export default function About() {
                                         style={{ textDecoration: "none", color: "black" }}
                                         // onClick={() => tech("frontend")}
                                     >
-                                        <Paper
-                                            elevation={3}
-                                            className="techselector-paper"
-                                            sx={{
-                                                background: feSelection,
-                                                ".code-icon": {
-                                                    transition: ".33s",
-                                                    boxShadow: feSelectionBoxShadow,
-                                                },
-                                            }}
-                                        >
+                                        <Paper elevation={3} className="techselector-paper">
                                             <CodeIcon className="code-icon" />
                                             <Typography className="main-title" variant="h2">
                                                 Frontend
@@ -77,23 +54,11 @@ export default function About() {
                                         </Paper>
                                     </Link>
                                     <Link
-                                        to={`${match.path}/backend/nodejs`}
+                                        to={`${match.path}/backend/csharp`}
                                         style={{ textDecoration: "none", color: "black" }}
-                                        // onClick={() => tech("backend")}
                                     >
-                                        <Paper
-                                            elevation={3}
-                                            className="techselector-paper"
-                                            sx={{
-                                                background: beSelection,
-
-                                                ".settings-icon": {
-                                                    transition: ".33s",
-                                                    boxShadow: beSelectionBoxShadow,
-                                                },
-                                            }}
-                                        >
-                                            <SettingsIcon className="settings-icon" />
+                                        <Paper elevation={3} className="techselector-paper">
+                                            <SettingsIcon className="code-icon" />
                                             <Typography className="main-title" variant="h2">
                                                 Backend
                                             </Typography>

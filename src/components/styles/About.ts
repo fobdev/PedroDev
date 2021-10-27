@@ -74,6 +74,9 @@ export const mainAboutContainer: SxProps<Theme> = {
                         columnGap: "1em",
                         cursor: "pointer",
                         userSelect: "none",
+                        ".code-icon": {
+                            boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .4)",
+                        },
                         "&:hover": {
                             transition: ".10s",
                             backgroundColor: "#eef",
@@ -81,6 +84,9 @@ export const mainAboutContainer: SxProps<Theme> = {
                         "&:active": {
                             transition: ".06s",
                             boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+                            ".code-icon": {
+                                boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+                            },
                         },
                     },
                 },
