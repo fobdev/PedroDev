@@ -1,3 +1,2 @@
-export { BigButton } from "./BigButton";
-export { Project } from "./Project";
-export { TechRole } from "./TechRole";
+export { Project } from "./Project/Project";
+export { TechRole } from "./TechRole/TechRole";
