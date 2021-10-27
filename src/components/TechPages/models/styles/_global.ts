@@ -28,6 +28,10 @@ export const globalPageStyle: SxProps<Theme> = {
                 },
             },
         },
+        "@media (max-width: 600px)": {
+            width: "100%",
+            fontSize: ".8em",
+        },
     },
     "@media (max-width: 780px)": {
         ".page-maintitle": {
