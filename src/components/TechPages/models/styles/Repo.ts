@@ -17,21 +17,17 @@ export const repoMainBoxStyling = (side: any) => {
         ".repobox-image, .repobox-text": {
             width: "100%",
         },
-
+        ".repobox-text": {
+            margin: "2em",
+        },
         "@media (max-width: 780px)": {
             ".repobox-image": {
                 display: "none",
             },
         },
-
-        ".repobox-text": {
-            margin: "2em",
-        },
-
         ".repo-title": {
             fontWeight: "500",
         },
-
         ".repo-description": {
             fontWeight: "300",
             ul: {
@@ -39,7 +35,6 @@ export const repoMainBoxStyling = (side: any) => {
                 padding: 0,
             },
         },
-
         ".repo-link": {
             marginTop: "1em",
             alignSelf: "center",
@@ -56,7 +51,6 @@ export const repoMainBoxStyling = (side: any) => {
                 fontSize: "2em",
             },
         },
-
         ".page-button": {
             display: "flex",
             transition: ".3s",
