@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4f19616d.chunk.css",
-    "main.js": "/static/js/main.13f1fbe9.chunk.js",
-    "main.js.map": "/static/js/main.13f1fbe9.chunk.js.map",
+    "main.js": "/static/js/main.0af367bd.chunk.js",
+    "main.js.map": "/static/js/main.0af367bd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e9bf1de0.js",
     "runtime-main.js.map": "/static/js/runtime-main.e9bf1de0.js.map",
     "static/js/2.76744484.chunk.js": "/static/js/2.76744484.chunk.js",
@@ -21,6 +21,7 @@
     "static/media/React.116e502c.svg": "/static/media/React.116e502c.svg",
     "static/media/Sass.d0d03348.svg": "/static/media/Sass.d0d03348.svg",
     "static/media/YouTube.350d8f8f.svg": "/static/media/YouTube.350d8f8f.svg",
+    "static/media/bankapi.4c24965e.png": "/static/media/bankapi.4c24965e.png",
     "static/media/bbmain.7fb73e7b.png": "/static/media/bbmain.7fb73e7b.png",
     "static/media/bbstandings.8425b923.png": "/static/media/bbstandings.8425b923.png",
     "static/media/discord-typescript.ba0bc0f6.png": "/static/media/discord-typescript.ba0bc0f6.png",
@@ -35,6 +36,6 @@
     "static/js/runtime-main.e9bf1de0.js",
     "static/js/2.76744484.chunk.js",
     "static/css/main.4f19616d.chunk.css",
-    "static/js/main.13f1fbe9.chunk.js"
+    "static/js/main.0af367bd.chunk.js"
   ]
 }
