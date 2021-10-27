@@ -14,4 +14,3 @@ export const YOUTUBEPage: React.FC<Props> = ({ image }) => {
         </Project>
     );
 };
-export default YOUTUBEPage;

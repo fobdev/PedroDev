@@ -14,4 +14,3 @@ export const MongoDBPage: React.FC<Props> = ({ image }) => {
         </Project>
     );
 };
-export default MongoDBPage;

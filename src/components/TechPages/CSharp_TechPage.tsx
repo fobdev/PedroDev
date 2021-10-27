@@ -44,8 +44,25 @@ export const CSharpPage: React.FC<Props> = ({ image }) => {
                 This is a list of the{" "}
                 <CodeLink link="https://www.nuget.org/">NuGet Packages</CodeLink> used in this
                 project:
+                <ul>
+                    NuGet Packages Used
+                    <li>
+                        <CodeLink link="https://www.nuget.org/packages/MongoDB.Driver/2.14.0-beta1">
+                            MongoDB.Driver
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.nuget.org/packages/Swashbuckle.AspNetCore/">
+                            Swashbuckle.AspNetCore
+                        </CodeLink>
+                    </li>
+                    <li>
+                        <CodeLink link="https://www.nuget.org/packages/AspNetCore.HealthChecks.MongoDb/">
+                            AspNetCore.HealthChecks.MongoDb
+                        </CodeLink>
+                    </li>
+                </ul>
             </Repo>
         </Page>
     );
 };
-export default CSharpPage;

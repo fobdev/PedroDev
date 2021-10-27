@@ -158,4 +158,3 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
         </Page>
     );
 };
-export default REACTPage;

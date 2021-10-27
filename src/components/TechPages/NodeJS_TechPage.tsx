@@ -14,4 +14,3 @@ export const NODEJSPage: React.FC<Props> = ({ image }) => {
         </Project>
     );
 };
-export default NODEJSPage;

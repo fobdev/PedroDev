@@ -14,4 +14,3 @@ export const POSTGRESPage: React.FC<Props> = ({ image }) => {
         </Project>
     );
 };
-export default POSTGRESPage;

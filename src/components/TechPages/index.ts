@@ -1,9 +1,9 @@
-export { default as CPage } from "./C_TechPage";
-export { default as MongoDBPage } from "./MongoDB_TechPage";
-export { default as JSPage } from "./JS_TechPage";
-export { default as CSharpPage } from "./CSharp_TechPage";
-export { default as NODEJSPage } from "./NodeJS_TechPage";
-export { default as POSTGRESPage } from "./Postgres_TechPage";
-export { default as REACTPage } from "./React_TechPage";
-export { default as TSPage } from "./Typescript_TechPage";
-export { default as YOUTUBEPage } from "./YouTube_TechPage";
+export * from "./C_TechPage";
+export * from "./MongoDB_TechPage";
+export * from "./JS_TechPage";
+export * from "./CSharp_TechPage";
+export * from "./NodeJS_TechPage";
+export * from "./Postgres_TechPage";
+export * from "./React_TechPage";
+export * from "./Typescript_TechPage";
+export * from "./YouTube_TechPage";

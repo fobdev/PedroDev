@@ -209,13 +209,11 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                                 number-to-words
                             </CodeLink>
                         </li>
-
                         <li>
                             <CodeLink link="https://www.npmjs.com/package/numeral">
                                 numeral
                             </CodeLink>
                         </li>
-
                         <li>
                             <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink>
                         </li>

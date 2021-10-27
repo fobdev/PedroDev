@@ -78,4 +78,3 @@ export const TSPage: React.FC<Props> = ({ image }) => {
         </Page>
     );
 };
-export default TSPage;
