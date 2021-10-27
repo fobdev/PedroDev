@@ -115,6 +115,9 @@ export const style: SxProps<Theme> = {
                         },
                     },
                 },
+                "@media (max-width: 500px)": {
+                    display: "none",
+                },
             },
 
             ".frontend-techbox, .backend-techbox": {
