@@ -224,7 +224,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                 </Box>
             </Repo>
             <Repo
-                title="@boguebot/music"
+                title="BogueBot Music Module"
                 side="left"
                 repoLink="https://github.com/fobdev/BogueBot/tree/master/commands/music"
                 largeImage={YTmain}
