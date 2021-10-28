@@ -161,7 +161,7 @@ export const Header: React.FC<Props> = () => {
                         </ListItem>
                     </Link>
                     <ListItemButton>
-                        <a className="" href={whatsappLink} rel="noreferrer" target="_blank">
+                        <a href={whatsappLink} rel="noreferrer" target="_blank">
                             <ListItemIcon>
                                 <WhatsAppIcon />
                             </ListItemIcon>
