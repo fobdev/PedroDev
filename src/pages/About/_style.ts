@@ -89,6 +89,11 @@ export const style: SxProps<Theme> = {
                             },
                         },
                     },
+                    "@media (max-width: 500px)": {
+                        flexDirection: "column",
+                        rowGap: "1em",
+                        marginBottom: "2em",
+                    },
                 },
                 ".main-title-box": {
                     padding: "1em 4em 1em 4em",
@@ -114,9 +119,6 @@ export const style: SxProps<Theme> = {
                             fontSize: ".6em",
                         },
                     },
-                },
-                "@media (max-width: 500px)": {
-                    display: "none",
                 },
             },
 
