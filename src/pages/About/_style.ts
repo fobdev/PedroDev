@@ -1,30 +1,5 @@
 import { SxProps, Theme } from "@mui/system";
 
-const colorPatterns = {
-    google_colors: {
-        blue: "#4285F4",
-        red: "#DB4437",
-        yellow: "#F4B400",
-        green: "#0F9D58",
-    },
-    firebase_colors: {
-        yellow: "#FFCA28",
-        ember: "#FFA000",
-        orange: "#F57C00",
-    },
-    heroku_colors: {
-        indigo: "#211746",
-        violet: "#430098",
-        lavender: "#7673C0",
-    },
-};
-
-export const references = {
-    google: `linear-gradient(30deg,${colorPatterns.google_colors.green} 20px, ${colorPatterns.google_colors.blue} 20px, ${colorPatterns.google_colors.blue} 40px, ${colorPatterns.google_colors.red} 40px, ${colorPatterns.google_colors.red} 60px, ${colorPatterns.google_colors.yellow} 60px, ${colorPatterns.google_colors.yellow} 80px, #fff 80px);`,
-    firebase: `linear-gradient(30deg, ${colorPatterns.firebase_colors.orange} 10px, ${colorPatterns.firebase_colors.orange} 30px, ${colorPatterns.firebase_colors.ember} 30px, ${colorPatterns.firebase_colors.ember} 50px, ${colorPatterns.firebase_colors.yellow} 50px, ${colorPatterns.firebase_colors.yellow} 70px, #fff 70px);`,
-    heroku: `linear-gradient(30deg, ${colorPatterns.heroku_colors.indigo} 10px, ${colorPatterns.heroku_colors.indigo} 30px, ${colorPatterns.heroku_colors.lavender} 30px, ${colorPatterns.heroku_colors.lavender} 50px, ${colorPatterns.heroku_colors.violet} 50px, ${colorPatterns.heroku_colors.violet} 70px, #fff 70px);`,
-};
-
 export const style: SxProps<Theme> = {
     backgroundColor: "#eee",
     display: "flex",
@@ -52,6 +27,12 @@ export const style: SxProps<Theme> = {
             ".main-title-paper": {
                 background: "linear-gradient(#eee, #fff)",
                 borderRadius: "2em",
+
+                "@media (max-width: 780px)": {
+                    width: "100%",
+                    borderRadius: 0,
+                },
+
                 border: "2px solid #fff",
                 ".display-box": {
                     display: "flex",
@@ -67,8 +48,8 @@ export const style: SxProps<Theme> = {
                         fontSize: "1em",
                     },
                     ".techselector-paper": {
-                        transition: ".33s",
                         display: "flex",
+                        transition: ".33s",
                         borderRadius: "1em",
                         padding: ".5em 1em .5em 1em",
                         columnGap: "1em",
@@ -89,11 +70,6 @@ export const style: SxProps<Theme> = {
                             },
                         },
                     },
-                    "@media (max-width: 500px)": {
-                        flexDirection: "column",
-                        rowGap: "1em",
-                        marginBottom: "2em",
-                    },
                 },
                 ".main-title-box": {
                     padding: "1em 4em 1em 4em",
@@ -110,19 +86,9 @@ export const style: SxProps<Theme> = {
                         borderRadius: "5em",
                     },
                 },
-                "@media (max-width: 780px)": {
-                    borderRadius: "0",
-                    width: "100%",
-
-                    ".display-box": {
-                        ".techselector-paper": {
-                            fontSize: ".6em",
-                        },
-                    },
-                },
             },
 
-            ".frontend-techbox, .backend-techbox": {
+            ".stack-techbox": {
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
@@ -131,11 +97,25 @@ export const style: SxProps<Theme> = {
                 columnGap: "2em",
                 padding: 0,
                 marginTop: "2em",
-
-                "@media (max-width: 780px)": {
-                    fontSize: ".4em",
-                },
             },
+        },
+    },
+
+    "@media (max-width: 780px)": {
+        ".stack-techbox": {
+            fontSize: ".4em",
+        },
+
+        ".techselector-paper": {
+            fontSize: ".6em",
+        },
+    },
+
+    "@media (max-width: 500px)": {
+        ".display-box": {
+            flexDirection: "column",
+            rowGap: "1em",
+            marginBottom: "2em",
         },
     },
 };
