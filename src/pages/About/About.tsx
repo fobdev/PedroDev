@@ -75,7 +75,7 @@ export const About: React.FC<Props> = () => {
                                         mountOnEnter
                                         unmountOnExit
                                     >
-                                        <Box className="frontend-techbox">
+                                        <Box className="stack-techbox">
                                             <Paper elevation={5} sx={techRolesStyle(false)}>
                                                 <Link
                                                     to={`${match.url}/frontend/react`}
@@ -136,7 +136,7 @@ export const About: React.FC<Props> = () => {
                                         mountOnEnter
                                         unmountOnExit
                                     >
-                                        <Box className="backend-techbox">
+                                        <Box className="stack-techbox">
                                             <Link
                                                 to={`${match.url}/backend/csharp`}
                                                 style={{ textDecoration: "none", color: "black" }}
