@@ -36,11 +36,6 @@ export const Footer: React.FC<Props> = () => {
                         <InstagramIcon />
                     </IconButton>
                 </a>
-                <a href="https://twitter.com/bfobenga" rel="noreferrer" target="_blank">
-                    <IconButton>
-                        <TwitterIcon />
-                    </IconButton>
-                </a>
             </Box>
         </Box>
     );
