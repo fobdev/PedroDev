@@ -4,7 +4,6 @@ import { Box } from "@mui/system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
 
 // Styles
 import { style } from "./_style";
