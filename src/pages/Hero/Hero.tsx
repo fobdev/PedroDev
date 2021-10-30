@@ -1,5 +1,5 @@
 // MUI
-import { Fade, Typography, Button, Box } from "@mui/material";
+import { Fade, Typography, Button, Stack } from "@mui/material";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import ComputerRoundedIcon from "@mui/icons-material/ComputerRounded";
 
@@ -18,28 +18,48 @@ export const Hero: React.FC<Props> = () => {
     const { colorChange, float } = animations();
 
     return (
-        <Box sx={style}>
-            <Box className="left-side">
+        <Stack
+            direction="row"
+            sx={style}
+            columnGap="5em"
+            justifyContent="center"
+            padding="5em 0 5em 0"
+        >
+            <Stack
+                className="left-side"
+                alignContent="center"
+                justifyContent="center"
+                maxWidth="100%"
+            >
                 <Fade in={true} timeout={{ enter: 2000 }}>
-                    <Box className="text">
-                        <Typography className="hello" variant="h3">
+                    <Stack>
+                        <Typography variant="h3" fontSize="clamp(2em, 5vw, 2.5em)" fontWeight="500">
                             Hello!
                         </Typography>
-                        <Typography className="pedro" variant="h1">
+                        <Typography variant="h1" fontSize="clamp(5em, 10vw, 6em)" fontWeight="200">
                             I'm <span className={`${colorChange}`}>Pedro.</span>
                         </Typography>
-                        <Typography className="description" variant="body1">
+                        <Typography
+                            variant="body1"
+                            fontSize="clamp(1em, 5vw ,2em)"
+                            fontWeight="200"
+                            sx={{ span: { textShadow: "rgb(0 0 0) 0px 0px 2px" } }}
+                        >
                             I'm a Full-Stack Developer,
                             <br />
                             working with <span>Node.JS and Typescript.</span>
                         </Typography>
-                        <Typography className="subtitle" variant="body1">
+                        <Typography
+                            variant="body1"
+                            fontSize="clamp(1em, 3vw, 1.3em)"
+                            fontWeight="200"
+                        >
                             I also work with Firebase, Heroku and GCP clouds.
                         </Typography>
-                    </Box>
+                    </Stack>
                 </Fade>
                 <Fade in={true} timeout={{ enter: 5000 }}>
-                    <Box className="buttons">
+                    <Stack direction="row" columnGap="4em" marginTop="1.5em">
                         <Button
                             className="btn-contact"
                             variant="contained"
@@ -79,14 +99,14 @@ export const Hero: React.FC<Props> = () => {
                                 Projects
                             </Button>
                         </Link>
-                    </Box>
+                    </Stack>
                 </Fade>
-            </Box>
-            <Box className="right-side">
+            </Stack>
+            <Stack className="right-side" justifyContent="center">
                 <Fade in={true} timeout={{ enter: 8000 }}>
                     <img className={`${float}`} src={heroImage} alt="Hero Placeholder" />
                 </Fade>
-            </Box>
-        </Box>
+            </Stack>
+        </Stack>
     );
 };

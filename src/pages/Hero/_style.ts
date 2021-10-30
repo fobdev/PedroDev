@@ -1,76 +1,38 @@
 import { SxProps, Theme } from "@mui/system";
-import { main_color, page_padding } from "../styles/_globals";
+import { main_color, pallete } from "../styles/_globals";
 
 export const style: SxProps<Theme> = {
-    backgroundColor: "#eee",
-    display: "flex",
-    justifyContent: "center",
-    columnGap: "5em",
-    padding: page_padding,
+    backgroundColor: pallete.white.backgroundAccent,
+
+    // Buttons Styling
     ".left-side": {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignContent: "center",
-        maxWidth: "100%",
-        ".text": {
-            display: "flex",
-            flexDirection: "column",
-            ".hello": {
-                fontSize: "clamp(2em, 5vw, 2.5em)",
-                fontWeight: "500",
-            },
-            ".pedro": {
-                fontSize: "clamp(5em, 10vw, 6em)",
-                fontWeight: "200",
-            },
-            ".description": {
-                fontSize: "clamp(1em, 5vw ,2em)",
-                fontWeight: "200",
-                span: {
-                    textShadow: "rgb(0 0 0) 0px 0px 2px",
-                },
-            },
-            ".subtitle": {
-                fontSize: "clamp(1em, 3vw, 1.3em)",
-                fontWeight: "200",
-            },
+        ".btn-contact, .btn-work": {
+            borderRadius: "5em",
+            border: "2px solid white",
+            background: "white",
+            color: main_color,
+            fontSize: "1em",
+            padding: "1em 4em 1em 4em",
         },
-        ".buttons": {
-            display: "inherit",
-            columnGap: "4em",
-            marginTop: "1.5em",
-            ".btn-contact, .btn-work": {
-                borderRadius: "5em",
-                border: "2px solid white",
-                background: "white",
-                color: main_color,
-                fontSize: "1em",
-                padding: "1em 4em 1em 4em",
+
+        ".btn-work": {
+            "@keyframes gradient": {
+                "0%": { backgroundPosition: "left" },
+                "100%": { backgroundPosition: "right" },
             },
 
-            ".btn-work": {
-                "@keyframes gradient": {
-                    "0%": { backgroundPosition: "left" },
-                    //"50%": { backgroundPosition: "right" },
-                    "100%": { backgroundPosition: "right" },
-                },
-
-                background:
-                    "linear-gradient(270deg, #fff, #fff, #defffe, #c9fffe, #f8e0ff, #f6d9ff, #d1feff, #fff, #fff)",
-                backgroundSize: "1200%",
-                animationName: "gradient",
-                animationDuration: "5s",
-                animationTimingFunction: "ease",
-                animationIterationCount: "infinite",
-
-                "&:hover": {},
-            },
+            background:
+                "linear-gradient(270deg, #fff, #fff, #defffe, #c9fffe, #f8e0ff, #f6d9ff, #d1feff, #fff, #fff)",
+            backgroundSize: "1200%",
+            animationName: "gradient",
+            animationDuration: "5s",
+            animationTimingFunction: "ease",
+            animationIterationCount: "infinite",
         },
     },
 
+    // Hero image
     ".right-side": {
-        display: "flex",
         img: {
             width: "30em",
             borderRadius: "5em",
@@ -78,6 +40,7 @@ export const style: SxProps<Theme> = {
         },
     },
 
+    // Media querys for mobile
     "@media (max-width: 720px)": {
         ".left-side": {
             textAlign: "center",
