@@ -194,15 +194,17 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                                 music
                             </CodeLink>
                         </li>
-                        {packageListWrapper([
-                            "queue",
-                            "nowplaying",
-                            "pause",
-                            "repeat",
-                            "skip",
-                            "earrape",
-                            "leave",
-                        ])}
+                        {["queue", "nowplaying", "pause", "repeat", "skip", "earrape", "leave"].map(
+                            (command) => (
+                                <li>
+                                    <CodeLink
+                                        link={`https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/${command}.js`}
+                                    >
+                                        {command}
+                                    </CodeLink>
+                                </li>
+                            )
+                        )}
                     </ul>
                 </Box>
                 You can check the repository on GitHub, but with a warning:{" "}
