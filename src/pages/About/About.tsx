@@ -45,7 +45,6 @@ export const About: React.FC<Props> = () => {
                                     <Link
                                         to={`${match.path}/frontend/react`}
                                         style={{ textDecoration: "none", color: "black" }}
-                                        // onClick={() => tech("frontend")}
                                     >
                                         <Paper elevation={3} className="techselector-paper">
                                             <CodeIcon className="code-icon" />
