@@ -10,6 +10,31 @@ interface Props {
 }
 
 export const JSPage: React.FC<Props> = ({ image }) => {
+    const commandListWrapper = (dir: string, commands: Array<string>) => {
+        return (
+            <div>
+                <b>{dir.charAt(0).toUpperCase() + dir.slice(1)} Commands</b>
+                {commands.map((command) => (
+                    <li>
+                        <CodeLink
+                            link={`https://github.com/fobdev/BogueBot/blob/master/commands/${dir}/${command}.js`}
+                        >
+                            {command}
+                        </CodeLink>
+                    </li>
+                ))}
+            </div>
+        );
+    };
+
+    const packageListWrapper = (pkgArray: Array<string>) => {
+        return pkgArray.map((pkg) => (
+            <li>
+                <CodeLink link={`https://www.npmjs.com/package/${pkg}`}>{pkg}</CodeLink>
+            </li>
+        ));
+    };
+
     return (
         <Page image={image} mainTitle="Javascript Projects" largeTitle="JavaScript & Discord.JS">
             <Repo
@@ -52,27 +77,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     }}
                 >
                     <ul>
-                        <span>Administrative Commands</span>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/ban.js">
-                                ban
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/clear.js">
-                                clear
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/report.js">
-                                report
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/renameserver.js">
-                                kick
-                            </CodeLink>
-                        </li>
+                        {commandListWrapper("admin", ["ban", "clear", "report", "kick"])}
                         <li>
                             <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/">
                                 more commands (7+)
@@ -80,27 +85,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         </li>
                     </ul>
                     <ul>
-                        <span>Client Commands</span>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/feedback.js">
-                                feedback
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/help.js">
-                                help
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/invite.js">
-                                invite
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/ping.js">
-                                prefix
-                            </CodeLink>
-                        </li>
+                        {commandListWrapper("bot", ["feedback", "help", "invite", "prefix"])}
                         <li>
                             <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/">
                                 more commands (+3)
@@ -108,46 +93,11 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         </li>
                     </ul>
                     <ul>
-                        <span>User Based Commands</span>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/user/avatar.js">
-                                avatar
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/user/couple.js">
-                                couple
-                            </CodeLink>
-                        </li>
-                        <span>Game Commands</span>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/games/guess.js">
-                                guess
-                            </CodeLink>
-                        </li>
+                        {commandListWrapper("user", ["avatar", "couple"])}
+                        {commandListWrapper("games", ["guess"])}
                     </ul>
                     <ul>
-                        <span>Fun Commands</span>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/imagesearch.js">
-                                imagesearch
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/bigtext.js">
-                                bigtext
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/dice.js">
-                                dice
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/roll.js">
-                                roll
-                            </CodeLink>
-                        </li>
+                        {commandListWrapper("fun", ["imagesearch", "bigtext", "dice", "roll"])}
                         <li>
                             <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/">
                                 more commands (+6)
@@ -177,50 +127,15 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     }}
                 >
                     <ul>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/discord.js">
-                                discord.js
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/g-i-s">g-i-s</CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/i18n">i18n</CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/lunicode">
-                                lunicode
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/merge-img">
-                                merge-img
-                            </CodeLink>
-                        </li>
+                        {packageListWrapper([
+                            "discord.js",
+                            "g-i-s",
+                            "i18n",
+                            "lunicode",
+                            "merge-img",
+                        ])}
                     </ul>
-                    <ul>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/ms">ms</CodeLink>
-                        </li>
-
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/number-to-words">
-                                number-to-words
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/numeral">
-                                numeral
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://www.npmjs.com/package/pg">pg</CodeLink>
-                        </li>
-                    </ul>
+                    <ul>{packageListWrapper(["ms", "number-to-words", "numeral", "uws", "pg"])}</ul>
                 </Box>
             </Repo>
             <Repo
@@ -241,31 +156,13 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                 by the <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
                 package. This is all the packages that the BogueBot Music System uses
                 <ul>
-                    <li>
-                        <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
-                            simple-youtube-api
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://www.npmjs.com/package/ytdl-core">
-                            ytdl-core
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://www.npmjs.com/package/m3u8stream">
-                            m3u8stream
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://www.npmjs.com/package/node-fetch">
-                            node-fetch
-                        </CodeLink>
-                    </li>
-                    <li>
-                        <CodeLink link="https://www.npmjs.com/package/@discordjs/opus">
-                            node-opus (@discordjs/opus)
-                        </CodeLink>
-                    </li>
+                    {packageListWrapper([
+                        "simple-youtube-api",
+                        "ytdl-core",
+                        "m3u8stream",
+                        "node-fetch",
+                        "node-opus",
+                    ])}
                 </ul>
                 The music system contains a mapset of asynchronous Discord.JS listeners that receive
                 all the requests from users in a single server while maintaining multi-server
@@ -297,43 +194,15 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                                 music
                             </CodeLink>
                         </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/queue.js">
-                                queue
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/nowplaying.js">
-                                nowplaying
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/pause.js">
-                                pause
-                            </CodeLink>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/repeat.js">
-                                repeat
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/skip.js">
-                                skip
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/earrape.js">
-                                earrape
-                            </CodeLink>
-                        </li>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/leave.js">
-                                leave
-                            </CodeLink>
-                        </li>
+                        {packageListWrapper([
+                            "queue",
+                            "nowplaying",
+                            "pause",
+                            "repeat",
+                            "skip",
+                            "earrape",
+                            "leave",
+                        ])}
                     </ul>
                 </Box>
                 You can check the repository on GitHub, but with a warning:{" "}
