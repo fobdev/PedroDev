@@ -8,7 +8,6 @@ export const style: SxProps<Theme> = {
     padding: "2em 0 5em 0",
 
     ".papers-title": {
-        backgroundColor: "red",
         paddingBottom: "1em",
         fontWeight: "200",
         textAlign: "center",
