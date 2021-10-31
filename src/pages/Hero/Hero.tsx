@@ -61,7 +61,7 @@ export const Hero: React.FC<Props> = () => {
                 <Fade in={true} timeout={{ enter: 5000 }}>
                     <Stack direction="row" columnGap="4em" marginTop="1.5em">
                         <Button
-                            className="btn-contact"
+                            className="hero-button"
                             variant="contained"
                             disableRipple
                             size="large"
@@ -84,7 +84,7 @@ export const Hero: React.FC<Props> = () => {
                             to="/projects/frontend/react"
                         >
                             <Button
-                                className="btn-work"
+                                className="hero-button"
                                 variant="contained"
                                 disableRipple
                                 size="large"

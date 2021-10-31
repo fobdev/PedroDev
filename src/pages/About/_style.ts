@@ -1,7 +1,7 @@
 import { SxProps, Theme } from "@mui/system";
 
 export const style: SxProps<Theme> = {
-    backgroundColor: "#eee",
+    background: "linear-gradient(90deg, rgba(241,253,255,1) 0%, rgba(255,238,250,1) 100%)",
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
@@ -24,15 +24,12 @@ export const style: SxProps<Theme> = {
             rowGap: "2em",
             alignItems: "center",
             ".main-title-paper": {
-                background: "linear-gradient(#eee, #fff)",
-                borderRadius: "2em",
-
+                borderRadius: "1em",
                 "@media (max-width: 780px)": {
                     width: "100%",
                     borderRadius: 0,
                 },
 
-                border: "2px solid #fff",
                 ".display-box": {
                     display: "flex",
                     alignItems: "center",
@@ -59,7 +56,7 @@ export const style: SxProps<Theme> = {
                         },
                         "&:hover": {
                             transition: ".10s",
-                            backgroundColor: "#eef",
+                            backgroundColor: "#f5f5ff",
                         },
                         "&:active": {
                             transition: ".06s",

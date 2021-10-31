@@ -2,32 +2,26 @@ import { SxProps, Theme } from "@mui/system";
 import { main_color, pallete } from "../styles/_globals";
 
 export const style: SxProps<Theme> = {
-    backgroundColor: pallete.white.backgroundAccent,
+    "@keyframes backgroundMovement": {
+        "0%": { backgroundPosition: "0% 50%" },
+        "50%": { backgroundPosition: "100% 50%" },
+        "100%": { backgroundPosition: "0% 50%" },
+    },
+
+    background: "linear-gradient(270deg, #f1fdff, #fff5fc)",
+    backgroundSize: "400% 400%",
+
+    animation: "backgroundMovement 5s ease infinite",
 
     // Buttons Styling
     ".left-side": {
-        ".btn-contact, .btn-work": {
+        ".hero-button": {
             borderRadius: "5em",
             border: "2px solid white",
             background: "white",
             color: main_color,
             fontSize: "1em",
             padding: "1em 4em 1em 4em",
-        },
-
-        ".btn-work": {
-            "@keyframes gradient": {
-                "0%": { backgroundPosition: "left" },
-                "100%": { backgroundPosition: "right" },
-            },
-
-            background:
-                "linear-gradient(270deg, #fff, #fff, #defffe, #c9fffe, #f8e0ff, #f6d9ff, #d1feff, #fff, #fff)",
-            backgroundSize: "1200%",
-            animationName: "gradient",
-            animationDuration: "5s",
-            animationTimingFunction: "ease",
-            animationIterationCount: "infinite",
         },
     },
 

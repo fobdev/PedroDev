@@ -5,8 +5,7 @@ export const style: SxProps<Theme> = {
     ".outside-paper": {
         display: "flex",
         position: "relative",
-        background: "linear-gradient(360deg, #eee, #fff)",
-        borderRadius: "2em",
+        borderRadius: "1em",
         border: "3px solid #fff",
         flexDirection: "column",
         justifyContent: "center",

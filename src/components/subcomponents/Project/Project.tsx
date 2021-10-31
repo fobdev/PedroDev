@@ -12,14 +12,14 @@ export const Project: React.FC<Props> = ({ children, title, image }) => {
     return (
         <Grow in={true} timeout={{ enter: 500, exit: 0 }} unmountOnExit mountOnEnter>
             <Box sx={style}>
-                <Paper className="outside-paper" elevation={2}>
+                <Paper className="outside-paper" elevation={0}>
                     <Box className="outside-title">
                         <img src={image} alt="Content" />
                         <Typography variant="h4" fontWeight="300" alignSelf="center">
                             {title}
                         </Typography>
                     </Box>
-                    <Paper className="inside-paper" elevation={5}>
+                    <Paper className="inside-paper" elevation={2}>
                         {children}
                     </Paper>
                 </Paper>

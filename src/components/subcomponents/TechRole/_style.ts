@@ -21,7 +21,7 @@ export const style = (selected: boolean) => {
         },
         "button:hover": {
             transition: ".5s",
-            background: "#eef",
+            background: "#f5f5ff",
         },
         ".image": {
             width: "24px",
