@@ -11,7 +11,7 @@ export const style: SxProps<Theme> = {
     background: "linear-gradient(270deg, #f1fdff, #fff5fc)",
     backgroundSize: "400% 400%",
 
-    animation: "backgroundMovement 5s ease infinite",
+    animation: "backgroundMovement 15s ease infinite",
 
     // Buttons Styling
     ".left-side": {
