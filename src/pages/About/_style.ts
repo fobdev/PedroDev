@@ -45,24 +45,26 @@ export const style: SxProps<Theme> = {
                     },
                     ".techselector-paper": {
                         display: "flex",
-                        transition: ".33s",
+                        transition: ".1s",
                         borderRadius: "1em",
                         padding: ".5em 1em .5em 1em",
                         columnGap: "1em",
                         cursor: "pointer",
                         userSelect: "none",
                         ".code-icon": {
-                            boxShadow: "3px 3px 3px 1px rgba(0, 0, 0, .4)",
+                            boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
                         },
                         "&:hover": {
-                            transition: ".10s",
-                            backgroundColor: "#f5f5ff",
+                            ".code-icon": {
+                                transition: ".5s",
+                                boxShadow: "3px 3px 3px 1px rgba(100, 100, 100, .4)",
+                            },
                         },
                         "&:active": {
-                            transition: ".06s",
-                            boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+                            boxShadow: "0px 1px 1px 0px rgba(0, 0, 0, .4)",
                             ".code-icon": {
-                                boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+                                transition: ".1s",
+                                boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, .4)",
                             },
                         },
                     },

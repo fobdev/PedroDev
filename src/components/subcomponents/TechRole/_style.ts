@@ -19,10 +19,6 @@ export const style = (selected: boolean) => {
             outline: "inherit",
             borderRadius: "1em",
         },
-        "button:hover": {
-            transition: ".5s",
-            background: "#f5f5ff",
-        },
         ".image": {
             width: "24px",
             height: "24px",
@@ -37,7 +33,7 @@ export const style = (selected: boolean) => {
         cursor: "pointer",
         "&:active": {
             transition: ".06s",
-            boxShadow: "1px 1px 1px 1px rgba(0, 0, 0, .4)",
+            boxShadow: "0px 1px 1px 0px rgba(0, 0, 0, .4)",
         },
     };
     return Style;

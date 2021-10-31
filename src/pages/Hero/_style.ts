@@ -1,5 +1,5 @@
 import { SxProps, Theme } from "@mui/system";
-import { main_color, pallete } from "../styles/_globals";
+import { main_color } from "../styles/_globals";
 
 export const style: SxProps<Theme> = {
     "@keyframes backgroundMovement": {

@@ -10,7 +10,7 @@ interface Props {
 
 export const TechRole: React.FC<Props> = ({ image, title, onClick, selected = false }) => {
     return (
-        <Paper elevation={5} sx={style(selected)}>
+        <Paper elevation={2} sx={style(selected)}>
             <ButtonBase disableRipple onClick={onClick}>
                 <img className="image" src={image} alt="Technology" />
                 <Typography className="title">{title}</Typography>

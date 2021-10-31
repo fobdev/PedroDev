@@ -39,14 +39,14 @@ export const About: React.FC<Props> = () => {
             <Box className="papers">
                 <Box className="main-box">
                     <Grow in={true} timeout={{ enter: 1000 }}>
-                        <Paper className="main-title-paper" elevation={3}>
+                        <Paper className="main-title-paper" elevation={1}>
                             <Box className="main-title-box" ref={insideContainer} overflow="hidden">
                                 <Box className="display-box">
                                     <Link
                                         to={`${match.path}/frontend/react`}
                                         style={{ textDecoration: "none", color: "black" }}
                                     >
-                                        <Paper elevation={3} className="techselector-paper">
+                                        <Paper elevation={2} className="techselector-paper">
                                             <CodeIcon className="code-icon" />
                                             <Typography className="main-title" variant="h2">
                                                 Frontend
@@ -57,7 +57,7 @@ export const About: React.FC<Props> = () => {
                                         to={`${match.path}/backend/csharp`}
                                         style={{ textDecoration: "none", color: "black" }}
                                     >
-                                        <Paper elevation={3} className="techselector-paper">
+                                        <Paper elevation={2} className="techselector-paper">
                                             <SettingsIcon className="code-icon" />
                                             <Typography className="main-title" variant="h2">
                                                 Backend
@@ -75,7 +75,7 @@ export const About: React.FC<Props> = () => {
                                         unmountOnExit
                                     >
                                         <Box className="stack-techbox">
-                                            <Paper elevation={5} sx={techRolesStyle(false)}>
+                                            <Paper elevation={2} sx={techRolesStyle(false)}>
                                                 <Link
                                                     to={`${match.url}/frontend/react`}
                                                     style={{
