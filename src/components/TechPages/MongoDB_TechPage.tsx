@@ -10,7 +10,6 @@ export const MongoDBPage: React.FC<Props> = ({ image }) => {
     useEffect(() => {
         document.title = "PedroDev: MongoDB Projects";
     }, []);
-
     return (
         <Project title="MongoDB Projects" image={image}>
             <Typography padding="1em">
