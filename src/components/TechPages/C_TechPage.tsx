@@ -1,7 +1,7 @@
 import { CodeLink, Page, Repo } from "./models";
 import directxImage from "../../images/png/directx.png";
 import directxMinImage from "../../images/png/bbmain-min.png";
-import { List, ListItem, Stack, Typography } from "@mui/material";
+import { List, ListItem, Typography } from "@mui/material";
 interface Props {
     image: any;
 }
