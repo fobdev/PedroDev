@@ -54,6 +54,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
 
     const gridStying: SxProps<Theme> = {
         display: "grid",
+        marginTop: ".5em",
         boxSizing: "border-box",
         gridTemplateColumns: "auto auto",
         gridRow: "auto auto",
@@ -117,7 +118,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         6
                     )}
                 </Box>
-                <Typography variant="h4" fontWeight="bold" marginTop="1em">
+                <Typography variant="h4" fontWeight="bold" marginTop=".5em">
                     npm modules
                 </Typography>
                 <Paragraph>
