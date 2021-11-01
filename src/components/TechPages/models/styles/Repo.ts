@@ -62,11 +62,11 @@ export const repoMainBoxStyling = (side: any) => {
             cursor: "pointer",
             "&:hover": {
                 transition: ".3s",
-                background: "#eee",
+                background: "#fafafa",
             },
             "&:active": {
                 transition: ".05s",
-                boxShadow: "1px 1px 1px 0 #000",
+                boxShadow: "0px 1px 0px 0 #000",
             },
         },
     };

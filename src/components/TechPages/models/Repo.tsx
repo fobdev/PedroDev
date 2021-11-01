@@ -34,7 +34,7 @@ export const Repo: React.FC<Props> = ({
                         </Typography>
                     </Typography>
                     <a className="repo-link" href={repoLink} rel="noreferrer" target="_blank">
-                        <Paper className="page-button" elevation={5}>
+                        <Paper className="page-button" elevation={2}>
                             <GitHubIcon className="gh-icon" />
                             <Typography variant="h3" className="goto-repo">
                                 Go to repository
