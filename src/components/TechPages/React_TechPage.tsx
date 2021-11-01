@@ -1,7 +1,8 @@
 import ReactIMG from "../../images/png/reactcode.png";
 import ReactIMGMin from "../../images/png/reactcode-min.png";
 import bbStandings from "../../images/png/bbstandings.png";
-import { Repo, Page, CodeLink } from "./models";
+import { Repo, Page, CodeLink, Paragraph, ItemsList } from "./models";
+import { List, ListItem, Typography } from "@mui/material";
 
 interface Props {
     image: any;
@@ -18,73 +19,74 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
                 largeImage={ReactIMG}
                 largeImagePlaceholder={ReactIMGMin}
             >
-                My personal portfolio, made completely in React in junction with Typescript. This
-                project is still under development and I push commits to it daily.
-                <ul>
-                    React Typescript modules used:
-                    <li>
+                <Paragraph>
+                    My personal portfolio, made completely in React in junction with Typescript.
+                    This project is still under development and I push commits to it daily.
+                </Paragraph>
+                <ItemsList title="React Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react">
                             @types/react
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react-dom">
                             @types/react-dom
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react-router-dom">
                             @types/react-router-dom
                         </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Other Typescript modules:
-                    <li>
+                    </ListItem>
+                </ItemsList>
+                <ItemsList title="Other Typescript Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/lodash">
                             @types/lodash
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/node">
                             @types/node
                         </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Other modules:
-                    <li>
+                    </ListItem>
+                </ItemsList>
+                <ItemsList title="Other Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/material">
                             @mui/material
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/icons-material">
                             @mui/icons-material
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/lab">@mui/lab</CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/styles">
                             @mui/styles
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/firebase">firebase</CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/i18next">i18next</CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/emailjs-com">
                             emailjs-com
                         </CodeLink>
-                    </li>
-                </ul>
-                If you want to help me develop my website, feel free to send requests to this
-                repository.
+                    </ListItem>
+                </ItemsList>
+                <Paragraph>
+                    If you want to help me develop my website, feel free to send requests to this
+                    repository.
+                </Paragraph>
             </Repo>
             <Repo
                 largeImage={bbStandings}
@@ -94,62 +96,64 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
                 side="right"
                 title="standings-fetch"
             >
-                This is a project that I made as a test for a company, where they wanted me to fetch
-                the contents of a public API that contains{" "}
-                <CodeLink link="https://github.com/azharimm/football-standings-api">
-                    Football Standings
-                </CodeLink>{" "}
-                from several Leagues, and my job was to show the content in a table, for each of the
-                leagues available. I mainly used{" "}
-                <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink> for the fetch
-                requests and made a Typescript fetcher using interfaces to get the JSON objects.
-                <ul>
-                    React Typescript modules used
-                    <li>
+                <Paragraph>
+                    This is a project that I made as a test for a company, where they wanted me to
+                    fetch the contents of a public API that contains{" "}
+                    <CodeLink link="https://github.com/azharimm/football-standings-api">
+                        Football Standings
+                    </CodeLink>{" "}
+                    from several Leagues, and my job was to show the content in a table, for each of
+                    the leagues available. I mainly used{" "}
+                    <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink> for the
+                    fetch requests and made a Typescript fetcher using interfaces to get the JSON
+                    objects.
+                </Paragraph>
+                <ItemsList title="React Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react">
                             @types/react
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react-dom">
                             @types/react-dom
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/react-router-dom">
                             @types/react-router-dom
                         </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Other Typescript modules
-                    <li>
+                    </ListItem>
+                </ItemsList>
+                <ItemsList title="Other Typescript Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@types/node">
                             @types/node
                         </CodeLink>
-                    </li>
-                </ul>
-                <ul>
-                    Other modules
-                    <li>
+                    </ListItem>
+                </ItemsList>
+                <ItemsList title="Other Dependencies">
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/icons-material">
                             @mui/icons-material
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/material">
                             @mui/material
                         </CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/@mui/lab">@mui/lab</CodeLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                         <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink>
-                    </li>
-                </ul>
-                Feel free to check it, I created a fetch system with axios that is completely
-                modular, and I use it basically all my projects that I need API fetching:
+                    </ListItem>
+                </ItemsList>
+                <Paragraph>
+                    Feel free to check it, I created a fetch system with axios that is completely
+                    modular, and I use it basically all my projects that I need API fetching:
+                </Paragraph>
             </Repo>
         </Page>
     );

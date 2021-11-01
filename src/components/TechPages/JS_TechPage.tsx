@@ -1,4 +1,4 @@
-import { CodeLink, Repo, Page } from "./models";
+import { CodeLink, Repo, Page, Paragraph } from "./models";
 import BBMain from "../../images/png/bbmain.png";
 import YTmain from "../../images/png/ytmain.png";
 import YTmainMin from "../../images/png/bbmain.png";
@@ -45,26 +45,30 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                 largeImagePlaceholder={BBMainMin}
                 largeImageLink="https://github.com/fobdev/BogueBot/blob/master/BogueBot.js"
             >
-                This is a large scale Discord.JS bot project named{" "}
-                <CodeLink link="https://github.com/fobdev/BogueBot/">BogueBot</CodeLink>, a general
-                porpuse Discord Bot with full support to music via the{" "}
-                <CodeLink link="https://developers.google.com/youtube/v3">YouTube API</CodeLink>,
-                with a queue system and a dynamic per-server configuration system made possible with{" "}
-                <CodeLink link="https://www.postgresql.org/">PostgreSQL</CodeLink> and{" "}
-                <CodeLink link="https://www.heroku.com/">Heroku</CodeLink>, done by me with a local
-                helper debugging tool made by{" "}
-                <CodeLink link="https://github.com/FranciscoRamon">FranciscoRamon</CodeLink>. <br />
-                On the left is a chunk of the main JavaScript file of the client, clicking on it
-                will take you to the file inside the repository. The entirety of the back-end was
-                made with{" "}
-                <CodeLink link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">
-                    JavaScript Maps
-                </CodeLink>{" "}
-                and{" "}
-                <CodeLink link="https://discordjs.guide/creating-your-bot/event-handling.html#individual-event-files">
-                    Discord.JS Listeners
-                </CodeLink>
-                <br /> Some of the client commands are listed below
+                <Paragraph>
+                    This is a large scale Discord.JS bot project named{" "}
+                    <CodeLink link="https://github.com/fobdev/BogueBot/">BogueBot</CodeLink>, a
+                    general porpuse Discord Bot with full support to music via the{" "}
+                    <CodeLink link="https://developers.google.com/youtube/v3">YouTube API</CodeLink>
+                    , with a queue system and a dynamic per-server configuration system made
+                    possible with <CodeLink link="https://www.postgresql.org/">PostgreSQL</CodeLink>{" "}
+                    and <CodeLink link="https://www.heroku.com/">Heroku</CodeLink>, done by me with
+                    a local helper debugging tool made by{" "}
+                    <CodeLink link="https://github.com/FranciscoRamon">FranciscoRamon</CodeLink>.
+                </Paragraph>
+                <Paragraph>
+                    On the left is a chunk of the main JavaScript file of the client, clicking on it
+                    will take you to the file inside the repository. The entirety of the back-end
+                    was made with{" "}
+                    <CodeLink link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">
+                        JavaScript Maps
+                    </CodeLink>{" "}
+                    and{" "}
+                    <CodeLink link="https://discordjs.guide/creating-your-bot/event-handling.html#individual-event-files">
+                        Discord.JS Listeners
+                    </CodeLink>
+                </Paragraph>
+                <Paragraph>Some of the client commands are listed below</Paragraph>
                 <Box
                     sx={{
                         display: "grid",
@@ -106,15 +110,16 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     </ul>
                 </Box>
                 <h2 style={{ lineHeight: "0.2em", marginTop: "1.2em" }}>npm modules</h2>
-                This is a list of all the packages used in the core backend of the client, with
-                packages like <CodeLink link="https://www.npmjs.com/package/i18n">
-                    i18n
-                </CodeLink>{" "}
-                and <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink> not being used
-                anymore, but still listed in it's{" "}
-                <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/package.json">
-                    package.json
-                </CodeLink>
+                <Paragraph>
+                    This is a list of all the packages used in the core backend of the client, with
+                    packages like{" "}
+                    <CodeLink link="https://www.npmjs.com/package/i18n">i18n</CodeLink> and{" "}
+                    <CodeLink link="https://www.npmjs.com/package/uws">uws</CodeLink> not being used
+                    anymore, but still listed in it's{" "}
+                    <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/package.json">
+                        package.json
+                    </CodeLink>
+                </Paragraph>
                 <Box
                     sx={{
                         display: "grid",
@@ -146,15 +151,19 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                 largeImagePlaceholder={YTmainMin}
                 largeImageLink="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js"
             >
-                This is the music module of the BogueBot, a complete player made possible with the{" "}
-                <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
-                    simple-youtube-api
-                </CodeLink>{" "}
-                package, that is a simplified/cutted-out version of the{" "}
-                <CodeLink link="https://www.npmjs.com/package/googleapis">googleapis</CodeLink>{" "}
-                package, only used for getting video information, while the audio streaming is dealt
-                by the <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
-                package. This is all the packages that the BogueBot Music System uses
+                <Paragraph>
+                    This is the music module of the BogueBot, a complete player made possible with
+                    the{" "}
+                    <CodeLink link="https://www.npmjs.com/package/simple-youtube-api">
+                        simple-youtube-api
+                    </CodeLink>{" "}
+                    package, that is a simplified/cutted-out version of the{" "}
+                    <CodeLink link="https://www.npmjs.com/package/googleapis">googleapis</CodeLink>{" "}
+                    package, only used for getting video information, while the audio streaming is
+                    dealt by the{" "}
+                    <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
+                    package. This is all the packages that the BogueBot Music System uses
+                </Paragraph>
                 <ul>
                     {packageListWrapper([
                         "simple-youtube-api",
@@ -164,19 +173,21 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         "node-opus",
                     ])}
                 </ul>
-                The music system contains a mapset of asynchronous Discord.JS listeners that receive
-                all the requests from users in a single server while maintaining multi-server
-                syncronization and personalization via PostgreSQL. <br />
-                As an attempt to save resources from{" "}
-                <CodeLink link="https://www.heroku.com/dynos">Heroku Dynos</CodeLink>, without the
-                usage of database architectures like{" "}
-                <CodeLink link="https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6">
-                    sharding
-                </CodeLink>
-                , the client in it's lifespan was only able to hold 100 servers at once before
-                shutdown in December of 2020, and after that, no longer being maintained by myself.
-                <br />
-                This is the list of all the available music commands
+                <Paragraph>
+                    The music system contains a mapset of asynchronous Discord.JS listeners that
+                    receive all the requests from users in a single server while maintaining
+                    multi-server syncronization and personalization via PostgreSQL. <br />
+                    As an attempt to save resources from{" "}
+                    <CodeLink link="https://www.heroku.com/dynos">Heroku Dynos</CodeLink>, without
+                    the usage of database architectures like{" "}
+                    <CodeLink link="https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6">
+                        sharding
+                    </CodeLink>
+                    , the client in it's lifespan was only able to hold 100 servers at once before
+                    shutdown in December of 2020, and after that, no longer being maintained by
+                    myself.
+                </Paragraph>
+                <Paragraph>This is the list of all the available music commands</Paragraph>
                 <Box
                     sx={{
                         display: "grid",
@@ -207,15 +218,17 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         )}
                     </ul>
                 </Box>
-                You can check the repository on GitHub, but with a warning:{" "}
-                <span style={{ backgroundColor: "#fed" }}>
-                    {" "}
-                    The Discord.JS version of the client is old, and a lot of changes to the main
-                    code must be done before it can run in the current Discord.JS API Version, while
-                    it's not maintained anymore, a lot of the logic related to the commands are
-                    still valid and completely usable whitin a new Bot Client.
-                </span>{" "}
-                Check my Typescript Bot Model for more information.
+                <Paragraph>
+                    You can check the repository on GitHub, but with a warning:{" "}
+                    <span style={{ backgroundColor: "#fed" }}>
+                        {" "}
+                        The Discord.JS version of the client is old, and a lot of changes to the
+                        main code must be done before it can run in the current Discord.JS API
+                        Version, while it's not maintained anymore, a lot of the logic related to
+                        the commands are still valid and completely usable whitin a new Bot Client.
+                    </span>{" "}
+                </Paragraph>
+                <Paragraph>Check my Typescript Bot Model for more information.</Paragraph>
             </Repo>
         </Page>
     );

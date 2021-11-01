@@ -1,7 +1,7 @@
-import { CodeLink, Page, Repo } from "./models";
+import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./models";
 import directxImage from "../../images/png/directx.png";
 import directxMinImage from "../../images/png/bbmain-min.png";
-import { List, ListItem, Typography } from "@mui/material";
+import { ListItem, Typography } from "@mui/material";
 interface Props {
     image: any;
 }
@@ -17,20 +17,20 @@ export const CPage: React.FC<Props> = ({ image }) => {
                 largeImagePlaceholder={directxMinImage}
                 largeImageLink="https://github.com/fobdev/snake-directxAPI/blob/me/Engine/Game.cpp"
             >
-                <Typography variant="body1" fontWeight="300">
+                <Paragraph>
                     This is one of my first projects using actual hardcore C++, with memory
                     allocation, address management, low-level pixel drawing, analictic geometry and
                     trigonometry.
-                </Typography>
-                <Typography variant="body1" fontWeight="300">
+                </Paragraph>
+                <Paragraph>
                     The snake rules are the default rules of the main snake game, and when you pass
                     "levels", some obstacles start to show up in{" "}
                     <CodeLink link="https://github.com/fobdev/snake-directxAPI/blob/me/Engine/Board.cpp">
                         The Grid
                     </CodeLink>
                     .
-                </Typography>
-                <Typography variant="body1" fontWeight="300">
+                </Paragraph>
+                <Paragraph>
                     This project was made possible because of a framework called{" "}
                     <CodeLink link="https://wiki.planetchili.net/index.php/Chili_Framework">
                         Chili Framework
@@ -40,30 +40,25 @@ export const CPage: React.FC<Props> = ({ image }) => {
                         Game Loop
                     </CodeLink>
                     .
-                </Typography>
-                <Typography variant="body1" fontWeight="300">
-                    These are the game rules and logic, also available in the{" "}
-                    <CodeLink link="https://github.com/fobdev/snake-directxAPI/tree/1.0#readme">
-                        README.md
-                    </CodeLink>{" "}
-                    of the project in the GitHub Repository:
-                </Typography>
-                <Typography variant="h6" fontWeight="bold">
-                    Game Rules:
-                </Typography>
-
-                <List>
+                </Paragraph>
+                <Paragraph>
+                    <Typography variant="body1" fontWeight="300">
+                        These are the game rules and logic, also available in the{" "}
+                        <CodeLink link="https://github.com/fobdev/snake-directxAPI/tree/1.0#readme">
+                            README.md
+                        </CodeLink>{" "}
+                        of the project in the GitHub Repository:
+                    </Typography>
+                </Paragraph>
+                <ItemsList title="Game Rules">
                     <ListItem>
                         <Typography variant="subtitle2" fontWeight="400">
                             <b>Catch</b> all the points without hitting walls, obstacles and
                             youself.
                         </Typography>
                     </ListItem>
-                </List>
-                <Typography variant="h6" fontWeight="bold">
-                    Game Logic:
-                </Typography>
-                <List>
+                </ItemsList>
+                <ItemsList title="Game Logic">
                     <ListItem>
                         <Typography variant="subtitle2" fontWeight="400">
                             <b>Food</b> will appear randomly in the grid size of 1 around all the
@@ -97,19 +92,19 @@ export const CPage: React.FC<Props> = ({ image }) => {
                             itself or the countdown of the level finishes
                         </Typography>
                     </ListItem>
-                </List>
-                <Typography variant="body1" fontWeight="300">
+                </ItemsList>
+                <Paragraph>
                     This repository does not have any external dependencies for it's execution and
                     it's a completely offline client. You can freely clone or fork the project and
                     it will be working perfectly fine.
-                </Typography>
-                <Typography variant="body1" fontWeight="300">
+                </Paragraph>
+                <Paragraph>
                     Also check out{" "}
                     <CodeLink link="https://github.com/planetchili/chili_framework">
                         Chili Framework Repository
                     </CodeLink>{" "}
                     for more information about the Framework.
-                </Typography>
+                </Paragraph>
             </Repo>
         </Page>
     );
