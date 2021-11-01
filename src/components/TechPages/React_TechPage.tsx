@@ -2,7 +2,7 @@ import ReactIMG from "../../images/png/reactcode.png";
 import ReactIMGMin from "../../images/png/reactcode-min.png";
 import bbStandings from "../../images/png/bbstandings.png";
 import { Repo, Page, CodeLink, Paragraph, ItemsList } from "./models";
-import { List, ListItem, Typography } from "@mui/material";
+import { ListItem } from "@mui/material";
 
 interface Props {
     image: any;
