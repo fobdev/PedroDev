@@ -143,6 +143,12 @@ export const About: React.FC<Props> = () => {
                                                 <TechRole image={svgBank.CSharpSVG} title="C#" />
                                             </Link>
                                             <Link
+                                                to={`${match.url}/backend/cpp`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole image={svgBank.CppSVG} title="C/C++" />
+                                            </Link>
+                                            <Link
                                                 to={`${match.url}/backend/mongodb`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
@@ -168,12 +174,6 @@ export const About: React.FC<Props> = () => {
                                                     image={svgBank.PostgreSQLSVG}
                                                     title="Postgres"
                                                 />
-                                            </Link>
-                                            <Link
-                                                to={`${match.url}/backend/cpp`}
-                                                style={{ textDecoration: "none", color: "black" }}
-                                            >
-                                                <TechRole image={svgBank.CppSVG} title="C/C++" />
                                             </Link>
                                             <Link
                                                 to={`${match.url}/backend/youtubeapi`}
