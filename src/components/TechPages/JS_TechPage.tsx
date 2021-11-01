@@ -60,12 +60,8 @@ export const JSPage: React.FC<Props> = ({ image }) => {
     const gridStying: SxProps<Theme> = {
         display: "grid",
         marginTop: ".5em",
-        boxSizing: "border-box",
         gridTemplateColumns: "auto auto",
         gridRow: "auto auto",
-        span: {
-            fontWeight: "bold",
-        },
     };
 
     return (
@@ -172,10 +168,13 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
                     package. This is all the packages that the BogueBot Music System uses
                 </Paragraph>
-                {packageListWrapper(
-                    ["simple-youtube-api", "ytdl-core", "m3u8stream", "node-fetch", "node-opus"],
-                    ""
-                )}
+                {packageListWrapper([
+                    "simple-youtube-api",
+                    "ytdl-core",
+                    "m3u8stream",
+                    "node-fetch",
+                    "node-opus",
+                ])}
                 <Paragraph>
                     The music system contains a mapset of asynchronous Discord.JS listeners that
                     receive all the requests from users in a single server while maintaining
@@ -196,27 +195,15 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         music subcommands
                     </CodeLink>
                 </Paragraph>
-                <Box
-                    sx={{
-                        display: "grid",
-                        boxSizing: "border-box",
-                        gridTemplateColumns: "auto auto",
-                        gridRow: "auto auto",
-                        span: {
-                            fontWeight: "bold",
-                        },
-                    }}
-                >
-                    {commandListWrapper("/music/subcommands/", "Music Subcommands", [
-                        "queue",
-                        "nowplaying",
-                        "pause",
-                        "repeat",
-                        "skip",
-                        "earrape",
-                        "leave",
-                    ])}
-                </Box>
+                {commandListWrapper("/music/subcommands/", "Music Subcommands", [
+                    "queue",
+                    "nowplaying",
+                    "pause",
+                    "repeat",
+                    "skip",
+                    "earrape",
+                    "leave",
+                ])}
                 <Paragraph>
                     You can check the repository on GitHub, but with a warning:
                     <Paragraph>
@@ -234,4 +221,3 @@ export const JSPage: React.FC<Props> = ({ image }) => {
         </Page>
     );
 };
-export default JSPage;
