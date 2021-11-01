@@ -9,7 +9,7 @@ interface Props {
 
 export const TSPage: React.FC<Props> = ({ image }) => {
     return (
-        <Page image={image} mainTitle="Typescript Projects" largeTitle="Typescript & Discord.JS">
+        <Page image={image} mainTitle="Typescript Projects">
             <Repo
                 title="Discord Bot Model in Typescript"
                 repoLink="https://github.com/fobdev/discordbot-typescript"

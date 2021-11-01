@@ -64,7 +64,7 @@ export const JSPage: React.FC<Props> = ({ image }) => {
     };
 
     return (
-        <Page image={image} mainTitle="Javascript Projects" largeTitle="JavaScript & Discord.JS">
+        <Page image={image} mainTitle="Javascript Projects">
             <Repo
                 title="BogueBot"
                 repoLink="https://github.com/fobdev/BogueBot"

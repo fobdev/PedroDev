@@ -24,7 +24,7 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
     };
 
     return (
-        <Page image={image} mainTitle="React Projects" largeTitle="React & Typescript / Mui + Sass">
+        <Page image={image} mainTitle="React Projects">
             <Repo
                 repoLink="https://github.com/fobdev/PedroDev"
                 title="PedroDev"

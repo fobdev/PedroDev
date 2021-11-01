@@ -8,7 +8,7 @@ interface Props {
 
 export const CPage: React.FC<Props> = ({ image }) => {
     return (
-        <Page image={image} mainTitle="Games in DirecX" largeTitle="C++ & DirectX">
+        <Page image={image} mainTitle="C/C++ Projects">
             <Repo
                 title="Snake in DirectX 9"
                 repoLink="https://github.com/fobdev/snake-directxAPI"

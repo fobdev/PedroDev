@@ -8,7 +8,7 @@ interface Props {
 
 export const CSharpPage: React.FC<Props> = ({ image }) => {
     return (
-        <Page image={image} mainTitle="C# Projects" largeTitle=".NET MVC WebAPI & MongoDB">
+        <Page image={image} mainTitle="C# Projects">
             <Repo
                 title="bank-dotnet-webapi"
                 repoLink="https://github.com/fobdev/bank-dotnet-webapi"
