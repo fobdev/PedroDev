@@ -14,7 +14,7 @@ interface Props {
 
 export const JSPage: React.FC<Props> = ({ image }) => {
     useEffect(() => {
-        document.title = "PedroDev: Javascript Projects";
+        document.title = "PedroDev: JavaScript Projects";
     }, []);
 
     const commandListWrapper = (
