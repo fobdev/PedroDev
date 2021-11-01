@@ -2,11 +2,15 @@ import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./models";
 import directxImage from "../../images/png/directx.png";
 import directxMinImage from "../../images/png/bbmain-min.png";
 import { ListItem, Typography } from "@mui/material";
+import { useEffect } from "react";
 interface Props {
     image: any;
 }
 
 export const CPage: React.FC<Props> = ({ image }) => {
+    useEffect(() => {
+        document.title = "PedroDev: C++ Projects";
+    }, []);
     return (
         <Page image={image} mainTitle="C/C++ Projects">
             <Repo

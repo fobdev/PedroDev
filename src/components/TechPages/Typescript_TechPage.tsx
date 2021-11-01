@@ -2,12 +2,16 @@ import TSimg from "../../images/png/discord-typescript.png";
 import TSimgMin from "../../images/png/discord-typescript-min.png";
 import { Repo, Page, CodeLink, ItemsList, Paragraph } from "./models";
 import { ListItem } from "@mui/material";
+import { useEffect } from "react";
 
 interface Props {
     image: any;
 }
 
 export const TSPage: React.FC<Props> = ({ image }) => {
+    useEffect(() => {
+        document.title = "PedroDev: Typescript Projects";
+    }, []);
     return (
         <Page image={image} mainTitle="Typescript Projects">
             <Repo

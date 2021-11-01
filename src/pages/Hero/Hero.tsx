@@ -5,6 +5,7 @@ import ComputerRoundedIcon from "@mui/icons-material/ComputerRounded";
 
 // React
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 // Styles
 import { style } from "./_style";
@@ -16,6 +17,9 @@ import heroImage from "../../images/gif/hero1.gif";
 interface Props {}
 export const Hero: React.FC<Props> = () => {
     const { colorChange, float } = animations();
+    useEffect(() => {
+        document.title = "PedroDev: Full Stack Developer";
+    }, []);
 
     return (
         <Stack

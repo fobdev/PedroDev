@@ -6,12 +6,17 @@ import BBMainMin from "../../images/png/bbmain-min.png";
 import Box from "@mui/material/Box";
 import { ListItem, Typography } from "@mui/material";
 import { SxProps, Theme } from "@mui/system";
+import { useEffect } from "react";
 
 interface Props {
     image: any;
 }
 
 export const JSPage: React.FC<Props> = ({ image }) => {
+    useEffect(() => {
+        document.title = "PedroDev: Javascript Projects";
+    }, []);
+
     const commandListWrapper = (
         dir: string,
         title: string,

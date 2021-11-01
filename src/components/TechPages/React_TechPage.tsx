@@ -3,12 +3,17 @@ import ReactIMGMin from "../../images/png/reactcode-min.png";
 import bbStandings from "../../images/png/bbstandings.png";
 import { Repo, Page, CodeLink, Paragraph, ItemsList } from "./models";
 import { ListItem } from "@mui/material";
+import { useEffect } from "react";
 
 interface Props {
     image: any;
 }
 
 export const REACTPage: React.FC<Props> = ({ image }) => {
+    useEffect(() => {
+        document.title = "PedroDev: React Projects";
+    }, []);
+
     const listItemMapper = (title: string, array: Array<string>) => {
         return (
             <ItemsList title={title}>
