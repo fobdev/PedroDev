@@ -9,6 +9,20 @@ interface Props {
 }
 
 export const REACTPage: React.FC<Props> = ({ image }) => {
+    const listItemMapper = (title: string, array: Array<string>) => {
+        return (
+            <ItemsList title={title}>
+                {array.map((element) => (
+                    <ListItem>
+                        <CodeLink link={`https://www.npmjs.com/package/${element}`}>
+                            {element}
+                        </CodeLink>
+                    </ListItem>
+                ))}
+            </ItemsList>
+        );
+    };
+
     return (
         <Page image={image} mainTitle="React Projects" largeTitle="React & Typescript / Mui + Sass">
             <Repo
@@ -23,66 +37,21 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
                     My personal portfolio, made completely in React in junction with Typescript.
                     This project is still under development and I push commits to it daily.
                 </Paragraph>
-                <ItemsList title="React Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react">
-                            @types/react
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react-dom">
-                            @types/react-dom
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react-router-dom">
-                            @types/react-router-dom
-                        </CodeLink>
-                    </ListItem>
-                </ItemsList>
-                <ItemsList title="Other Typescript Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/lodash">
-                            @types/lodash
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/node">
-                            @types/node
-                        </CodeLink>
-                    </ListItem>
-                </ItemsList>
-                <ItemsList title="Other Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/material">
-                            @mui/material
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/icons-material">
-                            @mui/icons-material
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/lab">@mui/lab</CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/styles">
-                            @mui/styles
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/firebase">firebase</CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/i18next">i18next</CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/emailjs-com">
-                            emailjs-com
-                        </CodeLink>
-                    </ListItem>
-                </ItemsList>
+                {listItemMapper("React Dependencies", [
+                    "@types/react",
+                    "@types/react-dom",
+                    "@types/react-router-dom",
+                ])}
+                {listItemMapper("Other Typescript Dependencies", ["@types/lodash", "@types/node"])}
+                {listItemMapper("Other Dependencies", [
+                    "@mui/material",
+                    "@mui/icons-material",
+                    "@mui/lab",
+                    "@mui/styles",
+                    "firebase",
+                    "i18next",
+                    "emailjs-com",
+                ])}
                 <Paragraph>
                     If you want to help me develop my website, feel free to send requests to this
                     repository.
@@ -108,48 +77,18 @@ export const REACTPage: React.FC<Props> = ({ image }) => {
                     fetch requests and made a Typescript fetcher using interfaces to get the JSON
                     objects.
                 </Paragraph>
-                <ItemsList title="React Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react">
-                            @types/react
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react-dom">
-                            @types/react-dom
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/react-router-dom">
-                            @types/react-router-dom
-                        </CodeLink>
-                    </ListItem>
-                </ItemsList>
-                <ItemsList title="Other Typescript Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@types/node">
-                            @types/node
-                        </CodeLink>
-                    </ListItem>
-                </ItemsList>
-                <ItemsList title="Other Dependencies">
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/icons-material">
-                            @mui/icons-material
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/material">
-                            @mui/material
-                        </CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/@mui/lab">@mui/lab</CodeLink>
-                    </ListItem>
-                    <ListItem>
-                        <CodeLink link="https://www.npmjs.com/package/axios">axios</CodeLink>
-                    </ListItem>
-                </ItemsList>
+                {listItemMapper("React Dependencies", [
+                    "@types/react",
+                    "@types/react-dom",
+                    "@types/react-router-dom",
+                ])}
+                {listItemMapper("Other Typescript Dependencies", ["@types/node"])}
+                {listItemMapper("Other Dependencies", [
+                    "@mui/icons-material",
+                    "@mui/material",
+                    "@mui/lab",
+                    "axios",
+                ])}
                 <Paragraph>
                     Feel free to check it, I created a fetch system with axios that is completely
                     modular, and I use it basically all my projects that I need API fetching:
