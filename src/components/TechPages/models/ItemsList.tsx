@@ -4,7 +4,7 @@ interface Props {
     children: any;
 }
 
-export const ItemsList: React.FC<Props> = ({ title, children }) => {
+export const ItemsList: React.FC<Props> = ({ title = "", children }) => {
     return (
         <div>
             <Typography variant="h6">{title}</Typography>
