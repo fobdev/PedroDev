@@ -1,38 +1,65 @@
-import { CodeLink, Repo, Page, Paragraph } from "./models";
+import { CodeLink, Repo, Page, Paragraph, ItemsList } from "./models";
 import BBMain from "../../images/png/bbmain.png";
 import YTmain from "../../images/png/ytmain.png";
 import YTmainMin from "../../images/png/bbmain.png";
 import BBMainMin from "../../images/png/bbmain-min.png";
 import Box from "@mui/material/Box";
+import { ListItem, Typography } from "@mui/material";
+import { SxProps, Theme } from "@mui/system";
 
 interface Props {
     image: any;
 }
 
 export const JSPage: React.FC<Props> = ({ image }) => {
-    const commandListWrapper = (dir: string, commands: Array<string>) => {
+    const commandListWrapper = (
+        dir: string,
+        title: string,
+        commands: Array<string>,
+        moreAmount: number = 0
+    ) => {
         return (
-            <div>
-                <b>{dir.charAt(0).toUpperCase() + dir.slice(1)} Commands</b>
+            <ItemsList title={title}>
                 {commands.map((command) => (
-                    <li>
+                    <ListItem>
                         <CodeLink
                             link={`https://github.com/fobdev/BogueBot/blob/master/commands/${dir}/${command}.js`}
                         >
                             {command}
                         </CodeLink>
-                    </li>
+                    </ListItem>
                 ))}
-            </div>
+                {moreAmount > 0 ? (
+                    <ListItem>
+                        <CodeLink
+                            link={`https://github.com/fobdev/BogueBot/blob/master/commands/${dir}/`}
+                        >
+                            more (+{moreAmount})
+                        </CodeLink>
+                    </ListItem>
+                ) : null}
+            </ItemsList>
         );
     };
 
-    const packageListWrapper = (pkgArray: Array<string>) => {
+    const packageListWrapper = (pkgArray: Array<string>, title: string = "") => {
         return pkgArray.map((pkg) => (
-            <li>
-                <CodeLink link={`https://www.npmjs.com/package/${pkg}`}>{pkg}</CodeLink>
-            </li>
+            <ItemsList title={title}>
+                <ListItem>
+                    <CodeLink link={`https://www.npmjs.com/package/${pkg}`}>{pkg}</CodeLink>
+                </ListItem>
+            </ItemsList>
         ));
+    };
+
+    const gridStying: SxProps<Theme> = {
+        display: "grid",
+        boxSizing: "border-box",
+        gridTemplateColumns: "auto auto",
+        gridRow: "auto auto",
+        span: {
+            fontWeight: "bold",
+        },
     };
 
     return (
@@ -69,47 +96,30 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     </CodeLink>
                 </Paragraph>
                 <Paragraph>Some of the client commands are listed below</Paragraph>
-                <Box
-                    sx={{
-                        display: "grid",
-                        boxSizing: "border-box",
-                        gridTemplateColumns: "auto auto",
-                        gridRow: "auto auto",
-                        span: {
-                            fontWeight: "bold",
-                        },
-                    }}
-                >
-                    <ul>
-                        {commandListWrapper("admin", ["ban", "clear", "report", "kick"])}
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/admin/">
-                                more commands (7+)
-                            </CodeLink>
-                        </li>
-                    </ul>
-                    <ul>
-                        {commandListWrapper("bot", ["feedback", "help", "invite", "prefix"])}
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/bot/">
-                                more commands (+3)
-                            </CodeLink>
-                        </li>
-                    </ul>
-                    <ul>
-                        {commandListWrapper("user", ["avatar", "couple"])}
-                        {commandListWrapper("games", ["guess"])}
-                    </ul>
-                    <ul>
-                        {commandListWrapper("fun", ["imagesearch", "bigtext", "dice", "roll"])}
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/fun/">
-                                more commands (+6)
-                            </CodeLink>
-                        </li>
-                    </ul>
+                <Box sx={gridStying}>
+                    {commandListWrapper(
+                        "admin",
+                        "Admin Commands",
+                        ["ban", "clear", "report", "kick"],
+                        7
+                    )}
+                    {commandListWrapper(
+                        "bot",
+                        "Client Commands",
+                        ["feedback", "help", "invite", "prefix"],
+                        3
+                    )}
+                    {commandListWrapper("user", "User Commands", ["avatar", "couple"])}
+                    {commandListWrapper(
+                        "fun",
+                        "Fun Commands",
+                        ["imagesearch", "bigtext", "dice", "roll"],
+                        6
+                    )}
                 </Box>
-                <h2 style={{ lineHeight: "0.2em", marginTop: "1.2em" }}>npm modules</h2>
+                <Typography variant="h4" fontWeight="bold" marginTop="1em">
+                    npm modules
+                </Typography>
                 <Paragraph>
                     This is a list of all the packages used in the core backend of the client, with
                     packages like{" "}
@@ -131,16 +141,8 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         },
                     }}
                 >
-                    <ul>
-                        {packageListWrapper([
-                            "discord.js",
-                            "g-i-s",
-                            "i18n",
-                            "lunicode",
-                            "merge-img",
-                        ])}
-                    </ul>
-                    <ul>{packageListWrapper(["ms", "number-to-words", "numeral", "uws", "pg"])}</ul>
+                    {packageListWrapper(["discord.js", "g-i-s", "i18n", "lunicode", "merge-img"])}
+                    {packageListWrapper(["ms", "number-to-words", "numeral", "uws", "pg"])}
                 </Box>
             </Repo>
             <Repo
@@ -164,15 +166,10 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     <CodeLink link="https://www.npmjs.com/package/ytdl-core">ytdl-core</CodeLink>{" "}
                     package. This is all the packages that the BogueBot Music System uses
                 </Paragraph>
-                <ul>
-                    {packageListWrapper([
-                        "simple-youtube-api",
-                        "ytdl-core",
-                        "m3u8stream",
-                        "node-fetch",
-                        "node-opus",
-                    ])}
-                </ul>
+                {packageListWrapper(
+                    ["simple-youtube-api", "ytdl-core", "m3u8stream", "node-fetch", "node-opus"],
+                    ""
+                )}
                 <Paragraph>
                     The music system contains a mapset of asynchronous Discord.JS listeners that
                     receive all the requests from users in a single server while maintaining
@@ -187,7 +184,12 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                     shutdown in December of 2020, and after that, no longer being maintained by
                     myself.
                 </Paragraph>
-                <Paragraph>This is the list of all the available music commands</Paragraph>
+                <Paragraph>
+                    This is the list of all the available{" "}
+                    <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js">
+                        music subcommands
+                    </CodeLink>
+                </Paragraph>
                 <Box
                     sx={{
                         display: "grid",
@@ -199,34 +201,27 @@ export const JSPage: React.FC<Props> = ({ image }) => {
                         },
                     }}
                 >
-                    <ul>
-                        <li>
-                            <CodeLink link="https://github.com/fobdev/BogueBot/blob/master/commands/music/music.js">
-                                music
-                            </CodeLink>
-                        </li>
-                        {["queue", "nowplaying", "pause", "repeat", "skip", "earrape", "leave"].map(
-                            (command) => (
-                                <li>
-                                    <CodeLink
-                                        link={`https://github.com/fobdev/BogueBot/blob/master/commands/music/subcommands/${command}.js`}
-                                    >
-                                        {command}
-                                    </CodeLink>
-                                </li>
-                            )
-                        )}
-                    </ul>
+                    {commandListWrapper("/music/subcommands/", "Music Subcommands", [
+                        "queue",
+                        "nowplaying",
+                        "pause",
+                        "repeat",
+                        "skip",
+                        "earrape",
+                        "leave",
+                    ])}
                 </Box>
                 <Paragraph>
-                    You can check the repository on GitHub, but with a warning:{" "}
-                    <span style={{ backgroundColor: "#fed" }}>
-                        {" "}
-                        The Discord.JS version of the client is old, and a lot of changes to the
-                        main code must be done before it can run in the current Discord.JS API
-                        Version, while it's not maintained anymore, a lot of the logic related to
-                        the commands are still valid and completely usable whitin a new Bot Client.
-                    </span>{" "}
+                    You can check the repository on GitHub, but with a warning:
+                    <Paragraph>
+                        <span style={{ backgroundColor: "#fed" }}>
+                            The Discord.JS version of the client is old, and a lot of changes to the
+                            main code must be done before it can run in the current Discord.JS API
+                            Version, while it's not maintained anymore, a lot of the logic related
+                            to the commands are still valid and completely usable whitin a new Bot
+                            Client.
+                        </span>{" "}
+                    </Paragraph>
                 </Paragraph>
                 <Paragraph>Check my Typescript Bot Model for more information.</Paragraph>
             </Repo>
