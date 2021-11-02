@@ -99,7 +99,7 @@ export const About: React.FC<Props> = () => {
                                                             alt="SASS"
                                                         />
                                                         <Typography className="title">
-                                                            React / MUI / Sass
+                                                            React & Material UI
                                                         </Typography>
                                                     </ButtonBase>
                                                 </Link>
