@@ -76,10 +76,9 @@ export const Contact: React.FC<Props> = () => {
     const handleChange = (prop: keyof userInfo) => (e: React.ChangeEvent<HTMLInputElement>) => {
         setButtonEnabled(true);
         setForm({ ...form, [prop]: e.target.value });
-        if (prop === "email") {
+        if (prop === "email")
             if (emailRegex.test(e.target.value)) setButtonEnabled(true);
             else setButtonEnabled(false);
-        }
     };
 
     const handleEmailSending = () => {
@@ -97,19 +96,16 @@ export const Contact: React.FC<Props> = () => {
                     console.log(response);
                     handlePopup("send_success");
 
-                    // @ts-ignore
-                    messageRef.current.value = "";
-                    // @ts-ignore
-                    subjectRef.current.value = "";
+                    messageRef.current!.value = "";
+                    subjectRef.current!.value = "";
                     setButtonEnabled(false);
                     setLoading(false);
                 },
                 function (error) {
-                    console.log(error);
                     setButtonEnabled(false);
-                    setLoading(false);
+                    console.error(error);
                     handlePopup("error");
-                    console.log(error);
+                    setLoading(false);
                 }
             );
         }
