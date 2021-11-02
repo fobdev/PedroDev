@@ -20,7 +20,6 @@ import {
     REACTPage,
     JSPage,
     TSPage,
-    YOUTUBEPage,
     NODEJSPage,
     CPage,
     MongoDBPage,
@@ -149,15 +148,6 @@ export const About: React.FC<Props> = () => {
                                                 <TechRole image={svgBank.CppSVG} title="C/C++" />
                                             </Link>
                                             <Link
-                                                to={`${match.url}/backend/mongodb`}
-                                                style={{ textDecoration: "none", color: "black" }}
-                                            >
-                                                <TechRole
-                                                    image={svgBank.MongoDBSVG}
-                                                    title="MongoDB"
-                                                />
-                                            </Link>
-                                            <Link
                                                 to={`${match.url}/backend/nodejs`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
@@ -167,21 +157,21 @@ export const About: React.FC<Props> = () => {
                                                 />
                                             </Link>
                                             <Link
+                                                to={`${match.url}/backend/mongodb`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.MongoDBSVG}
+                                                    title="MongoDB"
+                                                />
+                                            </Link>
+                                            <Link
                                                 to={`${match.url}/backend/postgres`}
                                                 style={{ textDecoration: "none", color: "black" }}
                                             >
                                                 <TechRole
                                                     image={svgBank.PostgreSQLSVG}
                                                     title="Postgres"
-                                                />
-                                            </Link>
-                                            <Link
-                                                to={`${match.url}/backend/youtubeapi`}
-                                                style={{ textDecoration: "none", color: "black" }}
-                                            >
-                                                <TechRole
-                                                    image={svgBank.YouTubeSVG}
-                                                    title="YouTube API"
                                                 />
                                             </Link>
                                         </Box>
@@ -203,9 +193,6 @@ export const About: React.FC<Props> = () => {
                         </Route>
                         <Route path={`${match.path}/backend/csharp`}>
                             <CSharpPage image={svgBank.CSharpSVG} />
-                        </Route>
-                        <Route path={`${match.path}/backend/youtubeapi`}>
-                            <YOUTUBEPage image={svgBank.YouTubeSVG} />{" "}
                         </Route>
                         <Route path={`${match.path}/backend/postgres`}>
                             <POSTGRESPage image={svgBank.PostgreSQLSVG} />{" "}

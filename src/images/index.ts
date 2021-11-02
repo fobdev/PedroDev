@@ -7,6 +7,5 @@ export { default as SassSVG } from "./svg/Sass.svg";
 export { default as CppSVG } from "./svg/C++.svg";
 export { default as PostgreSQLSVG } from "./svg/Postgres.svg";
 export { default as NodeJSSVG } from "./svg/NodeJS.svg";
-export { default as YouTubeSVG } from "./svg/YouTube.svg";
 export { default as CSharpSVG } from "./svg/CSharp.svg";
 export { default as MongoDBSVG } from "./svg/MongoDB.svg";

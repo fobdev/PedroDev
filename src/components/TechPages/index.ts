@@ -6,4 +6,3 @@ export * from "./NodeJS_TechPage";
 export * from "./Postgres_TechPage";
 export * from "./React_TechPage";
 export * from "./Typescript_TechPage";
-export * from "./YouTube_TechPage";
