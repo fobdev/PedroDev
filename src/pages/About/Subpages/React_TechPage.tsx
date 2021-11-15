@@ -1,7 +1,7 @@
-import ReactIMG from "../../images/png/reactcode.png";
-import ReactIMGMin from "../../images/png/reactcode-min.png";
-import bbStandings from "../../images/png/bbstandings.png";
-import { Repo, Page, CodeLink, Paragraph, ItemsList } from "./models";
+import ReactIMG from "../../../images/png/reactcode.png";
+import ReactIMGMin from "../../../images/png/reactcode-min.png";
+import bbStandings from "../../../images/png/bbstandings.png";
+import { Repo, Page, CodeLink, Paragraph, ItemsList } from "./components";
 import { ListItem } from "@mui/material";
 import { useEffect } from "react";
 

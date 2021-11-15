@@ -1,6 +1,6 @@
-import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./models";
-import bankapi from "../../images/png/bankapi.png";
-import bankapi_min from "../../images/png/bbmain-min.png";
+import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./components";
+import bankapi from "../../../images/png/bankapi.png";
+import bankapi_min from "../../../images/png/bbmain-min.png";
 import { ListItem, Paper } from "@mui/material";
 import { useEffect } from "react";
 interface Props {

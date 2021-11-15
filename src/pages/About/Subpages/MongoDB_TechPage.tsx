@@ -1,17 +1,17 @@
 import { Typography } from "@mui/material";
-import { Project } from "../subcomponents";
+import { Project } from "./components";
 import { useEffect } from "react";
 
 interface Props {
     image: any;
 }
 
-export const NODEJSPage: React.FC<Props> = ({ image }) => {
+export const MongoDBPage: React.FC<Props> = ({ image }) => {
     useEffect(() => {
-        document.title = "PedroDev: Node.JS Projects";
+        document.title = "PedroDev: MongoDB Projects";
     }, []);
     return (
-        <Project title="Node.JS Projects" image={image}>
+        <Project title="MongoDB Projects" image={image}>
             <Typography padding="1em">
                 This page is currently under development, please come back later.
             </Typography>

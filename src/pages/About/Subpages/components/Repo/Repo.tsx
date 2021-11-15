@@ -1,8 +1,8 @@
 import { Paper, Box, Typography, Slide } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { repoMainBoxStyling } from "./styles/Repo";
-import { largeImageHoverMainBox } from "./styles/LargeImageHover";
-import ImageLoader from "../../../utils/ImageLoader";
+import { repoMainBoxStyling } from "./_styles";
+import { largeImageHoverMainBox } from "./_imagehoverStyles";
+import { ImageLoader } from "../../../../../utils";
 
 interface Props {
     title: string;

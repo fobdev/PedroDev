@@ -1,6 +1,6 @@
-import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./models";
-import directxImage from "../../images/png/directx.png";
-import directxMinImage from "../../images/png/bbmain-min.png";
+import { CodeLink, ItemsList, Page, Paragraph, Repo } from "./components";
+import directxImage from "../../../images/png/directx.png";
+import directxMinImage from "../../../images/png/bbmain-min.png";
 import { ListItem, Typography } from "@mui/material";
 import { useEffect } from "react";
 interface Props {

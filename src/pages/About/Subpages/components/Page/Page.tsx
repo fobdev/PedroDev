@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
-import Project from "../../subcomponents/Project/Project";
-import { globalPageStyle } from "./styles/_global";
+import { Project } from "..";
+import { globalPageStyle } from "../_globalStyles";
+
 interface Props {
     mainTitle: string;
     image: any;

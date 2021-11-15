@@ -1,6 +1,6 @@
-import TSimg from "../../images/png/discord-typescript.png";
-import TSimgMin from "../../images/png/discord-typescript-min.png";
-import { Repo, Page, CodeLink, ItemsList, Paragraph } from "./models";
+import TSimg from "../../../images/png/discord-typescript.png";
+import TSimgMin from "../../../images/png/discord-typescript-min.png";
+import { Repo, Page, CodeLink, ItemsList, Paragraph } from "./components";
 import { ListItem } from "@mui/material";
 import { useEffect } from "react";
 

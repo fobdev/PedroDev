@@ -1,5 +1,5 @@
 // MUI
-import { Slide, Grow, Paper, Typography, ButtonBase } from "@mui/material";
+import { Slide, Grow, Paper, Typography } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Box } from "@mui/system";
@@ -9,12 +9,12 @@ import { Link, useRouteMatch, Route } from "react-router-dom";
 import { useRef } from "react";
 
 // Styles
-import { style as techRolesStyle } from "../../components/subcomponents/TechRole/_style";
 import { style } from "./_style";
 
 // Components
-import { TechRole } from "../../components/subcomponents";
+import { TechRole } from "./Subpages/components";
 import * as svgBank from "../../images";
+
 import {
     POSTGRESPage,
     REACTPage,
@@ -24,7 +24,8 @@ import {
     CPage,
     MongoDBPage,
     CSharpPage,
-} from "../../components/TechPages";
+} from "./Subpages";
+import { REACTNATIVEPage } from "./Subpages/ReactNative_TechPage";
 
 interface Props {}
 export const About: React.FC<Props> = () => {

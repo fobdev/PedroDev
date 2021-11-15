@@ -1,8 +1,8 @@
-import { CodeLink, Repo, Page, Paragraph, ItemsList } from "./models";
-import BBMain from "../../images/png/bbmain.png";
-import YTmain from "../../images/png/ytmain.png";
-import YTmainMin from "../../images/png/bbmain.png";
-import BBMainMin from "../../images/png/bbmain-min.png";
+import { CodeLink, Repo, Page, Paragraph, ItemsList } from "./components";
+import BBMain from "../../../images/png/bbmain.png";
+import YTmain from "../../../images/png/ytmain.png";
+import YTmainMin from "../../../images/png/bbmain.png";
+import BBMainMin from "../../../images/png/bbmain-min.png";
 import Box from "@mui/material/Box";
 import { ListItem, Typography } from "@mui/material";
 import { SxProps, Theme } from "@mui/system";

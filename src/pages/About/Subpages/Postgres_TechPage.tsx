@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { Project } from "../subcomponents";
+import { Project } from "./components";
 import { useEffect } from "react";
 
 interface Props {
