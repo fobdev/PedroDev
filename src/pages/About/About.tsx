@@ -74,36 +74,21 @@ export const About: React.FC<Props> = () => {
                                         unmountOnExit
                                     >
                                         <Box className="stack-techbox">
-                                            <Paper elevation={2} sx={techRolesStyle(false)}>
-                                                <Link
-                                                    to={`${match.url}/frontend/react`}
-                                                    style={{
-                                                        textDecoration: "none",
-                                                        color: "black",
-                                                    }}
-                                                >
-                                                    <ButtonBase disableRipple>
-                                                        <img
-                                                            className="image"
-                                                            src={svgBank.ReactSVG}
-                                                            alt="React"
-                                                        />
-                                                        <img
-                                                            className="image"
-                                                            src={svgBank.MUISVG}
-                                                            alt="MUI"
-                                                        />
-                                                        <img
-                                                            className="image"
-                                                            src={svgBank.SassSVG}
-                                                            alt="SASS"
-                                                        />
-                                                        <Typography className="title">
-                                                            React & Material UI
-                                                        </Typography>
-                                                    </ButtonBase>
-                                                </Link>
-                                            </Paper>
+                                            <Link
+                                                to={`${match.url}/frontend/react`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole image={svgBank.ReactSVG} title="React" />
+                                            </Link>
+                                            <Link
+                                                to={`${match.url}/frontend/reactnative`}
+                                                style={{ textDecoration: "none", color: "black" }}
+                                            >
+                                                <TechRole
+                                                    image={svgBank.ReactSVG}
+                                                    title="React Native"
+                                                />
+                                            </Link>
                                             <Link
                                                 to={`${match.url}/frontend/typescript`}
                                                 style={{ textDecoration: "none", color: "black" }}
@@ -184,6 +169,9 @@ export const About: React.FC<Props> = () => {
                         {/* Frontend */}
                         <Route path={`${match.path}/frontend/react`}>
                             <REACTPage image={svgBank.ReactSVG} />
+                        </Route>
+                        <Route path={`${match.path}/frontend/reactnative`}>
+                            <REACTNATIVEPage image={svgBank.ReactSVG} />
                         </Route>
                         <Route path={`${match.path}/frontend/typescript`}>
                             <TSPage image={svgBank.TypescriptSVG} />
