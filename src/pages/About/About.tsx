@@ -180,6 +180,7 @@ export const About: React.FC<Props> = () => {
                         <Route path={`${match.path}/frontend/javascript`}>
                             <JSPage image={svgBank.JavascriptSVG} />
                         </Route>
+                        {/* Backend */}
                         <Route path={`${match.path}/backend/csharp`}>
                             <CSharpPage image={svgBank.CSharpSVG} />
                         </Route>
