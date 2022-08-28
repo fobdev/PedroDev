@@ -18,4 +18,8 @@ export const style: SxProps<Theme> = {
         display: "flex",
         justifyContent: "center",
     },
+
+    ".footer-title": {
+        fontSize: 12,
+    },
 };

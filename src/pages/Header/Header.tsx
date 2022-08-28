@@ -29,8 +29,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const githubLink = "https://github.com/fobdev";
-const whatsappLink = "https://wa.me/+5599982207527";
-const linkedinLink = "https://www.linkedin.com/in/pedro-henrique-dev1997/";
+const linkedinLink = "https://www.linkedin.com/in/pedro-henrique-799755173/";
 
 interface Props {}
 export const Header: React.FC<Props> = () => {
@@ -214,11 +213,6 @@ export const Header: React.FC<Props> = () => {
             <List>
                 <Grow in={true} timeout={{ enter: 1000 }}>
                     <Stack direction="row">
-                        <ListItemIcon>
-                            <IconButton href={whatsappLink} rel="noreferrer" target="_blank">
-                                <WhatsAppIcon />
-                            </IconButton>
-                        </ListItemIcon>
                         <ListItemIcon>
                             <IconButton href={linkedinLink} rel="noreferrer" target="_blank">
                                 <LinkedInIcon />
