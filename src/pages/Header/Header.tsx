@@ -8,18 +8,18 @@ import {
     ListItemButton,
     ListItemIcon,
     Stack,
-    SwipeableDrawer,
-    ListItem,
-    ListItemText,
+    // SwipeableDrawer,
+    // ListItem,
+    // ListItemText,
 } from "@mui/material";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import logo from "../../images/svg/logo.svg";
-import HomeIcon from "@mui/icons-material/Home";
-import EmailIcon from "@mui/icons-material/Email";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
+// import HomeIcon from "@mui/icons-material/Home";
+// import EmailIcon from "@mui/icons-material/Email";
+// import AccountTreeIcon from "@mui/icons-material/AccountTree";
 
 // Styles
 import { style } from "./_style";
@@ -55,18 +55,18 @@ export const Header: React.FC<Props> = () => {
         });
     };
 
-    const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-        if (
-            event &&
-            event.type === "keydown" &&
-            ((event as React.KeyboardEvent).key === "Tab" ||
-                (event as React.KeyboardEvent).key === "Shift")
-        ) {
-            return;
-        }
+    // const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+    //     if (
+    //         event &&
+    //         event.type === "keydown" &&
+    //         ((event as React.KeyboardEvent).key === "Tab" ||
+    //             (event as React.KeyboardEvent).key === "Shift")
+    //     ) {
+    //         return;
+    //     }
 
-        setOpenMenu(open);
-    };
+    //     setOpenMenu(open);
+    // };
 
     return (
         <Stack
@@ -93,7 +93,7 @@ export const Header: React.FC<Props> = () => {
             <IconButton className="mobile-menu" onClick={handleMenuOpen}>
                 <MenuRoundedIcon />
             </IconButton>
-            <SwipeableDrawer
+            {/* <SwipeableDrawer
                 anchor="right"
                 open={openMenu}
                 onClose={toggleDrawer(false)}
@@ -185,7 +185,7 @@ export const Header: React.FC<Props> = () => {
                         </a>
                     </ListItemButton>
                 </List>
-            </SwipeableDrawer>
+            </SwipeableDrawer> */}
             <List>
                 <Stack direction="row" spacing={1}>
                     <Slide in={true} timeout={{ enter: 500 }}>
