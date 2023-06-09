@@ -10,10 +10,10 @@ export const Footer: React.FC<Props> = () => {
     return (
         <Box sx={style}>
             <Typography className="title" fontWeight="300">
-                Pedro Henrique - 2022
+                Pedro Henrique - 2023
             </Typography>
             <Typography className="footer-title" fontWeight="100">
-                Last Update: 28/08/2022
+                Last Update: June 09 of 2023
             </Typography>
         </Box>
     );
