@@ -214,11 +214,6 @@ export const Header: React.FC<Props> = () => {
                 <Grow in={true} timeout={{ enter: 1000 }}>
                     <Stack direction="row">
                         <ListItemIcon>
-                            <IconButton href={linkedinLink} rel="noreferrer" target="_blank">
-                                <LinkedInIcon />
-                            </IconButton>
-                        </ListItemIcon>
-                        <ListItemIcon>
                             <IconButton href={githubLink} rel="noreferrer" target="_blank">
                                 <GitHubIcon />
                             </IconButton>

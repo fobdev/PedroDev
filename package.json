@@ -4,7 +4,7 @@
     "homepage": "http://pedrodev.net/",
     "private": true,
     "engines": {
-        "node": "^16.0.0",
+        "node": "^18.0.0",
         "npm": "^8.0.0"
     },
     "dependencies": {
@@ -38,7 +38,7 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "dev": "react-scripts start",
+        "dev": "react-scripts --openssl-legacy-provider start ",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
