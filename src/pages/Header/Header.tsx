@@ -31,7 +31,7 @@ import { useState } from "react";
 const githubLink = "https://github.com/fobdev";
 const linkedinLink = "https://www.linkedin.com/in/pedro-henrique-799755173/";
 
-interface Props {}
+interface Props { }
 export const Header: React.FC<Props> = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -89,102 +89,6 @@ export const Header: React.FC<Props> = () => {
                     </Grow>
                 </Stack>
             </Link>
-            <IconButton className="mobile-menu" onClick={handleMenuOpen}>
-                <MenuRoundedIcon />
-            </IconButton>
-            {/* <SwipeableDrawer
-                anchor="right"
-                open={openMenu}
-                onClose={toggleDrawer(false)}
-                onOpen={toggleDrawer(true)}
-                sx={{ zIndex: "1500" }}
-            >
-                <List
-                    sx={{
-                        a: {
-                            display: "flex",
-                            alignItems: "center",
-                            textDecoration: "none",
-                            color: "black",
-                        },
-                    }}
-                >
-                    <Link
-                        to="/"
-                        className="link"
-                        style={{ textDecoration: "none", color: "black" }}
-                    >
-                        <ListItem
-                            button
-                            onClick={() => {
-                                handleToTopClick();
-                                setOpenMenu(false);
-                            }}
-                        >
-                            <ListItemIcon>
-                                <HomeIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Home" />
-                        </ListItem>
-                    </Link>
-                    <Link
-                        to="/projects/frontend/react"
-                        style={{ textDecoration: "none", color: "black" }}
-                    >
-                        <ListItem
-                            button
-                            onClick={() => {
-                                setOpenMenu(false);
-                                handleToTopClick();
-                            }}
-                        >
-                            <ListItemIcon>
-                                <AccountTreeIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Projects" />
-                        </ListItem>
-                    </Link>
-                    <Link to="#" style={{ textDecoration: "none", color: "black" }}>
-                        <ListItem
-                            divider
-                            button
-                            onClick={() => {
-                                handleToBottomClick();
-                                setOpenMenu(false);
-                            }}
-                        >
-                            <ListItemIcon>
-                                <EmailIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Contact me" />
-                        </ListItem>
-                    </Link>
-                    <ListItemButton>
-                        <a href={whatsappLink} rel="noreferrer" target="_blank">
-                            <ListItemIcon>
-                                <WhatsAppIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Whatsapp" />
-                        </a>
-                    </ListItemButton>
-                    <ListItemButton>
-                        <a href={linkedinLink} rel="noreferrer" target="_blank">
-                            <ListItemIcon>
-                                <LinkedInIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="LinkedIn" />
-                        </a>
-                    </ListItemButton>
-                    <ListItemButton>
-                        <a href={githubLink} rel="noreferrer" target="_blank">
-                            <ListItemIcon>
-                                <GitHubIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="GitHub" />
-                        </a>
-                    </ListItemButton>
-                </List>
-            </SwipeableDrawer> */}
             <List>
                 <Stack direction="row" spacing={1}>
                     <Slide in={true} timeout={{ enter: 500 }}>

@@ -14,6 +14,7 @@ export const style: SxProps<Theme> = {
     },
     ".title": {
         display: "inherit",
+        marginVertical: 1.1,
         columnGap: 0.2,
         alignItems: "end",
         ".title-name": {
