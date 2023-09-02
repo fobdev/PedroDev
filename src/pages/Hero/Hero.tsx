@@ -14,7 +14,7 @@ import { animations } from "../../utils";
 // Images
 import heroImage from "../../images/gif/hero1.gif";
 
-interface Props {}
+interface Props { }
 export const Hero: React.FC<Props> = () => {
     const { colorChange, float } = animations();
     useEffect(() => {
@@ -63,7 +63,7 @@ export const Hero: React.FC<Props> = () => {
                     </Stack>
                 </Fade>
                 <Fade in={true} timeout={{ enter: 5000 }}>
-                    <Stack direction="row" columnGap="4em" marginTop="1.5em">
+                    <Stack className="buttons" direction="row" columnGap="4em" marginTop="1.5em">
                         <Button
                             className="hero-button"
                             variant="contained"

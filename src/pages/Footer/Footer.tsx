@@ -5,15 +5,17 @@ import { Box } from "@mui/system";
 // Styles
 import { style } from "./_style";
 
-interface Props {}
+interface Props { }
 export const Footer: React.FC<Props> = () => {
     return (
         <Box sx={style}>
-            <Typography className="title" fontWeight="300">
-                Pedro Henrique - 2023
-            </Typography>
-            <Typography className="footer-title" fontWeight="100">
-                Last Update: June 09 of 2023
+            <Typography className="title" align="center">
+                <Typography fontWeight="300">
+                    Webside made by Pedro Henrique using React
+                </Typography>
+                <Typography fontWeight="300">
+                    Last Update: September 02, 2023
+                </Typography>
             </Typography>
         </Box>
     );

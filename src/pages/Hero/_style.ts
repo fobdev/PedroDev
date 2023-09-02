@@ -44,6 +44,8 @@ export const style: SxProps<Theme> = {
                 },
             },
             ".buttons": {
+                justifyContent: "center",
+                alignItems: "center",
                 flexDirection: "column",
                 rowGap: "1em",
                 width: "60%",
